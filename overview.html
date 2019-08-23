@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>API Overview</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main">
+
+     <!-- Main jumbotron for a primary marketing message or call to action -->
+     <!-- <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">API Overview</h1>
+          <p>This is a collection of information to help you interact with the Roostify APIs</p>
+       
+        </div>
+      </div> -->
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-8">
+            <h2 style="margin-top:6rem;">API Overview</h2>
+        
+<p>Roostify provides a web-based REST API that uses Basic Auth for authentication and formats the request and response bodies in JSON. The API allows you to integrate with the following objects in the Roostify platform.  </p>
+<ul>
+<li>Loan applications - Create, update, list, and retrieve.</li>
+<li>Tasks - Create, update, list, and retrieve.</li>
+<li>Documents - Create, update, list, and retrieve.</li>
+<li>Accounts - List and retrieve.</li>
+<li>Integration settings - Retrieve.</li>
+<li>Service - Retrieve.</li>
+<li>User settings - Retrieve.</li>
+<li>Webhooks - Create, list, retrieve, and delete.</li>
+<li>Loan applications - Create, update, list, and retrieve.</li>
+<li>Tasks - Create, update, list, and retrieve.</li>
+<li>Documents - Create, update, list, and retrieve.</li>
+<li>Accounts - List and retrieve.</li>
+<li>Webhook events  - List.</li>
+<li>Status updates  - Create.</li>
+<li>Users  - Create, list, retrieve, update, activate, and deactivate.</li>
+<li>Messages  - Create, list, retrieve, and delete.</li>
+<li>Access control groups  - Create and update.  </li>
+</ul>
+<h2 id="authentication">Authentication</h2>
+<p>You authenticate your Roostify REST API requests using HTTP basic access authentication, which requires a username and password. The username, is the token of your Roostify account and the password is a service access token. If you don't have these tokens, you can obtain them from your CSM recodesentative.  </p>
+<p>You pass the tokens as a Base64-encoded string in the <code>Authorization</code> header of the request. At the beginning of the header, you must also put the string <code>Basic</code> to identify the type of authentication. For example, if username is <code>magic</code> and password is <code>talisman</code>, the encoded string is <code>bWFnaWM6dGFsaXNtYW4=</code>. Given these tokens, you specify the <code>Authorization</code> header as follows  </p>
+<pre><code>Basic bWFnaWM6dGFsaXNtYW4=</code>  </pre>
+<p><strong>Note</strong> If you are using Postman to test and develop with the Roostify API, you can use it to encode and generate the authorization header for you. In the <strong>Authorization</strong> tab of a Postman request, specify <code>Basic Auth</code> and enter your account token and service access tokens as the username and password. When you execute the request, Postman generates the Base64-encoded <code>Authorization</code> header.  </p>
+<p>Within application code you may need to dynamically Base64-encode these values before adding them to your request’s headers. This page provides examples of how to Base64-encode values in most programming languages.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>You call the API by sending HTTP requests to a URI that combines the location of the Roostify API service <strong>https://<em>myDomain</em>.roostify.com/api</strong> with the identifier for a specific resource (<code>/v1/_resourceEndpoint_</code>). Note that the URL includes your domain name, and as such, is specific to your service. Also, note that the endpoint URI includes the version of the API to call (in this document version 1). Future updates to the API could be packaged into a different version, in which case you call these endpoints using the new version (for example, v2).The following sample shows the complete URIs to the tasks and documents resources (for the <code>acme</code> domain)  </p>
+<ul>
+<li><code>https://acme.roostify.com/api/v1/tasks</code> </li>
+<li><code>https://acme.roostify.com/api/v1/documents</code>  </li>
+</ul>
+<p>In addition to your client URL, Roostify provides these URLs for testing and development</p>
+<ul>
+<li><code>https://test.roostify.com/api</code></li>
+<li><code>https://sandbox.roostify.com/api</code></li>
+</ul>
+<p><strong>Note</strong> Each of these URLs requires separate authentication credentials. Talk with your CSM recodesentative if you require access to them.  </p>
+<p>You make requests with standard HTTP methods  </p>
+<ul>
+<li><code>GET</code>  Requests data from a resource.</li>
+<li><code>POST</code>  Submits data to a resource.</li>
+<li><code>PUT</code>  Updates a resource.</li>
+<li><code>PLACE</code>  Partially updates a resource.</li>
+<li><code>DELETE</code>  Deletes a resource.</li>
+</ul>
+<p><strong>Note</strong> All API requests require an authorization header.  </p>
+<p>For example, the following snippet shows how to use a <code>GET</code> method to retrieve a list of users</p>
+<pre><code>-H Authorization: Basic OTcwMDEzNjMzODY4MTM5MTo2NTA4OTAwOTY4MjczODM2
+-H Cache-Control: no-cache</code></pre>
+<p>When you make a request to create or update a resource (`POST PUT PLACE`), you pass a request body to the URL. For example, to update a task, make a `PATCH` request similar to the following:</p>
+
+<pre><code>curl -X PATCH<br><a href="https://sandbox.roostify.com/api/v1/tasks/7911047531308034">https://sandbox.roostify.com/api/v1/tasks/7911047531308034</a>
+-H Authorization: Basic OTcwMDEzNjMzODY4MTM5MTo2NTA4OTAwOTY4MjczODM2
+-H Cache-Control: no-cache
+-d {
+"description": "Copy of your driver’s license or equivalent
+proof of identity (e.g., birth certificate)"  }
+</code></pre>
+  A successful call returns an HTTP success code (<code>200 OK</code>) and a JSON-formatted response body. See the section for each API endpoint for information about specific request and response parameters.
+</p>
+           
+          </div>
+       <!--   <div class="col-md-4">
+            <h2>Admin Guide</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Gateway Guide</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div> -->
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; Roostify 2019-2020</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
