@@ -10,11 +10,8 @@ body {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-a hover {   
-    color: #000000;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
+a:hover {   
+   text-decoration: none;
 }
 
  .zoomA {
