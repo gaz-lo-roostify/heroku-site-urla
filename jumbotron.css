@@ -4,7 +4,18 @@ body {
     -webkit-print-color-adjust: exact;  
 }
 
-
+ a {   
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a hover {   
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
 
  .zoomA {
         /*width: 600px;*/
