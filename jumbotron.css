@@ -4,6 +4,14 @@ body {
     -webkit-print-color-adjust: exact;  
 }
 
+
+.col-md-4 p {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 38.333333%;
+    max-width: 53.333333%;
+}
+
  a {   
     color: #000000;
     text-decoration: none;
