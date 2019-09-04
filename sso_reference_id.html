@@ -67,11 +67,15 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-8">
-            <h2 style="margin-top:6rem;">API Overview</h2>
+            <h2 style="margin-top:6rem;">Create a Loan Application with a Borrower SSO Reference ID</h2>
         
-<p>Create a Loan Application with SSO Reference ID</p>
 
-</ul>
+
+<p>With SSO turned on, if you create a Loan Application via the API and you include a borrower_sso_reference_id, Roostify attempts to find an existing user with that id, and if successful assigns the user to the loan application.</p> 
+
+<p>If Roostify does not find a user with the borrower_sso_reference_id that you provided, it creates a user with that ID.</p> 
+
+<p>Note that since each borrower_sso_reference_id is unique, once it has been assigned to either an existing or new user you can’t update another user with that borrower_sso_reference_id to match the loan application.</p>
 
 
       </div> <!-- /container -->
