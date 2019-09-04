@@ -74,13 +74,13 @@
 
 <p>With SSO turned on, if you create a Loan Application via the API and you include a <code>borrower_sso_reference_id</code>, Roostify attempts to find an existing user with that id, and if successful assigns the user to the loan application.</p> 
 
-<p>If Roostify does not find a user with the borrower_sso_reference_id that you provided, it creates a user with that ID.</p> 
+<p>If Roostify does not find a user with the <code>borrower_sso_reference_id</code> that you provided, it creates a user with that ID.</p> 
 
-<p>The same applies to the coborrower_sso_reference_id.
+<p>The same applies to the <code>coborrower_sso_reference_id</code>.
 
-<p>Note that since each borrower_sso_reference_id is unique, once it has been assigned to either an existing or new user you can’t update another user with that borrower_sso_reference_id to match the loan application.</p>
+<p>Note that since each <code>borrower_sso_reference_id</code> or <code>coborrower_sso_reference_id</code> is unique, once it has been assigned to either an existing or new user you can’t update another user with it to match the loan application.</p>
 
-<p>The following snippet shows how to include the borrower_sso_reference_id and coborrower_sso_reference_id when creating a loan application using the Roostify API:</p>
+<p>The following snippet shows how to include the <code>borrower_sso_reference_id</code>and <code>coborrower_sso_reference_id</code> when creating a loan application using the Roostify API:</p>
 <p><br>
 </p>
 
