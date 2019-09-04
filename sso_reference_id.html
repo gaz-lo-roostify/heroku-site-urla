@@ -77,6 +77,21 @@
 
 <p>Note that since each borrower_sso_reference_id is unique, once it has been assigned to either an existing or new user you can’t update another user with that borrower_sso_reference_id to match the loan application.</p>
 
+<p>The following snippet shows how to include the borrower_sso_reference_id and coborrower_sso_reference_id when creating a loan application using the Roostify API:</p>
+
+<pre><code>
+  {
+
+"lender_email": "chase_admin@roostify.com",
+"borrower_sso_reference_id": "te34z4",
+"coborrower_sso_reference_id":"d43rd23",
+"b_reference_id": "Ded3i09",
+"c_reference_id": "s3359",
+"reference_id": "ret53",
+"application_type": "purchase",
+...
+</pre></code>
+
 
       </div> <!-- /container -->
 
