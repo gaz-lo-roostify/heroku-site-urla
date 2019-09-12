@@ -801,7 +801,7 @@
         </div>
         <div id="header">
           <div id="api-_">
-            <h2 id="welcome-to-apidoc">Roostify URLA API Documentation</h2>
+            <h2 id="welcome-to-apidoc">URLA API and SDK Documentation</h2>
               <div class="app-desc">Version: 4.0.0</div>
             <hr>
             <div><p>Fannie Mae's Form 1003 Uniform Residential Loan Application (URLA) has been in use for more than twenty years. It is the standard form used to apply for a residential loan application, also known as a mortgage. Fannie Mae is coming out with a revised URLA in 2020, with many enhancements to the borrower experience.</p>
@@ -812,7 +812,7 @@
         </div>
         <div id="sections">
                 <section id="api-LoanApplicationsV2">
-                  <h1>LoanApplications</h1>
+                  <h1>LoanApplicationsV2</h1>
                     <div id="api-LoanApplicationsV2-listingYourLoanApplications">
                       <article id="api-LoanApplicationsV2-listingYourLoanApplications-0" data-group="User" data-name="listingYourLoanApplications" data-version="0">
                         <div class="pull-left">
@@ -1120,7 +1120,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-LoanApplicationsV2-readLoanApp-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://api.roostify.com/api/v1/loan_applications?publishDate=&duCaseFileID=&mortgageType="</code></pre>
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://api.roostify.com/api/v1/loan_applications?publishDate=&duCaseFileID=&mortgageType=&fnmCaseNumber=&LoanAmount=&LoanTerm=&LoanUse=&LoanUseOther=&totalInterestRate=&amortizationTerm=&amortizationType="</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -1137,16 +1137,19 @@ public class LoanApplicationsV2ApiExample {
         
         LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
         String publishDate = publishDate_example; // String | Date of publication of the loan application.
-        array[MortgageTypes] mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
-
         Integer duCaseFileID = 56; // Integer | CaseFile Identifier
+        array[MortgageTypes] mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
+
+        String fnmCaseNumber = fnmCaseNumber_example; // String | Fannie Mae case number.
+        Integer loanAmount = 56; // Integer | Amount of loan.
+        Integer loanTerm = 56; // Integer | Term in months for loan
+        String loanUse = loanUse_example; // String | Purpose of the loan
+        String loanUseOther = loanUseOther_example; // String | Purpose of the loan
+        Integer totalInterestRate = 56; // Integer | combined interest rate total
+        Integer amortizationTerm = 56; // Integer | term of amortization
+        String amortizationType = amortizationType_example; // String | Type of amortization
         try {
-            array['String'] result = apiInstance.readLoanApp(publishDate, mortgageType, duCaseFileID);
+            array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LoanApplicationsV2Api#readLoanApp");
@@ -1164,16 +1167,19 @@ public class LoanApplicationsV2ApiExample {
     public static void main(String[] args) {
         LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
         String publishDate = publishDate_example; // String | Date of publication of the loan application.
-        array[MortgageTypes] mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
-
         Integer duCaseFileID = 56; // Integer | CaseFile Identifier
+        array[MortgageTypes] mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
+
+        String fnmCaseNumber = fnmCaseNumber_example; // String | Fannie Mae case number.
+        Integer loanAmount = 56; // Integer | Amount of loan.
+        Integer loanTerm = 56; // Integer | Term in months for loan
+        String loanUse = loanUse_example; // String | Purpose of the loan
+        String loanUseOther = loanUseOther_example; // String | Purpose of the loan
+        Integer totalInterestRate = 56; // Integer | combined interest rate total
+        Integer amortizationTerm = 56; // Integer | term of amortization
+        String amortizationType = amortizationType_example; // String | Type of amortization
         try {
-            array['String'] result = apiInstance.readLoanApp(publishDate, mortgageType, duCaseFileID);
+            array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling LoanApplicationsV2Api#readLoanApp");
@@ -1188,21 +1194,32 @@ public class LoanApplicationsV2ApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *publishDate = publishDate_example; // Date of publication of the loan application.
-array[MortgageTypes] *mortgageType = ; // Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
+Integer *duCaseFileID = 56; // CaseFile Identifier
+array[MortgageTypes] *mortgageType = ; // Definition of the type of mortgage, one of four types as shown in the drop-down menu.
 
-Integer *duCaseFileID = 56; // CaseFile Identifier (optional)
+String *fnmCaseNumber = fnmCaseNumber_example; // Fannie Mae case number.
+Integer *loanAmount = 56; // Amount of loan.
+Integer *loanTerm = 56; // Term in months for loan
+String *loanUse = loanUse_example; // Purpose of the loan
+String *loanUseOther = loanUseOther_example; // Purpose of the loan
+Integer *totalInterestRate = 56; // combined interest rate total
+Integer *amortizationTerm = 56; // term of amortization
+String *amortizationType = amortizationType_example; // Type of amortization
 
 LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
 
 // Listing your Loan Applications
 [apiInstance readLoanAppWith:publishDate
-    mortgageType:mortgageType
     duCaseFileID:duCaseFileID
+    mortgageType:mortgageType
+    fnmCaseNumber:fnmCaseNumber
+    loanAmount:loanAmount
+    loanTerm:loanTerm
+    loanUse:loanUse
+    loanUseOther:loanUseOther
+    totalInterestRate:totalInterestRate
+    amortizationTerm:amortizationTerm
+    amortizationType:amortizationType
               completionHandler: ^(array['String'] output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -1219,16 +1236,18 @@ LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
 
 var api = new Api.LoanApplicationsV2Api()
 var publishDate = publishDate_example; // {{String}} Date of publication of the loan application.
-var mortgageType = ; // {{array[MortgageTypes]}} Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
+var duCaseFileID = 56; // {{Integer}} CaseFile Identifier
+var mortgageType = ; // {{array[MortgageTypes]}} Definition of the type of mortgage, one of four types as shown in the drop-down menu.
 
-var opts = { 
-  'duCaseFileID': 56 // {{Integer}} CaseFile Identifier
-};
+var fnmCaseNumber = fnmCaseNumber_example; // {{String}} Fannie Mae case number.
+var loanAmount = 56; // {{Integer}} Amount of loan.
+var loanTerm = 56; // {{Integer}} Term in months for loan
+var loanUse = loanUse_example; // {{String}} Purpose of the loan
+var loanUseOther = loanUseOther_example; // {{String}} Purpose of the loan
+var totalInterestRate = 56; // {{Integer}} combined interest rate total
+var amortizationTerm = 56; // {{Integer}} term of amortization
+var amortizationType = amortizationType_example; // {{String}} Type of amortization
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -1236,7 +1255,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.readLoanApp(publishDate, mortgageType, opts, callback);
+api.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType, callback);
 </code></pre>
                             </div>
 
@@ -1259,19 +1278,22 @@ namespace Example
 
             var apiInstance = new LoanApplicationsV2Api();
             var publishDate = publishDate_example;  // String | Date of publication of the loan application.
-            var mortgageType = new array[MortgageTypes](); // array[MortgageTypes] | Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
+            var duCaseFileID = 56;  // Integer | CaseFile Identifier
+            var mortgageType = new array[MortgageTypes](); // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
 
-            var duCaseFileID = 56;  // Integer | CaseFile Identifier (optional) 
+            var fnmCaseNumber = fnmCaseNumber_example;  // String | Fannie Mae case number.
+            var loanAmount = 56;  // Integer | Amount of loan.
+            var loanTerm = 56;  // Integer | Term in months for loan
+            var loanUse = loanUse_example;  // String | Purpose of the loan
+            var loanUseOther = loanUseOther_example;  // String | Purpose of the loan
+            var totalInterestRate = 56;  // Integer | combined interest rate total
+            var amortizationTerm = 56;  // Integer | term of amortization
+            var amortizationType = amortizationType_example;  // String | Type of amortization
 
             try
             {
                 // Listing your Loan Applications
-                array['String'] result = apiInstance.readLoanApp(publishDate, mortgageType, duCaseFileID);
+                array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1290,17 +1312,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiLoanApplicationsV2Api();
 $publishDate = publishDate_example; // String | Date of publication of the loan application.
-$mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
-
 $duCaseFileID = 56; // Integer | CaseFile Identifier
+$mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
+
+$fnmCaseNumber = fnmCaseNumber_example; // String | Fannie Mae case number.
+$loanAmount = 56; // Integer | Amount of loan.
+$loanTerm = 56; // Integer | Term in months for loan
+$loanUse = loanUse_example; // String | Purpose of the loan
+$loanUseOther = loanUseOther_example; // String | Purpose of the loan
+$totalInterestRate = 56; // Integer | combined interest rate total
+$amortizationTerm = 56; // Integer | term of amortization
+$amortizationType = amortizationType_example; // String | Type of amortization
 
 try {
-    $result = $api_instance->readLoanApp($publishDate, $mortgageType, $duCaseFileID);
+    $result = $api_instance->readLoanApp($publishDate, $duCaseFileID, $mortgageType, $fnmCaseNumber, $loanAmount, $loanTerm, $loanUse, $loanUseOther, $totalInterestRate, $amortizationTerm, $amortizationType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LoanApplicationsV2Api->readLoanApp: ', $e->getMessage(), PHP_EOL;
@@ -1315,17 +1340,20 @@ use WWW::SwaggerClient::LoanApplicationsV2Api;
 
 my $api_instance = WWW::SwaggerClient::LoanApplicationsV2Api->new();
 my $publishDate = publishDate_example; # String | Date of publication of the loan application.
-my $mortgageType = []; # array[MortgageTypes] | Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
-
 my $duCaseFileID = 56; # Integer | CaseFile Identifier
+my $mortgageType = []; # array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
+
+my $fnmCaseNumber = fnmCaseNumber_example; # String | Fannie Mae case number.
+my $loanAmount = 56; # Integer | Amount of loan.
+my $loanTerm = 56; # Integer | Term in months for loan
+my $loanUse = loanUse_example; # String | Purpose of the loan
+my $loanUseOther = loanUseOther_example; # String | Purpose of the loan
+my $totalInterestRate = 56; # Integer | combined interest rate total
+my $amortizationTerm = 56; # Integer | term of amortization
+my $amortizationType = amortizationType_example; # String | Type of amortization
 
 eval { 
-    my $result = $api_instance->readLoanApp(publishDate => $publishDate, mortgageType => $mortgageType, duCaseFileID => $duCaseFileID);
+    my $result = $api_instance->readLoanApp(publishDate => $publishDate, duCaseFileID => $duCaseFileID, mortgageType => $mortgageType, fnmCaseNumber => $fnmCaseNumber, loanAmount => $loanAmount, loanTerm => $loanTerm, loanUse => $loanUse, loanUseOther => $loanUseOther, totalInterestRate => $totalInterestRate, amortizationTerm => $amortizationTerm, amortizationType => $amortizationType);
     print Dumper($result);
 };
 if ($@) {
@@ -1343,18 +1371,21 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.LoanApplicationsV2Api()
 publishDate = publishDate_example # String | Date of publication of the loan application.
-mortgageType =  # array[MortgageTypes] | Definition of the type of mortgage, from one of the following```:```  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
+duCaseFileID = 56 # Integer | CaseFile Identifier
+mortgageType =  # array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
 
-duCaseFileID = 56 # Integer | CaseFile Identifier (optional)
+fnmCaseNumber = fnmCaseNumber_example # String | Fannie Mae case number.
+loanAmount = 56 # Integer | Amount of loan.
+loanTerm = 56 # Integer | Term in months for loan
+loanUse = loanUse_example # String | Purpose of the loan
+loanUseOther = loanUseOther_example # String | Purpose of the loan
+totalInterestRate = 56 # Integer | combined interest rate total
+amortizationTerm = 56 # Integer | term of amortization
+amortizationType = amortizationType_example # String | Type of amortization
 
 try: 
     # Listing your Loan Applications
-    api_response = api_instance.read_loan_app(publishDate, mortgageType, duCaseFileID=duCaseFileID)
+    api_response = api_instance.read_loan_app(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LoanApplicationsV2Api->readLoanApp: %s\n" % e)</code></pre>
@@ -1395,7 +1426,7 @@ except ApiException as e:
                                     </div>
                                 </td>
                                 </tr>
-                                <tr><td style="width:150px;">duCaseFileID</td>
+                                <tr><td style="width:150px;">duCaseFileID*</td>
                                 <td>
                                 
                                 
@@ -1410,6 +1441,9 @@ except ApiException as e:
                                                         CaseFile Identifier
                                                     </div>
                                             </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
                                         </div>
                                     </div>
                                 </td>
@@ -1426,13 +1460,184 @@ except ApiException as e:
                                                 </span>
                                 
                                                     <div class="inner description">
-                                                        Definition of the type of mortgage, from one of the following&#x60;&#x60;&#x60;:&#x60;&#x60;&#x60;  
-   
-   Conventional  
-   FHA  
-   Other  
-   USDHARuralDevelopment
+                                                        Definition of the type of mortgage, one of four types as shown in the drop-down menu.
 
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">fnmCaseNumber*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_fnmCaseNumber">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    String
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        Fannie Mae case number.
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">LoanAmount*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_loanAmount">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    Integer
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        Amount of loan.
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">LoanTerm*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_loanTerm">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    Integer
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        Term in months for loan
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">LoanUse*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_loanUse">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    String
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        Purpose of the loan
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">LoanUseOther*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_loanUseOther">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    String
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        Purpose of the loan
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">totalInterestRate*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_totalInterestRate">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    Integer
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        combined interest rate total
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">amortizationTerm*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_amortizationTerm">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    Integer
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        term of amortization
+                                                    </div>
+                                            </div>
+                                                <div class="inner required">
+                                                    Required
+                                                </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">amortizationType*</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_readLoanApp_amortizationType">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    String
+                                                </span>
+                                
+                                                    <div class="inner description">
+                                                        Type of amortization
                                                     </div>
                                             </div>
                                                 <div class="inner required">
