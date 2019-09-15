@@ -1,0 +1,495 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+
+  $('.overlay').scroll(function() {
+   var scroll = $('.overlay').scrollTop();
+
+
+
+   //display counter showing where scroll is at any moment
+  //  $("#inst_text").html("</p>" + scroll + "</p>" );
+
+   $('#position').html(+ $('.overlay').scrollTop().toFixed(1));
+
+   $(".noscroll").css('backgroundImage','url(laptop4.png');
+
+    if (scroll >= 601 && scroll <=1949) {
+    // alert("scroll alert!")
+       $("#topBackground").css('display','none');
+     
+   }
+     
+     else if (scroll <=600) {
+        $("#topBackground").css('display','block');
+     }
+
+     else if (scroll >=1950) {
+        $(".noscroll").css('backgroundImage','url(marin-fog.jpg');
+     }
+
+});
+
+});
+</script>
+
+
+<style>
+
+
+body {margin: 0; height: 100%; overflow: hidden}
+
+
+#inst_text {
+position: fixed;
+left: 9px;
+top: 5em;
+}
+#inst_text p {
+font-size 10px;
+}
+
+
+.parallax.parallax--myscrollsection {
+    left: -16em;
+    position: relative;
+}
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    visibility: hidden;
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+
+.courier {
+    font-family: courier;
+}
+
+#oceanLink, #mlLink {
+
+    cursor: pointer;
+    color: #99ccff;
+}
+
+.imageClick {
+display: none;
+cursor:pointer;
+left: -9em;
+top: 2em;
+position: relative;
+width: 107em;
+}
+
+.imageClick.imgShow {
+    display: block;
+}
+
+#imgOne {
+
+}
+
+#imgTwo {
+  
+}
+#imgThree {
+  
+}
+
+#position {
+  visibility: hidden;
+  position:absolute;
+  z-index:4;
+}
+
+.noscroll {
+    overflow: hidden;
+    height: 57em;
+    width: 136em;
+   // background-image: url(laptop4.png);
+    background-size: 132em 45em;
+    background-position-x: 4em;
+    background-position-y: 12em;
+    top: 17em;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: fixed;
+    overflow-y: scroll;
+    right: 0;
+    bottom: 0;
+    left: -1em;
+    width: 100em;
+    height: 71em;
+    top: -8em;
+    font-size: 15pt;
+}
+
+.overlayContent {
+    position: relative;
+    padding: 1em;
+    /*right: 0;*/
+    bottom: 0;
+    left: 0em;
+    width: 23em;
+    top: -10em;
+    font-size: 14pt;
+    color: #2f3438;
+}
+
+.scrollRule {
+    height: 7px;
+    width: 95%;
+    float: left;
+    color: #8b9fb3;
+    background-color: #8b9fb3;
+    margin-bottom: 0.5em;
+}
+
+
+
+#subhead {
+  font-size: 23pt;
+  font-size: 18pt;
+  letter-spacing: 9.7pt
+}
+
+#topBackground {
+    position: relative;
+    left: -29em;
+    width: 113%;
+}
+#middleImage {
+    position: relative;
+    left: 21.8em;
+    top: -6.7em;
+}
+
+#middleImageImg {
+width: 16em;
+}
+
+#bottomImage {
+    position: relative;
+    left: -21em;
+    top: 3em;
+}
+
+
+#contentOne, #contentTwo, #contentThree, #contentFour, #contentFive, #contentSix, #contentSeven, #contentEight  {
+    display: none;
+    position: relative;
+    text-align: left;
+    margin-bottom: 22em;
+    padding: 1em;
+    left: 0em;
+    bottom: 0;
+    width: 23em;
+    color: #FFF;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 38px;
+    line-height: 60px;
+    letter-spacing: 10px;
+}
+
+#contentOne {
+    display: block;
+    top: 12em;
+    left: 14em;
+}
+
+#contentTwo {
+  display: block;
+  background-color: #FFF;
+  color: #000;
+  width: 100em;
+  height: 18em;
+  top: -2.5em;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1445px) {
+  #contentTwo {
+    left: -6em;
+  }
+}
+
+#contentTwoBody {
+  font-size: 30px;
+  width: 17em;
+  left: 8em;
+  position: relative;
+  top: 7em;
+}
+#contentTwoText {
+    font-size: 17px;
+    line-height: 31px;
+    letter-spacing: 0.5px;
+}
+
+
+#resourceHead {
+    font-size: 32px;
+    width: 21em;
+    left: 28em;
+    position: relative;
+    top: 8em;
+    letter-spacing: 8.3px;
+} 
+.contentTwoRight {
+    position: relative;
+    top: 14em;
+    left: 37.3em;
+    font-size: 24px;
+    line-height: 58px;
+    letter-spacing: 0.5px;
+    width: 20em;
+    color: #000;
+}
+
+#tools {
+letter-spacing: 2.5pt;
+}
+#industry {
+letter-spacing: 3.2pt;
+}
+#roostify {
+letter-spacing: 3.3pt;
+}
+#hr {
+letter-spacing: 7pt;
+}
+#IT {
+letter-spacing: 11.9pt;
+}
+
+.contentTwoRight a:link, .contentTwoRight a:visited {
+   color: #000000;
+   text-decoration:none;
+}
+
+.contentTwoRight a:hover {
+   color: red;
+   text-decoration:none;
+}
+
+#contentTwoRightText {
+    position: relative;
+    top: 4em;
+    left: 0em;
+    font-size: 17px;
+    line-height: 31px;
+    letter-spacing: 0.5px;
+    width: 20em;
+    color: #000;
+}
+
+#contentThree {
+  display: block;
+  background-color: #FFF;
+  color: #000;
+  width: 100em;
+  height: 20.5em;
+  top: -10em;
+  letter-spacing: 1px;
+}
+#contentThreeBody {
+    font-size: 27px;
+    width: 21em;
+    left: 27em;
+    position: relative;
+    top: 1em;
+}
+#contentThreeText {
+    font-size: 17px;
+    line-height: 31px;
+    letter-spacing: 0.5px;
+}
+
+.overlay::-webkit-scrollbar { 
+    display: none; 
+}
+/*
+[aria-hidden="true"] { display: none; }
+[aria-hidden="false"] { display: block; }*/
+/* ML Scroll Styles Above */
+
+// general
+
+.main-container {
+  padding: 0px;
+}
+.page-header {
+  padding-bottom: 0px;
+}
+
+
+#leftBox {
+  position: relative;
+  left: 11%;
+  top: 2em;
+  text-align: left;
+}
+
+#midBox {
+  position: relative;
+  left: 42%;
+  top: -3em;
+  text-align: left;
+}
+#rightBox{
+  position: relative;
+  left: 77%;
+  top: -8.2em;
+  text-align: left;
+}
+
+.block-block-content1a31ff52-7962-454d-8df9-e5a203d1e4ca {
+  text-align: center;
+  padding: 10em;
+  font-size: 20px;
+  background-color: #204d74;
+  color: #fff;
+}
+
+#block-normalsection01 {
+    text-align: center;
+    top: 16em;
+    height: 22em;
+    left: 0em;
+    width: 102%;
+    padding: 0em;
+    font-size: 20px;
+    background-color: #204d74;
+    color: #fff;
+    z-index: 2;
+}
+
+#block-normalsection02 {
+  text-align: center;
+  top: 49em;
+  left: 0em;
+  width: 102%;
+  padding: 1em;
+  font-size: 20px;
+  background-color: #204d74;
+  color: #fff;
+  z-index: 2;
+}
+
+// parallax sections
+
+.parallax {
+  text-align: center;
+  // so we can absolute position the background
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+}
+
+
+.parallax.parallax--parallax02 {
+
+  margin-top: 49%
+}
+
+.parallax__bg {
+  position: absolute;
+  width: 100%;
+  height: 98%;
+}
+
+.parallax--parallax01 .parallax__bg {
+  background: url('slider-bg.jpg');
+  background-size: 143em 59em;
+  top: 17em;
+}
+.parallax--parallax02 .parallax__bg  {
+  background: url('marin-fog.jpg');
+  background-size: 143em 59em;
+  top: 98.5em;
+}
+
+.parallax--parallax03 .parallax__bg  {
+  background: url('blue-background.jpg');
+  background-size: 143em 59em;
+  top: 91.5em;
+}
+
+.parallax__content {
+    position: relative;
+    -webkit-transform: translateY(-23%);
+    -ms-transform: translateY(-23%);
+    transform: translateY(-23%);
+    color: #fff;
+    width: 80%;
+    left: 11%;
+    text-align: center;
+    z-index: 2;
+}
+
+
+ .parallax__content h2{
+    margin: 0px;
+    font-size: 30px;
+  }
+ .parallax__content p  {
+    font-size: 20px;
+  }
+
+ #rTitle {
+    font-size: 54px;
+    position: relative;
+    top: -4em;
+    text-align: left;
+}
+
+#rTitle2 {
+    font-size: 36px;
+    position: relative;
+    top: -17em;
+    text-align: right;
+}
+
+div[data-test-id="confluence-navigation-v2"]
+  display: none;
+}
+</style>
+
+
+
+
+<div class="background noscroll"><img id="topBackground" src="slider-bg.jpg" /></div>
+
+<div class="overlay">
+<div class="overlayContent">
+<div id="contentOne">ROOSTIFY
+<div id="subhead">Onboarding</div>
+</div>
+
+<div id="contentTwo">
+<div id="contentTwoBody">WELCOME TO ROOSTIFY 
+<div id="contentTwoText">These resources will help make it as easy as possible to get up and running and be sure that you have everything you need to work at Roostify. Select the links on the next panel for information about initial setup, software, HR, and learning about Roostify and the real estate industry.</div>
+<div id="middleImage"> <img id="middleImageImg" src="WorkWithUs_Box.jpg"></div>
+</div>
+
+<div class="contentTwoRight" id="resourceHead">RESOURCES</div>
+<div class="contentTwoRight" id="tools"><a href="https://roostify.atlassian.net/wiki/spaces/TEAM/pages/830079048/Tools+and+Software" target="_blank">Tools and Software</a></div>
+<div class="contentTwoRight" id="industry"><a href="https://roostify.atlassian.net/wiki/spaces/TEAM/pages/830046225/Industry+Learning" target="_blank">Industry Learning</a></div>
+<div class="contentTwoRight" id="roostify"><a href="https://roostify.atlassian.net/wiki/spaces/TEAM/pages/829685790/Roostify+Learning" target="_blank">Roostify Learning</a></div>
+<div class="contentTwoRight" id="hr"><a href="https://roostify.atlassian.net/wiki/spaces/TEAM/pages/829489240/HR+Resources" target="_blank">HR Resources</a></div>
+<div class="contentTwoRight" id="IT"><a href="https://roostify.atlassian.net/wiki/spaces/TEAM/pages/829653065/IT+Support" target="_blank">IT Support</a></div>
+
+<div id="contentTwoRightText"></div>
+<p id="inst_text"></p>
+</div>
+</div>
+</div>

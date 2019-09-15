@@ -67,11 +67,35 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-8">
-            <h2 style="margin-top:6rem;">API Overview</h2>
+            <h2 style="margin-top:6rem;">Create a Loan Application with a Borrower SSO Reference ID</h2>
         
-<p>Create a Loan Application with SSO Reference ID</p>
+<p><br>
+</p>
 
-</ul>
+<p>With SSO turned on, if you create a Loan Application via the API and you include a <code>borrower_sso_reference_id</code>, Roostify attempts to find an existing user with that id, and if successful assigns the user to the loan application.</p> 
+
+<p>If Roostify does not find a user with the <code>borrower_sso_reference_id</code> that you provided, it creates a user with that ID.</p> 
+
+<p>The same applies to the <code>coborrower_sso_reference_id</code>.
+
+<p>Note that since each <code>borrower_sso_reference_id</code> or <code>coborrower_sso_reference_id</code> is unique, once it has been assigned to either an existing or new user you can’t update another user with it to match the loan application.</p>
+
+<p>The following snippet shows how to include the <code>borrower_sso_reference_id</code> and <code>coborrower_sso_reference_id</code> when creating a loan application using the Roostify API:</p>
+<p><br>
+</p>
+
+<pre><code>
+  {
+
+"lender_email": "chase_admin@roostify.com",
+"borrower_sso_reference_id": "te34z4",
+"coborrower_sso_reference_id":"d43rd23",
+"b_reference_id": "Ded3i09",
+"c_reference_id": "s3359",
+"reference_id": "ret53",
+"application_type": "purchase",
+...
+</pre></code>
 
 
       </div> <!-- /container -->
