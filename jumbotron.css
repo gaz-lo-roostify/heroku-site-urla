@@ -92,3 +92,15 @@ width: 100%;
 .img:target+.close+.expand {
     display: none;
 }
+
+#json {
+
+}
+
+#yaml {
+    position: absolute;
+    top: 15em;
+    left: 125%;
+}
+
+}
