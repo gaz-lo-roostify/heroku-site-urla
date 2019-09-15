@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>API Overview</title>
+    <title>URLA API Overview</title>
 
     <link rel="shortcut icon" type="image/png" href="RFY_Favicon2.ico"/>
 
@@ -68,84 +68,15 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-8">
-            <h2 style="margin-top:6rem;">API Overview</h2>
+            <h2 style="margin-top:6rem;">Roostify URLA API Overview</h2>
         
-<p>Roostify provides a web-based REST API that uses Basic Auth for authentication and formats the request and response bodies in JSON. The API allows you to integrate with the following objects in the Roostify platform.  </p>
-<ul>
-<li>Loan applications - Create, update, list, and retrieve.</li>
-<li>Tasks - Create, update, list, and retrieve.</li>
-<li>Documents - Create, update, list, and retrieve.</li>
-<li>Accounts - List and retrieve.</li>
-<li>Integration settings - Retrieve.</li>
-<li>Service - Retrieve.</li>
-<li>User settings - Retrieve.</li>
-<li>Webhooks - Create, list, retrieve, and delete.</li>
-<li>Loan applications - Create, update, list, and retrieve.</li>
-<li>Tasks - Create, update, list, and retrieve.</li>
-<li>Documents - Create, update, list, and retrieve.</li>
-<li>Accounts - List and retrieve.</li>
-<li>Webhook events  - List.</li>
-<li>Status updates  - Create.</li>
-<li>Users  - Create, list, retrieve, update, activate, and deactivate.</li>
-<li>Messages  - Create, list, retrieve, and delete.</li>
-<li>Access control groups  - Create and update.  </li>
-</ul>
-<h2 id="authentication">Authentication</h2>
-<p>You authenticate your Roostify REST API requests using HTTP basic access authentication, which requires a username and password. The username, is the token of your Roostify account and the password is a service access token. If you don't have these tokens, you can obtain them from your CSM recodesentative.  </p>
-<p>You pass the tokens as a Base64-encoded string in the <code>Authorization</code> header of the request. At the beginning of the header, you must also put the string <code>Basic</code> to identify the type of authentication. For example, if username is <code>magic</code> and password is <code>talisman</code>, the encoded string is <code>bWFnaWM6dGFsaXNtYW4=</code>. Given these tokens, you specify the <code>Authorization</code> header as follows  </p>
-<pre><code>Basic bWFnaWM6dGFsaXNtYW4=</code>  </pre>
-<p><strong>Note</strong> If you are using Postman to test and develop with the Roostify API, you can use it to encode and generate the authorization header for you. In the <strong>Authorization</strong> tab of a Postman request, specify <code>Basic Auth</code> and enter your account token and service access tokens as the username and password. When you execute the request, Postman generates the Base64-encoded <code>Authorization</code> header.  </p>
-<p>Within application code you may need to dynamically Base64-encode these values before adding them to your request’s headers. This page provides examples of how to Base64-encode values in most programming languages.</p>
-<h2 id="getting-started">Getting Started</h2>
-<p>You call the API by sending HTTP requests to a URI that combines the location of the Roostify API service <strong>https://<em>myDomain</em>.roostify.com/api</strong> with the identifier for a specific resource (<code>/v1/_resourceEndpoint_</code>). Note that the URL includes your domain name, and as such, is specific to your service. Also, note that the endpoint URI includes the version of the API to call (in this document version 1). Future updates to the API could be packaged into a different version, in which case you call these endpoints using the new version (for example, v2).The following sample shows the complete URIs to the tasks and documents resources (for the <code>acme</code> domain)  </p>
-<ul>
-<li><code>https://acme.roostify.com/api/v1/tasks</code> </li>
-<li><code>https://acme.roostify.com/api/v1/documents</code>  </li>
-</ul>
-<p>In addition to your client URL, Roostify provides these URLs for testing and development</p>
-<ul>
-<li><code>https://test.roostify.com/api</code></li>
-<li><code>https://sandbox.roostify.com/api</code></li>
-</ul>
-<p><strong>Note</strong> Each of these URLs requires separate authentication credentials. Talk with your CSM recodesentative if you require access to them.  </p>
-<p>You make requests with standard HTTP methods  </p>
-<ul>
-<li><code>GET</code>  Requests data from a resource.</li>
-<li><code>POST</code>  Submits data to a resource.</li>
-<li><code>PUT</code>  Updates a resource.</li>
-<li><code>PLACE</code>  Partially updates a resource.</li>
-<li><code>DELETE</code>  Deletes a resource.</li>
-</ul>
-<p><strong>Note</strong> All API requests require an authorization header.  </p>
-<p>For example, the following snippet shows how to use a <code>GET</code> method to retrieve a list of users</p>
-<pre><code>-H Authorization: Basic OTcwMDEzNjMzODY4MTM5MTo2NTA4OTAwOTY4MjczODM2
--H Cache-Control: no-cache</code></pre>
-<p>When you make a request to create or update a resource (`POST PUT PLACE`), you pass a request body to the URL. For example, to update a task, make a `PATCH` request similar to the following:</p>
 
-<pre><code>curl -X PATCH<br><a href="https://sandbox.roostify.com/api/v1/tasks/7911047531308034">https://sandbox.roostify.com/api/v1/tasks/7911047531308034</a>
--H Authorization: Basic OTcwMDEzNjMzODY4MTM5MTo2NTA4OTAwOTY4MjczODM2
--H Cache-Control: no-cache
--d {
-"description": "Copy of your driver’s license or equivalent
-proof of identity (e.g., birth certificate)"  }
-</code></pre>
-  A successful call returns an HTTP success code (<code>200 OK</code>) and a JSON-formatted response body. See the section for each API endpoint for information about specific request and response parameters.
-</p>
-           
-          </div>
-       <!--   <div class="col-md-4">
-            <h2>Admin Guide</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Gateway Guide</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div> -->
-        </div>
 
-        <hr>
+<p>Fannie Mae's Form 1003 Uniform Residential Loan Application (URLA) has been in use for more than twenty years. It is the standard form used to apply for a residential loan application, also known as a mortgage. Fannie Mae is coming out with a revised URLA in 2020, with many enhancements to the borrower experience.</p>
+
+      <p>The revised URLA is a completely reimagined loan application form that moves the audience focus away from the lender on to the borrower. Because more information must be collected, Roostify has completely refreshed its digital loan application UX to meet the new mandated data requirements.</p>
+      
+      <p>Roostify has not only built a new application UX but a completely new V2 loan format to support it. Clients are able to turn on this new format in test accounts so they can thoroughly prepare for switching over their production accounts to the new format. Once they switch, all new loans must use the new format. The benefit of Roostify creating a new loan format is it can now support both simultaneously in the same account. This eliminates the need for forced migration of loans in-flight to the new format, lowering the risk of issues arising.</p>
 
       </div> <!-- /container -->
 
