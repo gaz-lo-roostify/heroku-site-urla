@@ -94,13 +94,13 @@ width: 100%;
 }
 
 #json {
+  margin-left: 0em;
 
 }
 
 #yaml {
-    position: absolute;
-    top: 15em;
-    left: 125%;
+    margin-top: 14.7em;
+    margin-left: 8em;
 }
 
 }
