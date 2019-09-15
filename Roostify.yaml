@@ -1,0 +1,449 @@
+---
+loan:
+  token: '9057964436726381'
+  publishDate: necessary?
+  duCaseFileId: necessary?
+  mortgageType:
+  - Conventional
+  - FHA
+  - Other
+  - USDARuralDevelopment
+  - VA
+  fnmCaseNumber: 
+  loanAmount: amount
+  loanTerm: Amount
+  loanUse:
+  - Other
+  - Purchase
+  - Refinance
+  loanUseOther: string
+  totalInterestRate: percent
+  amortizationTerm: numeric
+  amortizationType:
+  - AdjustableRate
+  - Fixed
+  - Other
+  applicationType: necessary?
+  propertyUse: necessary?
+  propertySaleStage: 
+  payOffAmount: amount
+  vaIrrrl: false
+  downPayment: ''
+  downPaymentMethods: 
+  applicants:
+  - firstName: sting
+    lastName: string
+    middleName: string
+    suffix: string
+    email: string
+    alternateFirstName: string
+    alternateLastName: string
+    alternateMiddleName: string
+    alternateSuffix: string
+    primaryBorrower: boolean
+    partyRoleType:
+    - Borrower
+    taxPayerIdentifierType:
+    - IndividualTaxPayerIdentificationNumber
+    - SocialSecurityNumber
+    ssn: string
+    phoneNumber: string (home phone)
+    mobilePhoneNumber: string
+    workPhoneNumber: string
+    dob: ULAD date
+    maritalStatus:
+    - Married
+    - Separated
+    - Unmarried
+    dependents: "[1,3,4] (enumeration of ages)"
+    jointApplicantSSN: 
+    addresses:
+    - address1: string
+      address2: string
+      city: string
+      state: string state code 2 digits
+      zip: string 5 or 9 digits
+      own: boolean
+      country: string
+      startDate: ULAD date
+      endDate: ULAD date
+      rentAmount: amount
+      borrowerResidencyBasisType:
+      - livingRentFree
+      - own
+      - rent
+      addressType:
+      - current
+      - prior
+      - mailing
+      unitTypeDesignator:
+      - Apartment
+      - Basement
+      - Building
+      - Condo
+      - Department
+      - Floor
+      - Front
+      - Hangar
+      - Key
+      - Lobby
+      - Lot
+      - Lower
+      - Office
+      - Penthouse
+      - Pier
+      - Rear
+      - Room
+      - Side
+      - Space
+      - Stop
+      - Suite
+      - Trailer
+      - Unit
+      - Upper
+    militaryService: boolean
+    militaryServiceType:
+    - ActiveDuty
+    - ReserverNationalGuardNeverActivated
+    - Veteran
+    expectedMilitaryCompletionDate: ULAD date
+    monthlyRetirementAmount: amount
+    totalOtherIncome: amount
+    employments:
+    - employmentStatus:
+      - current
+      - previous
+      name: string
+      timeInLineOfWork: numeric (months)
+      specialBorrowerEmployerRelationship: boolean
+      selfEmployed: boolean
+      ownershipInterestType:
+      - GreaterThanOrEqualTo25Percent
+      - LessThan25Percent
+      monthlyIncome: amount
+      startDate: ULAD date
+      endDate: ULAD date
+      position: string
+      phone: string
+      address1: string
+      address2: string
+      city: string
+      state: string state code 2 digits
+      zip: string 5 or 9 digits
+      own: boolean
+      country: string
+      totalAmount: amount
+      income:
+        incomeType:
+        - base
+        - bonus
+        - commissions
+        - other
+        - overtime
+        monthlyTotal: amount
+        monthlyMilitaryEntitlement: amount
+        employmentIncome: true
+      unitTypeDesignator:
+      - Apartment
+      - Basement
+      - Building
+      - Condo
+      - Department
+      - Floor
+      - Front
+      - Hangar
+      - Key
+      - Lobby
+      - Lot
+      - Lower
+      - Office
+      - Penthouse
+      - Pier
+      - Rear
+      - Room
+      - Side
+      - Space
+      - Stop
+      - Suite
+      - Trailer
+      - Unit
+      - Upper
+    incomes:
+    - incomeSource:
+      - Alimony
+      - AutomobileAllowance
+      - BoarderIncome
+      - CapitalGains
+      - ChildSupport
+      - DefinedContributionPlan
+      - Disability
+      - DividendsInterest
+      - FosterCare
+      - HousingAllowance
+      - MortgageCreditCertificate
+      - MortgageDifferential
+      - NotesReceivableInstallment
+      - Other
+      - Pension
+      - PublicAssistance
+      - Royalties
+      - SeparateMaintenance
+      - SocialSecurity
+      - Trust
+      - Unemployment
+      - VABenefitsNonEducational
+      monthlyTotal: amount
+      employmentIncome: false
+    assets:
+    - assetType:
+      - accounts
+      - other
+      - purchase_credit
+      - gift
+      giftType:
+      - GiftOfCash
+      - GiftOfPropertyEquity
+      - Grant
+      giftSourceType:
+      - CommunityNonProfit
+      accountSourceType:
+      - Bond
+      - BridgeLoanNotDeposited
+      - CertificateOfDepositTimeDeposit
+      - CheckingAccount
+      - IndividualDevelopmentAccount
+      - LifeInsurance
+      - MoneyMarketFund
+      - MutualFund
+      - RetirementFund
+      - SavingsAccount
+      - Stock
+      - StockOptions
+      - TrustAccount
+      otherSourceType:
+      - Other
+      - PendingNetSaleProceedsFromRealEstateAssets
+      - ProceedsFromSaleOfNonRealEstateAsset
+      - ProceedsFromSecuredLoan
+      - ProceedsFromUnsecuredLoan
+      purchaseCreditType:
+      - EarnestMoney
+      - EmployerAssistedHousing
+      - LeasePurchaseFund
+      - SweatEquity
+      - TradeEquityFromPropertySwap
+      otherDescription: string
+      accountIdentifier: string
+      deposited: boolean
+      source: string
+      amount: amount
+    currentHousingExpenses: {}
+    properties:
+    - propertyUse: string
+      propertyType: string
+      propertyState: string
+      titleStatus: string
+      address1: string
+      address2: string
+      city: string
+      state: string state code 2 digits
+      zip: string 5 or 9 digits
+      marketValue: amount (estimated)
+      subjectProperty: boolean
+      mortgages: Liability
+      rentalGrossIncome: Amount
+      rentalNetIncome: Amount
+      annualTax: ''
+      monthlyHoa: ''
+      monthlyMortgageInsurance: ''
+      monthlyHomeownersInsurance: ''
+    liabilities:
+    - liabiltyType:
+      - debt
+      - other
+      - mortgage
+      mortgageType:
+      - HELOC
+      - MortgageLoan
+      debtType:
+      - Installment
+      - LeasePayment
+      - Open30DayChargeAccount
+      - Other
+      - Revolving
+      otherType:
+      - Alimony
+      - ChildSupport
+      - JobRelatedExpenses
+      - Other
+      - SeperateMaintenanceExpense
+      typeOfMortgage:
+      - Convential
+      - FHA
+      - Other
+      - USDA
+      - VA
+      creditLimit: amount
+      creditorName: string
+      otherDescription: string
+      accountNumber: string
+      balance: amount
+      monthlyAmount: amount
+      willBePaid: boolean
+      toBeResubordinated: 
+      reoIdAndMortgage: 
+      subjectProperty: 
+      creditorCity: 
+      creditorState: 
+      creditorZip: 
+      creditorZipFour: 
+      creditorStreetAddress: 
+      creditorAccountNo: 
+      noOfMonthsLeft: 
+      omitted: 
+      rentalProperty: 
+      applicantSsn: 
+      reoAssetId: 
+    recentOwnership: 
+    ongoingPayments: 
+    alimonyAmount: '0.00'
+    childSupportAmount: '0.00'
+    hasDefault: 
+    hasDefaultExp: ''
+    hasJudgements: 
+    hasJudgementsExp: ''
+    hasBankruptcy: 
+    hasBankruptcyExp: ''
+    hasOngoingPayments: 
+    hasOngoingPaymentsExp: 
+    hasPropertyForeclosure: 
+    hasPropertyForeclosureExp: ''
+    hasLawsuit: 
+    hasLawsuitExp: ''
+    hasLoanForeclosure: 
+    hasLoanForeclosureExp: ''
+    downPaymentBorrowed: 
+    downPaymentBorrowedExp: ''
+    noteDebt: 
+    noteDebtExp: ''
+    citizen:
+    - NonPermanentResidentAlien
+    - PermanentResidentAlien
+    - USCitizen
+    alien: 
+    ownedPropertyUse: 
+    ownedPropertyTitle: 
+    wantsMonitoring: 
+    hispanic: 
+    gender: 
+    white: 
+    black: 
+    islander: 
+    nativeAmerican: 
+    asian: 
+    hmdaMale: 
+    hmdaFemale: 
+    hmdaProvidesGender: 
+    hmdaProvidesEthnicity: 
+    hmdaHispanicOrLatino: 
+    hmdaNotHispanicOrLatino: 
+    hmdaMexican: 
+    hmdaPuertoRican: 
+    hmdaCuban: 
+    hmdaOtherHispanicOrLatino: 
+    hmdaProvidesRace: 
+    hmdaAmericanIndianOrAlaskan: 
+    hmdaAsian: 
+    hmdaAsianIndian: 
+    hmdaChinese: 
+    hmdaFilipino: 
+    hmdaJapanese: 
+    hmdaKorean: 
+    hmdaVietnamese: 
+    hmdaOtherAsian: 
+    hmdaBlackOrAfricanAmerican: 
+    hmdaHawaiianOrOtherPacificIslander: 
+    hmdaGuamanianOrChamorro: 
+    hmdaSamoan: 
+    hmdaOtherPacificIslander: 
+    hmdaWhite: 
+    hmdaHispanicOrLatinoDescription: 
+    hmdaAmericanIndianOrAlaskanDescription: 
+    hmdaOtherAsianDescription: 
+    hmdaOtherPacificIslanderDescription: 
+    hmdaNativeHawaiian: 
+    hmdaLenderProvidedGenderVisually: 
+    hmdaLenderProvidedRaceVisually: 
+    hmdaLenderProvidedEthnicityVisually: 
+  subjectProperty:
+    units: amount
+    propertyUse:
+    - Investment
+    - PrimaryResidence
+    - SecondHome
+    mortgages: Liability
+    rentalIncome: amount
+    netRentalIncome: amount
+    secondaryResidence: boolean
+    mixedUse: boolean
+    manufactured: boolean
+    marketValue: amount (estimated)
+    address1: string
+    address2: string
+    city: string
+    state: string state code 2 digits
+    zip: string 5 or 9 digits
+    own: boolean
+    country: string
+    startDate: ULAD date
+    endDate: ULAD date
+    rentAmount: amount
+    borrowerResidencyBasisType:
+    - livingRentFree
+    - own
+    - rent
+    addressType:
+    - current
+    - prior
+    - mailing
+    unitTypeDesignator:
+    - Apartment
+    - Basement
+    - Building
+    - Condo
+    - Department
+    - Floor
+    - Front
+    - Hangar
+    - Key
+    - Lobby
+    - Lot
+    - Lower
+    - Office
+    - Penthouse
+    - Pier
+    - Rear
+    - Room
+    - Side
+    - Space
+    - Stop
+    - Suite
+    - Trailer
+    - Unit
+    - Upper
+  proposedHousingExpenses: {}
+  prepaidItemsTotalAmount: ''
+  closingCostsTotal: ''
+  pmiMipAndFundingFees: ''
+  borrowerPaidDiscountPointsTotalAmount: ''
+  subordinateFinancingAmount: ''
+  earnestMoneyAmount: ''
+  sellerCreditAmount: ''
+  lenderCreditAmount: ''
+  loanType: 
+  armIndex: 
+  armMargin: 
+  reference: 
+advancedMode: 
+enable2018Hmda: true
+enableHmda: 

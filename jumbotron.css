@@ -104,3 +104,16 @@ width: 100%;
     margin-left: 38%;
 }
 
+#downloadJson {
+    font-size: 14px;
+    position: relative;
+    left: 18em;
+    top: -32px;
+}
+#downloadYaml {
+    font-size: 14px;
+    position: relative;
+    left: 21em;
+    top: -32px;
+}
+
