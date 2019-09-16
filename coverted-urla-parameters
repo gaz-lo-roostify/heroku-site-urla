@@ -1,0 +1,2273 @@
+
+      - name: fnmCaseNumber
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name:  loanAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: loanTerm
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "Amount",
+      - name: loanUse
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["Other", "Purchase", "Refinance"],
+      - name: loanUseOther
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: totalInterestRate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "percent",
+      - name: amortizationTerm
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "numeric",
+      - name: amortizationType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+        
+      - name: applicationType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "necessary?",
+      - name: propertyUse
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "necessary?",
+      - name: propertySaleStage
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: payOffAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: vaIrrrl
+        in: query
+        description:
+        required: true
+        schema:
+          type:: false,
+      - name: downPayment
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: downPaymentMethods
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: applicants
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+           {
+      - name: firstName
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: lastName
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: middleName
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: suffix
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: email
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: alternateFirstName
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: alternateLastName
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: alternateMiddleName
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: alternateSuffix
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: primaryBorrower
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+      - name: partyRoleType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["Borrower"],
+      - name: taxPayerIdentifierType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+      - name: IndividualTaxPayerIdentificationNumber
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: SocialSecurityNumber
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+               ],
+      - name: ssn
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+       - name: phoneNumber
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string (home phone)",
+       - name: mobilePhoneNumber
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+       - name: workPhoneNumber
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+       - name: dob
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+       - name: maritalStatus
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+          - name: Married
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+          - name: Separated
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+          - name: Unmarried
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+               ],
+       - name: dependents
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "[1,3,4] (enumeration of ages)",
+       - name: jointApplicantSSN
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: addresses
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+                  {
+      - name: address1
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: address2
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: city
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: state
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string state code 2 digits",
+      - name: zip
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string 5 or 9 digits",
+      - name: own
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+      - name: country
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: startDate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+      - name: endDate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+      - name: rentAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: borrowerResidencyBasisType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["livingRentFree", "own", "rent"],
+      - name: addressType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["current", "prior", "mailing"],
+      - name: unitTypeDesignator
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+      - name: Apartment
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Basement
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Building
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Condo
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Department
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Floor
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Front
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Hangar
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Key
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Lobby
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Lot
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Lower
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Office
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Penthouse
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Pier
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Rear
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Room
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Side
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Space
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Stop
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Suite
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Trailer
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Unit
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Upper
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+                      ]
+                  }
+               ],
+       - name: militaryService
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+       - name: militaryServiceType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+          - name: ActiveDuty
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+          - name: ReserverNationalGuardNeverActivated
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+          - name: Veteran
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+               ],
+       - name: expectedMilitaryCompletionDate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+       - name: monthlyRetirementAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+       - name: totalOtherIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+       - name: employments
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+                  {
+      - name: employmentStatus
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["current", "previous"],
+      - name: name
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: timeInLineOfWork
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "numeric (months)",
+      - name: specialBorrowerEmployerRelationship
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+      - name: selfEmployed
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+      - name: ownershipInterestType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["GreaterThanOrEqualTo25Percent", "LessThan25Percent"],
+      - name: monthlyIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: startDate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+      - name: endDate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+      - name: position
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: phone
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: address1
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: address2
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: city
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: state
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string state code 2 digits",
+      - name: zip
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string 5 or 9 digits",
+      - name: own
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+      - name: country
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: totalAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: income
+        in: query
+        description:
+        required: true
+        schema:
+          type::
+                      {
+      - name: incomeType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["base", "bonus", "commissions", "other", "overtime"],
+      - name: monthlyTotal
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: monthlyMilitaryEntitlement
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: employmentIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: true
+                      },
+      - name: unitTypeDesignator
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+      - name: Apartment
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Basement
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Building
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Condo
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Department
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Floor
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Front
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Hangar
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Key
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Lobby
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Lot
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Lower
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Office
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Penthouse
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Pier
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Rear
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Room
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Side
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Space
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Stop
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Suite
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Trailer
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Unit
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Upper
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+                      ]  
+                  }
+               ],
+       - name: incomes
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+                  {
+      - name: incomeSource
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+      - name: Alimony
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: AutomobileAllowance
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: BoarderIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: CapitalGains
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: ChildSupport
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: DefinedContributionPlan
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Disability
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: DividendsInterest
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: FosterCare
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: HousingAllowance
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: MortgageCreditCertificate
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: MortgageDifferential
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: NotesReceivableInstallment
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Other
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Pension
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: PublicAssistance
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Royalties
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: SeparateMaintenance
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: SocialSecurity
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Trust
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: Unemployment
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: VABenefitsNonEducational
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+                      ],
+      - name: monthlyTotal
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: employmentIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: false
+                  }
+               ],
+       - name: assets
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+                  {
+      - name: assetType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["accounts", "other", "purchase_credit", "gift"],
+      - name: giftType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["GiftOfCash", "GiftOfPropertyEquity", "Grant"],
+      - name: giftSourceType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+      - name: CommunityNonProfit
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+                      ],
+      - name: accountSourceType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+      - name: Bond
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: BridgeLoanNotDeposited
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: CertificateOfDepositTimeDeposit
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: CheckingAccount
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: IndividualDevelopmentAccount
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: LifeInsurance
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: MoneyMarketFund
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: MutualFund
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: RetirementFund
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: SavingsAccount
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: Stock
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: StockOptions
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: TrustAccount
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+                      ],
+      - name: otherSourceType
+        in: query
+        description:
+        required: true
+        schema:
+          type::[
+      - name: Other
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: PendingNetSaleProceedsFromRealEstateAssets
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+      - name: ProceedsFromSaleOfNonRealEstateAsset
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: ProceedsFromSecuredLoan
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: ProceedsFromUnsecuredLoan
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+                      ],
+      - name: purchaseCreditType
+        in: query
+        description:
+        required: true
+        schema:
+          type::[
+      - name: EarnestMoney
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: EmployerAssistedHousing
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: LeasePurchaseFund
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: SweatEquity
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+      - name: TradeEquityFromPropertySwap
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+                      ],
+      - name: otherDescription
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: accountIdentifier
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: deposited
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+      - name: source
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: amount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount"
+                  }
+               ],
+       - name: currentHousingExpenses
+        in: query
+        description:
+        required: true
+        schema:
+          type:: {},
+       - name: properties
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+                  {
+      - name: propertyUse
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: propertyType
+        in: query
+        description:
+        required: true
+        schema:
+          type::"string",
+      - name: propertyState
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: titleStatus
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: address1
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: address2
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: city
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: state
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string state code 2 digits",
+      - name: zip
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string 5 or 9 digits",
+      - name: marketValue
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount (estimated)",
+      - name: subjectProperty
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+      - name: mortgages
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "Liability",
+      - name: rentalGrossIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "Amount",
+      - name: rentalNetIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "Amount",
+      - name: annualTax
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: monthlyHoa
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: monthlyMortgageInsurance
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: monthlyHomeownersInsurance
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ""
+                  }
+               ],
+       - name: liabilities
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+                  {
+      - name: liabiltyType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["debt", "other", "mortgage"],
+      - name: mortgageType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["HELOC", "MortgageLoan"] , 
+      - name: debtType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["Installment", "LeasePayment", "Open30DayChargeAccount", "Other", "Revolving"],
+      - name: otherType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["Alimony", "ChildSupport", "JobRelatedExpenses", "Other", "SeperateMaintenanceExpense"],
+      - name: typeOfMortgage
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["Convential", "FHA", "Other", "USDA", "VA"],
+      - name: creditLimit
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: creditorName
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: otherDescription
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: accountNumber
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+      - name: balance
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: monthlyAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+      - name: willBePaid
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+
+
+
+      - name: toBeResubordinated
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: reoIdAndMortgage
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: subjectProperty
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: creditorCity
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: creditorState
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: creditorZip
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: creditorZipFour
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: creditorStreetAddress
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: creditorAccountNo
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: noOfMonthsLeft
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: omitted
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: rentalProperty
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: applicantSsn
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+      - name: reoAssetId
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null
+                  }
+               ],
+       - name: recentOwnership
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: ongoingPayments
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: alimonyAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "0.00",
+       - name: childSupportAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "0.00",
+       - name: hasDefault
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasDefaultExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: hasJudgements
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasJudgementsExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: hasBankruptcy
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasBankruptcyExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: hasOngoingPayments
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasOngoingPaymentsExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasPropertyForeclosure
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasPropertyForeclosureExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: hasLawsuit
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasLawsuitExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: hasLoanForeclosure
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hasLoanForeclosureExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: downPaymentBorrowed
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: downPaymentBorrowedExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: noteDebt
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: noteDebtExp
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+       - name: citizen
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+          - name: NonPermanentResidentAlien
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+          - name: PermanentResidentAlien
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+          - name: USCitizen
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+               ],
+       - name: alien
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: ownedPropertyUse
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: ownedPropertyTitle
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: wantsMonitoring
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hispanic
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: gender
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: white
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: black
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: islander
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: nativeAmerican
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: asian
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaMale
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaFemale
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaProvidesGender
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaProvidesEthnicity
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaHispanicOrLatino
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaNotHispanicOrLatino
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaMexican
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaPuertoRican
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaCuban
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaOtherHispanicOrLatino
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaProvidesRace
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaAmericanIndianOrAlaskan
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaAsian
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaAsianIndian
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaChinese
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaFilipino
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaJapanese
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaKorean
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaVietnamese
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaOtherAsian
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaBlackOrAfricanAmerican
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaHawaiianOrOtherPacificIslander
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaGuamanianOrChamorro
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaSamoan
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaOtherPacificIslander
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaWhite
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaHispanicOrLatinoDescription
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaAmericanIndianOrAlaskanDescription
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaOtherAsianDescription
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaOtherPacificIslanderDescription
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaNativeHawaiian
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaLenderProvidedGenderVisually
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaLenderProvidedRaceVisually
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null,
+       - name: hmdaLenderProvidedEthnicityVisually
+        in: query
+        description:
+        required: true
+        schema:
+          type:: null
+           }
+        ],
+      - name: subjectProperty
+        in: query
+        description:
+        required: true
+        schema:
+          type:: {
+         - name: units
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+         - name: propertyUse
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["Investment", "PrimaryResidence", "SecondHome"],
+         - name: mortgages
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "Liability",
+         - name: rentalIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+         - name: netRentalIncome
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+         - name: secondaryResidence
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+         - name: mixedUse
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+         - name: manufactured
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+         - name: marketValue
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount (estimated)",
+         - name: address1
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+         - name: address2
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+         - name: city
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+         - name: state
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string state code 2 digits",
+         - name: zip
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string 5 or 9 digits",
+         - name: own
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "boolean",
+         - name: country
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "string",
+         - name: startDate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+         - name: endDate
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "ULAD date",
+         - name: rentAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "amount",
+         - name: borrowerResidencyBasisType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["livingRentFree", "own", "rent"],
+         - name: addressType
+        in: query
+        description:
+        required: true
+        schema:
+          type:: ["current", "prior", "mailing"],
+         - name: unitTypeDesignator
+        in: query
+        description:
+        required: true
+        schema:
+          type:: [
+       - name: Apartment
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+       - name: Basement
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+       - name: Building
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Condo
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+       - name: Department
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Floor
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Front
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Hangar
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Key
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Lobby
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Lot
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Lower
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Office
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Penthouse
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Pier
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Rear
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+       - name: Room
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+       - name: Side
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+       - name: Space
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Stop
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Suite
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Trailer
+        in: query
+        description:
+        required: true
+        schema:
+          type:, 
+       - name: Unit
+        in: query
+        description:
+        required: true
+        schema:
+          type:,
+       - name: Upper
+        in: query
+        description:
+        required: true
+        schema:
+          type:
+           ]
+        },
+      - name: proposedHousingExpenses
+        in: query
+        description:
+        required: true
+        schema:
+          type:: {},
+      - name: prepaidItemsTotalAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: closingCostsTotal
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: pmiMipAndFundingFees
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: borrowerPaidDiscountPointsTotalAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: subordinateFinancingAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: earnestMoneyAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",
+      - name: sellerCreditAmount
+        in: query
+        description:
+        required: true
+        schema:
+          type:: "",

@@ -2,11 +2,7 @@
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<<<<<<< HEAD
   <title>URLA API</title>
-=======
-  <title>Roostify URLA API</title>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8" />
@@ -693,69 +689,10 @@
   <script>
     // Script section to load models into a JS Var
     var defs = {}
-<<<<<<< HEAD
-=======
-            defs.Loan Application = {
-  "required" : [ "name" ],
+            defs.Applicant = {
+  "required" : [ "id", "name" ],
   "type" : "object",
   "properties" : {
-    "token" : {
-      "type" : "string"
-    },
-    "publishDate" : {
-      "type" : "string"
-    },
-    "duCaseFileId" : {
-      "type" : "string"
-    },
-    "mortgageType" : {
-      "type" : "string"
-    },
-    "fnmCaseNumber" : {
-      "type" : "string"
-    },
-    "loanAmount" : {
-      "type" : "string"
-    },
-    "loanTerm" : {
-      "type" : "string"
-    },
-    "loanUse" : {
-      "type" : "string"
-    },
-    "loanUseOther" : {
-      "type" : "string"
-    },
-    "totalInterestRate" : {
-      "type" : "string"
-    },
-    "amortizationTerm" : {
-      "type" : "string"
-    },
-    "amortizationType" : {
-      "type" : "string"
-    },
-    "applicationType" : {
-      "type" : "string"
-    },
-    "propertyUse" : {
-      "type" : "string"
-    },
-    "propertySaleStage" : {
-      "type" : "string"
-    },
-    "payOffAmount" : {
-      "type" : "string"
-    },
-    "vaIrrrl" : {
-      "type" : "string"
-    },
-    "downPayment" : {
-      "type" : "string"
-    },
-    "downPaymentMethods" : {
-      "type" : "string"
-    },
     "id" : {
       "type" : "integer",
       "format" : "int64"
@@ -768,11 +705,25 @@
     }
   }
 };
-            defs.MortgageTypes = {
+            defs.Applicants = {
   "type" : "array",
-  "example" : "Conventional"
+  "items" : {
+    "$ref" : "#/components/schemas/Applicant"
+  }
 };
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+            defs.Error = {
+  "required" : [ "code", "message" ],
+  "type" : "object",
+  "properties" : {
+    "code" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "message" : {
+      "type" : "string"
+    }
+  }
+};
   </script>
 
   <div class="container-fluid">
@@ -790,16 +741,8 @@
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
                   <li class="nav-header" data-group="LoanApplicationsV2"><a href="#api-LoanApplicationsV2">API Methods - LoanApplicationsV2</a></li>
-<<<<<<< HEAD
-                    <li data-group="LoanApplicationsV2" data-name="applicantsGet" class="">
-                      <a href="#api-LoanApplicationsV2-applicantsGet">applicantsGet</a>
-=======
-                    <li data-group="LoanApplicationsV2" data-name="listingYourLoanApplications" class="">
-                      <a href="#api-LoanApplicationsV2-listingYourLoanApplications">listingYourLoanApplications</a>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                    </li>
-                    <li data-group="LoanApplicationsV2" data-name="readLoanApp" class="">
-                      <a href="#api-LoanApplicationsV2-readLoanApp">readLoanApp</a>
+                    <li data-group="LoanApplicationsV2" data-name="petsPost" class="">
+                      <a href="#api-LoanApplicationsV2-petsPost">petsPost</a>
                     </li>
           </ul>
         </nav>
@@ -813,12 +756,8 @@
         </div>
         <div id="header">
           <div id="api-_">
-<<<<<<< HEAD
-            <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
-=======
             <h2 id="welcome-to-apidoc">URLA API and SDK Documentation</h2>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-              <div class="app-desc">Version: 4.0.0</div>
+              <div class="app-desc">Version: 5.0.0</div>
             <hr>
             <div><p>Fannie Mae's Form 1003 Uniform Residential Loan Application (URLA) has been in use for more than twenty years. It is the standard form used to apply for a residential loan application, also known as a mortgage. Fannie Mae is coming out with a revised URLA in 2020, with many enhancements to the borrower experience.</p>
 <p>Revised URLA is a completely reimagined loan application form that move the audience focus away from the lender on to the borrower. Because more information must be collected, Roostify has completely refreshed its digital loan application UX to meet the new mandated data requirements.</p>
@@ -829,74 +768,44 @@
         <div id="sections">
                 <section id="api-LoanApplicationsV2">
                   <h1>LoanApplicationsV2</h1>
-<<<<<<< HEAD
-                    <div id="api-LoanApplicationsV2-applicantsGet">
-                      <article id="api-LoanApplicationsV2-applicantsGet-0" data-group="User" data-name="applicantsGet" data-version="0">
+                    <div id="api-LoanApplicationsV2-petsPost">
+                      <article id="api-LoanApplicationsV2-petsPost-0" data-group="User" data-name="petsPost" data-version="0">
                         <div class="pull-left">
-                          <h1>applicantsGet</h1>
-                          <p>Applicants</p>
-=======
-                    <div id="api-LoanApplicationsV2-listingYourLoanApplications">
-                      <article id="api-LoanApplicationsV2-listingYourLoanApplications-0" data-group="User" data-name="listingYourLoanApplications" data-version="0">
-                        <div class="pull-left">
-                          <h1>listingYourLoanApplications</h1>
-                          <p>Listing your Loan Applications</p>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                          <h1>petsPost</h1>
+                          <p>Add a new loan application</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked"></p>
+                        <p class="marked">
+**Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+</p>
                         <p></p>
                         <br />
-<<<<<<< HEAD
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/applicants</span></code></pre>
-=======
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/loan_applications/{loan_application_id}</span></code></pre>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/pets</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-<<<<<<< HEAD
-                          <li class="active"><a href="#examples-LoanApplicationsV2-applicantsGet-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-java">Java</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-applicantsGet-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-LoanApplicationsV2-petsPost-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-java">Java</a></li>
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-LoanApplicationsV2-petsPost-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-LoanApplicationsV2-applicantsGet-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://api.roostify.com/api/v1/applicants?email=&alternateFirstName=&alternateLastName=&alternateMiddleName=&alternateSuffix=&primaryBorrower=&partyRoleType=&taxPayerIdentifierType="</code></pre>
+                          <div class="tab-pane active" id="examples-LoanApplicationsV2-petsPost-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://api.roostify.com/api/v1/pets"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-java">
-=======
-                          <li class="active"><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-java">Java</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-listingYourLoanApplications-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://api.roostify.com/api/v1/loan_applications/{loan_application_id}"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-java">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                          <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -910,113 +819,57 @@ public class LoanApplicationsV2ApiExample {
     public static void main(String[] args) {
         
         LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
-<<<<<<< HEAD
-        String email = email_example; // String | email address
-        String alternateFirstName = alternateFirstName_example; // String | Alternate first name
-        String alternateLastName = alternateLastName_example; // String | Alternate last name
-        String alternateMiddleName = alternateMiddleName_example; // String | 
-        String alternateSuffix = alternateSuffix_example; // String | 
-        Boolean primaryBorrower = true; // Boolean | 
-        String partyRoleType = partyRoleType_example; // String | 
-        String taxPayerIdentifierType = taxPayerIdentifierType_example; // String | 
+        Applicant body = ; // Applicant | **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+
         try {
-            array['String'] result = apiInstance.applicantsGet(email, alternateFirstName, alternateLastName, alternateMiddleName, alternateSuffix, primaryBorrower, partyRoleType, taxPayerIdentifierType);
+            array['String'] result = apiInstance.petsPost(body);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#applicantsGet");
-=======
-        String loanApplicationId = loanApplicationId_example; // String | Listing your loan applications
-        try {
-            apiInstance.listingYourLoanApplications(loanApplicationId);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#listingYourLoanApplications");
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+            System.err.println("Exception when calling LoanApplicationsV2Api#petsPost");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-<<<<<<< HEAD
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-android">
-=======
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-android">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                          <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.LoanApplicationsV2Api;
 
 public class LoanApplicationsV2ApiExample {
 
     public static void main(String[] args) {
         LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
-<<<<<<< HEAD
-        String email = email_example; // String | email address
-        String alternateFirstName = alternateFirstName_example; // String | Alternate first name
-        String alternateLastName = alternateLastName_example; // String | Alternate last name
-        String alternateMiddleName = alternateMiddleName_example; // String | 
-        String alternateSuffix = alternateSuffix_example; // String | 
-        Boolean primaryBorrower = true; // Boolean | 
-        String partyRoleType = partyRoleType_example; // String | 
-        String taxPayerIdentifierType = taxPayerIdentifierType_example; // String | 
+        Applicant body = ; // Applicant | **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+
         try {
-            array['String'] result = apiInstance.applicantsGet(email, alternateFirstName, alternateLastName, alternateMiddleName, alternateSuffix, primaryBorrower, partyRoleType, taxPayerIdentifierType);
+            array['String'] result = apiInstance.petsPost(body);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#applicantsGet");
-=======
-        String loanApplicationId = loanApplicationId_example; // String | Listing your loan applications
-        try {
-            apiInstance.listingYourLoanApplications(loanApplicationId);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#listingYourLoanApplications");
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+            System.err.println("Exception when calling LoanApplicationsV2Api#petsPost");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-<<<<<<< HEAD
-  <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-groovy">
+  <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *email = email_example; // email address
-String *alternateFirstName = alternateFirstName_example; // Alternate first name
-String *alternateLastName = alternateLastName_example; // Alternate last name
-String *alternateMiddleName = alternateMiddleName_example; // 
-String *alternateSuffix = alternateSuffix_example; // 
-Boolean *primaryBorrower = true; // 
-String *partyRoleType = partyRoleType_example; // 
-String *taxPayerIdentifierType = taxPayerIdentifierType_example; // 
+                            <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Applicant *body = ; // **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+
 
 LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
 
-// Applicants
-[apiInstance applicantsGetWith:email
-    alternateFirstName:alternateFirstName
-    alternateLastName:alternateLastName
-    alternateMiddleName:alternateMiddleName
-    alternateSuffix:alternateSuffix
-    primaryBorrower:primaryBorrower
-    partyRoleType:partyRoleType
-    taxPayerIdentifierType:taxPayerIdentifierType
+// Add a new loan application
+[apiInstance petsPostWith:body
               completionHandler: ^(array['String'] output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
-=======
-  <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *loanApplicationId = loanApplicationId_example; // Listing your loan applications
-
-LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
-
-// Listing your Loan Applications
-[apiInstance listingYourLoanApplicationsWith:loanApplicationId
-              completionHandler: ^(NSError* error) {
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
                             if (error) {
                                 NSLog(@"Error: %@", error);
                             }
@@ -1024,56 +877,29 @@ LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
 </code></pre>
                             </div>
 
-<<<<<<< HEAD
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-javascript">
+                            <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var Api = require('api');
 
 var api = new Api.LoanApplicationsV2Api()
-var email = email_example; // {{String}} email address
-var alternateFirstName = alternateFirstName_example; // {{String}} Alternate first name
-var alternateLastName = alternateLastName_example; // {{String}} Alternate last name
-var alternateMiddleName = alternateMiddleName_example; // {{String}} 
-var alternateSuffix = alternateSuffix_example; // {{String}} 
-var primaryBorrower = true; // {{Boolean}} 
-var partyRoleType = partyRoleType_example; // {{String}} 
-var taxPayerIdentifierType = taxPayerIdentifierType_example; // {{String}} 
-=======
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var Api = require('api');
+var body = ; // {{Applicant}} **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
 
-var api = new Api.LoanApplicationsV2Api()
-var loanApplicationId = loanApplicationId_example; // {{String}} Listing your loan applications
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-<<<<<<< HEAD
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.applicantsGet(email, alternateFirstName, alternateLastName, alternateMiddleName, alternateSuffix, primaryBorrower, partyRoleType, taxPayerIdentifierType, callback);
+api.petsPost(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-angular">
+                            <!--<div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-csharp">
-=======
-    console.log('API called successfully.');
-  }
-};
-api.listingYourLoanApplications(loanApplicationId, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-csharp">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                            <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -1082,47 +908,25 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-<<<<<<< HEAD
-    public class applicantsGetExample
-=======
-    public class listingYourLoanApplicationsExample
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+    public class petsPostExample
     {
         public void main()
         {
 
             var apiInstance = new LoanApplicationsV2Api();
-<<<<<<< HEAD
-            var email = email_example;  // String | email address
-            var alternateFirstName = alternateFirstName_example;  // String | Alternate first name
-            var alternateLastName = alternateLastName_example;  // String | Alternate last name
-            var alternateMiddleName = alternateMiddleName_example;  // String | 
-            var alternateSuffix = alternateSuffix_example;  // String | 
-            var primaryBorrower = true;  // Boolean | 
-            var partyRoleType = partyRoleType_example;  // String | 
-            var taxPayerIdentifierType = taxPayerIdentifierType_example;  // String | 
+            var body = new Applicant(); // Applicant | **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+
 
             try
             {
-                // Applicants
-                array['String'] result = apiInstance.applicantsGet(email, alternateFirstName, alternateLastName, alternateMiddleName, alternateSuffix, primaryBorrower, partyRoleType, taxPayerIdentifierType);
+                // Add a new loan application
+                array['String'] result = apiInstance.petsPost(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LoanApplicationsV2Api.applicantsGet: " + e.Message );
-=======
-            var loanApplicationId = loanApplicationId_example;  // String | Listing your loan applications
-
-            try
-            {
-                // Listing your Loan Applications
-                apiInstance.listingYourLoanApplications(loanApplicationId);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling LoanApplicationsV2Api.listingYourLoanApplications: " + e.Message );
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                Debug.Print("Exception when calling LoanApplicationsV2Api.petsPost: " + e.Message );
             }
         }
     }
@@ -1130,85 +934,44 @@ namespace Example
 </code></pre>
                             </div>
 
-<<<<<<< HEAD
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-php">
-=======
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-php">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                            <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiLoanApplicationsV2Api();
-<<<<<<< HEAD
-$email = email_example; // String | email address
-$alternateFirstName = alternateFirstName_example; // String | Alternate first name
-$alternateLastName = alternateLastName_example; // String | Alternate last name
-$alternateMiddleName = alternateMiddleName_example; // String | 
-$alternateSuffix = alternateSuffix_example; // String | 
-$primaryBorrower = true; // Boolean | 
-$partyRoleType = partyRoleType_example; // String | 
-$taxPayerIdentifierType = taxPayerIdentifierType_example; // String | 
+$body = ; // Applicant | **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+
 
 try {
-    $result = $api_instance->applicantsGet($email, $alternateFirstName, $alternateLastName, $alternateMiddleName, $alternateSuffix, $primaryBorrower, $partyRoleType, $taxPayerIdentifierType);
+    $result = $api_instance->petsPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LoanApplicationsV2Api->applicantsGet: ', $e->getMessage(), PHP_EOL;
-=======
-$loanApplicationId = loanApplicationId_example; // String | Listing your loan applications
-
-try {
-    $api_instance->listingYourLoanApplications($loanApplicationId);
-} catch (Exception $e) {
-    echo 'Exception when calling LoanApplicationsV2Api->listingYourLoanApplications: ', $e->getMessage(), PHP_EOL;
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+    echo 'Exception when calling LoanApplicationsV2Api->petsPost: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-<<<<<<< HEAD
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-perl">
-=======
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-perl">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                            <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::LoanApplicationsV2Api;
 
 my $api_instance = WWW::SwaggerClient::LoanApplicationsV2Api->new();
-<<<<<<< HEAD
-my $email = email_example; # String | email address
-my $alternateFirstName = alternateFirstName_example; # String | Alternate first name
-my $alternateLastName = alternateLastName_example; # String | Alternate last name
-my $alternateMiddleName = alternateMiddleName_example; # String | 
-my $alternateSuffix = alternateSuffix_example; # String | 
-my $primaryBorrower = true; # Boolean | 
-my $partyRoleType = partyRoleType_example; # String | 
-my $taxPayerIdentifierType = taxPayerIdentifierType_example; # String | 
+my $body = WWW::SwaggerClient::Object::Applicant->new(); # Applicant | **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+
 
 eval { 
-    my $result = $api_instance->applicantsGet(email => $email, alternateFirstName => $alternateFirstName, alternateLastName => $alternateLastName, alternateMiddleName => $alternateMiddleName, alternateSuffix => $alternateSuffix, primaryBorrower => $primaryBorrower, partyRoleType => $partyRoleType, taxPayerIdentifierType => $taxPayerIdentifierType);
+    my $result = $api_instance->petsPost(body => $body);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling LoanApplicationsV2Api->applicantsGet: $@\n";
+    warn "Exception when calling LoanApplicationsV2Api->petsPost: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-applicantsGet-0-python">
-=======
-my $loanApplicationId = loanApplicationId_example; # String | Listing your loan applications
-
-eval { 
-    $api_instance->listingYourLoanApplications(loanApplicationId => $loanApplicationId);
-};
-if ($@) {
-    warn "Exception when calling LoanApplicationsV2Api->listingYourLoanApplications: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-listingYourLoanApplications-0-python">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+                            <div class="tab-pane" id="examples-LoanApplicationsV2-petsPost-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -1217,259 +980,87 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.LoanApplicationsV2Api()
-<<<<<<< HEAD
-email = email_example # String | email address
-alternateFirstName = alternateFirstName_example # String | Alternate first name
-alternateLastName = alternateLastName_example # String | Alternate last name
-alternateMiddleName = alternateMiddleName_example # String | 
-alternateSuffix = alternateSuffix_example # String | 
-primaryBorrower = true # Boolean | 
-partyRoleType = partyRoleType_example # String | 
-taxPayerIdentifierType = taxPayerIdentifierType_example # String | 
+body =  # Applicant | **Overview**  
+Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+
 
 try: 
-    # Applicants
-    api_response = api_instance.applicants_get(email, alternateFirstName, alternateLastName, alternateMiddleName, alternateSuffix, primaryBorrower, partyRoleType, taxPayerIdentifierType)
+    # Add a new loan application
+    api_response = api_instance.pets_post(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LoanApplicationsV2Api->applicantsGet: %s\n" % e)</code></pre>
-=======
-loanApplicationId = loanApplicationId_example # String | Listing your loan applications
-
-try: 
-    # Listing your Loan Applications
-    api_instance.listing_your_loan_applications(loanApplicationId)
-except ApiException as e:
-    print("Exception when calling LoanApplicationsV2Api->listingYourLoanApplications: %s\n" % e)</code></pre>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
+    print("Exception when calling LoanApplicationsV2Api->petsPost: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
                           <h2>Parameters</h2>
 
-<<<<<<< HEAD
-=======
-                            <div class="methodsubtabletitle">Path parameters</div>
-                            <table id="methodsubtable">
-                                <tr>
-                                  <th width="150px">Name</th>
-                                  <th>Description</th>
-                                </tr>
-                                  <tr><td style="width:150px;">loan_application_id*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_listingYourLoanApplications_loanApplicationId">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          Listing your loan applications
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                            </table>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
 
 
-
-
-<<<<<<< HEAD
-                            <div class="methodsubtabletitle">Query parameters</div>
+                            <div class="methodsubtabletitle">Body parameters</div>
                             <table id="methodsubtable">
                               <tr>
                                 <th width="150px">Name</th>
                                 <th>Description</th>
                               </tr>
-                                <tr><td style="width:150px;">email*</td>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
                                 <td>
                                 
                                 
-                                    <div id="d2e199_applicantsGet_email">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "**Overview**  \nUse the applicants array to provide details about the borrowers. You can specify up to four borrowers.\n",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Applicant"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
                                 
-                                                    <div class="inner description">
-                                                        email address
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">alternateFirstName*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_applicantsGet_alternateFirstName">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Alternate first name
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">alternateLastName*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_applicantsGet_alternateLastName">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Alternate last name
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">alternateMiddleName*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_applicantsGet_alternateMiddleName">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">alternateSuffix*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_applicantsGet_alternateSuffix">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">primaryBorrower*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_applicantsGet_primaryBorrower">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    Boolean
-                                                </span>
-                                
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">partyRoleType*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_applicantsGet_partyRoleType">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">taxPayerIdentifierType*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_applicantsGet_taxPayerIdentifierType">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_petsPost_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_petsPost_body"></div>
                                 </td>
                                 </tr>
                             </table>
 
+
+
                           <h2>Responses</h2>
-                            <h3> Status: 200 - List loan applications </h3>
+                            <h3> Status: 200 - successful </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-applicantsGet-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-petsPost-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-applicantsGet-200-schema">
-                                  <div id='responses-applicantsGet-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-petsPost-200-schema">
+                                  <div id='responses-petsPost-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
-  "description" : "List loan applications",
+  "description" : "successful",
   "content" : {
     "application/json" : {
       "schema" : {
@@ -1495,1071 +1086,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-applicantsGet-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-applicantsGet-200-schema-200');
+                                        $('#responses-petsPost-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-petsPost-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-applicantsGet-200-schema-data' type='hidden' value=''></input>
-                                </div>
-=======
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - A JSON array of user names </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-LoanApplicationsV2-readLoanApp">
-                      <article id="api-LoanApplicationsV2-readLoanApp-0" data-group="User" data-name="readLoanApp" data-version="0">
-                        <div class="pull-left">
-                          <h1>readLoanApp</h1>
-                          <p>Listing your Loan Applications</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked">This will retrieve all loan applications belonging to your account or its descendants. For clients with many loan applications, this may time out if you do not use pagination. By default, we do not paginate results. 
-
- **Overview**  
- Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
- 
-<<<<<<< HEAD
-</p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/loan</span></code></pre>
-=======
- &#x60;&#x60;&#x60;
- {
-      ...
-      &quot;applicants&quot;: [
-        {
-          &quot;id&quot;: &quot;356249128&quot;
-          &quot;user_id&quot;: &quot;265489137&quot;
-          &quot;personal&quot;: {&quot;...&quot;},
-          &quot;residence&quot;: {&quot;...&quot;},
-          &quot;properties&quot;: [&quot;...&quot;],
-          &quot;asset_details&quot;: {&quot;...&quot;},
-          &quot;employment_details&quot;: {&quot;...&quot;},
-          &quot;veteran_details&quot;: {&quot;...&quot;},
-          &quot;liability_details&quot;: {&quot;...&quot;},
-          &quot;credit&quot;: {&quot;...&quot;},
-          &quot;downpayment_additional_source&quot;: {&quot;...&quot;},
-          &quot;hmda&quot;: {&quot;...&quot;},
-          &quot;primary_borrower&quot;: true,
-          &quot;econsent&quot;: {&quot;...&quot;},
-          &quot;consent&quot;: {&quot;...&quot;}
-        }
-        ...
-      ]
-    }
-&#x60;&#x60;&#x60;
-</p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/loan_applications</span></code></pre>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-LoanApplicationsV2-readLoanApp-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-java">Java</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-readLoanApp-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-LoanApplicationsV2-readLoanApp-0-curl">
-<<<<<<< HEAD
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://api.roostify.com/api/v1/loan?publishDate=&duCaseFileID=&mortgageType=&LoanTerm=&LoanUse=&LoanUseOther=&totalInterestRate=&amortizationTerm=&amortizationType=&applicationType=&propertyUse=&payoffAmount=&fnmCaseNumber=&loanAmount=&loanTerm=&loanUse=&loanUseOther="</code></pre>
-=======
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://api.roostify.com/api/v1/loan_applications?publishDate=&duCaseFileID=&mortgageType=&fnmCaseNumber=&LoanAmount=&LoanTerm=&LoanUse=&LoanUseOther=&totalInterestRate=&amortizationTerm=&amortizationType="</code></pre>
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                          </div>
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.LoanApplicationsV2Api;
-
-import java.io.File;
-import java.util.*;
-
-public class LoanApplicationsV2ApiExample {
-
-    public static void main(String[] args) {
-        
-        LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
-        String publishDate = publishDate_example; // String | Date of publication of the loan application.
-        Integer duCaseFileID = 56; // Integer | CaseFile Identifier
-<<<<<<< HEAD
-        String mortgageType = mortgageType_example; // String | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-        array[MortgageTypes] mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-        String fnmCaseNumber = fnmCaseNumber_example; // String | Fannie Mae case number.
-        Integer loanAmount = 56; // Integer | Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-        Integer loanTerm = 56; // Integer | Term in months for loan
-        String loanUse = loanUse_example; // String | Purpose of the loan
-        String loanUseOther = loanUseOther_example; // String | Purpose of the loan
-        Integer totalInterestRate = 56; // Integer | combined interest rate total
-        Integer amortizationTerm = 56; // Integer | term of amortization
-        String amortizationType = amortizationType_example; // String | Type of amortization
-<<<<<<< HEAD
-        BigDecimal fnmCaseNumber = 1.2; // BigDecimal | Fannie Mae Case Number
-        Integer loanAmount = 56; // Integer | Amount of loan
-        Integer loanTerm2 = 56; // Integer | Term of loan
-        String loanUse2 = loanUse_example; // String | Purpose of loan
-        String loanUseOther2 = loanUseOther_example; // String | Other purpose of loan
-        String applicationType = applicationType_example; // String | Type of application
-        String propertyUse = propertyUse_example; // String | Enter what the property will be used for
-        String payoffAmount = payoffAmount_example; // String | Payoff amount
-        try {
-            array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType, fnmCaseNumber, loanAmount, loanTerm2, loanUse2, loanUseOther2, applicationType, propertyUse, payoffAmount);
-=======
-        try {
-            array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType);
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#readLoanApp");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.LoanApplicationsV2Api;
-
-public class LoanApplicationsV2ApiExample {
-
-    public static void main(String[] args) {
-        LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
-        String publishDate = publishDate_example; // String | Date of publication of the loan application.
-        Integer duCaseFileID = 56; // Integer | CaseFile Identifier
-<<<<<<< HEAD
-        String mortgageType = mortgageType_example; // String | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-        array[MortgageTypes] mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-        String fnmCaseNumber = fnmCaseNumber_example; // String | Fannie Mae case number.
-        Integer loanAmount = 56; // Integer | Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-        Integer loanTerm = 56; // Integer | Term in months for loan
-        String loanUse = loanUse_example; // String | Purpose of the loan
-        String loanUseOther = loanUseOther_example; // String | Purpose of the loan
-        Integer totalInterestRate = 56; // Integer | combined interest rate total
-        Integer amortizationTerm = 56; // Integer | term of amortization
-        String amortizationType = amortizationType_example; // String | Type of amortization
-<<<<<<< HEAD
-        BigDecimal fnmCaseNumber = 1.2; // BigDecimal | Fannie Mae Case Number
-        Integer loanAmount = 56; // Integer | Amount of loan
-        Integer loanTerm2 = 56; // Integer | Term of loan
-        String loanUse2 = loanUse_example; // String | Purpose of loan
-        String loanUseOther2 = loanUseOther_example; // String | Other purpose of loan
-        String applicationType = applicationType_example; // String | Type of application
-        String propertyUse = propertyUse_example; // String | Enter what the property will be used for
-        String payoffAmount = payoffAmount_example; // String | Payoff amount
-        try {
-            array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType, fnmCaseNumber, loanAmount, loanTerm2, loanUse2, loanUseOther2, applicationType, propertyUse, payoffAmount);
-=======
-        try {
-            array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType);
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#readLoanApp");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *publishDate = publishDate_example; // Date of publication of the loan application.
-Integer *duCaseFileID = 56; // CaseFile Identifier
-<<<<<<< HEAD
-String *mortgageType = mortgageType_example; // Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-array[MortgageTypes] *mortgageType = ; // Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-String *fnmCaseNumber = fnmCaseNumber_example; // Fannie Mae case number.
-Integer *loanAmount = 56; // Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-Integer *loanTerm = 56; // Term in months for loan
-String *loanUse = loanUse_example; // Purpose of the loan
-String *loanUseOther = loanUseOther_example; // Purpose of the loan
-Integer *totalInterestRate = 56; // combined interest rate total
-Integer *amortizationTerm = 56; // term of amortization
-String *amortizationType = amortizationType_example; // Type of amortization
-<<<<<<< HEAD
-BigDecimal *fnmCaseNumber = 1.2; // Fannie Mae Case Number
-Integer *loanAmount = 56; // Amount of loan
-Integer *loanTerm2 = 56; // Term of loan
-String *loanUse2 = loanUse_example; // Purpose of loan
-String *loanUseOther2 = loanUseOther_example; // Other purpose of loan
-String *applicationType = applicationType_example; // Type of application (optional)
-String *propertyUse = propertyUse_example; // Enter what the property will be used for (optional)
-String *payoffAmount = payoffAmount_example; // Payoff amount (optional)
-=======
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-
-LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
-
-// Listing your Loan Applications
-[apiInstance readLoanAppWith:publishDate
-    duCaseFileID:duCaseFileID
-    mortgageType:mortgageType
-<<<<<<< HEAD
-=======
-    fnmCaseNumber:fnmCaseNumber
-    loanAmount:loanAmount
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-    loanTerm:loanTerm
-    loanUse:loanUse
-    loanUseOther:loanUseOther
-    totalInterestRate:totalInterestRate
-    amortizationTerm:amortizationTerm
-    amortizationType:amortizationType
-<<<<<<< HEAD
-    fnmCaseNumber:fnmCaseNumber
-    loanAmount:loanAmount
-    loanTerm2:loanTerm2
-    loanUse2:loanUse2
-    loanUseOther2:loanUseOther2
-    applicationType:applicationType
-    propertyUse:propertyUse
-    payoffAmount:payoffAmount
-=======
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-              completionHandler: ^(array['String'] output, NSError* error) {
-                            if (output) {
-                                NSLog(@"%@", output);
-                            }
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var Api = require('api');
-
-var api = new Api.LoanApplicationsV2Api()
-var publishDate = publishDate_example; // {{String}} Date of publication of the loan application.
-var duCaseFileID = 56; // {{Integer}} CaseFile Identifier
-<<<<<<< HEAD
-var mortgageType = mortgageType_example; // {{String}} Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-var mortgageType = ; // {{array[MortgageTypes]}} Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-var fnmCaseNumber = fnmCaseNumber_example; // {{String}} Fannie Mae case number.
-var loanAmount = 56; // {{Integer}} Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-var loanTerm = 56; // {{Integer}} Term in months for loan
-var loanUse = loanUse_example; // {{String}} Purpose of the loan
-var loanUseOther = loanUseOther_example; // {{String}} Purpose of the loan
-var totalInterestRate = 56; // {{Integer}} combined interest rate total
-var amortizationTerm = 56; // {{Integer}} term of amortization
-var amortizationType = amortizationType_example; // {{String}} Type of amortization
-<<<<<<< HEAD
-var fnmCaseNumber = 1.2; // {{BigDecimal}} Fannie Mae Case Number
-var loanAmount = 56; // {{Integer}} Amount of loan
-var loanTerm2 = 56; // {{Integer}} Term of loan
-var loanUse2 = loanUse_example; // {{String}} Purpose of loan
-var loanUseOther2 = loanUseOther_example; // {{String}} Other purpose of loan
-var opts = { 
-  'applicationType': applicationType_example, // {{String}} Type of application
-  'propertyUse': propertyUse_example, // {{String}} Enter what the property will be used for
-  'payoffAmount': payoffAmount_example // {{String}} Payoff amount
-};
-=======
-
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-<<<<<<< HEAD
-api.readLoanApp(publishDate, duCaseFileID, mortgageType, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType, fnmCaseNumber, loanAmount, loanTerm2, loanUse2, loanUseOther2, opts, callback);
-=======
-api.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType, callback);
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class readLoanAppExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new LoanApplicationsV2Api();
-            var publishDate = publishDate_example;  // String | Date of publication of the loan application.
-            var duCaseFileID = 56;  // Integer | CaseFile Identifier
-<<<<<<< HEAD
-            var mortgageType = mortgageType_example;  // String | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-            var mortgageType = new array[MortgageTypes](); // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-            var fnmCaseNumber = fnmCaseNumber_example;  // String | Fannie Mae case number.
-            var loanAmount = 56;  // Integer | Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-            var loanTerm = 56;  // Integer | Term in months for loan
-            var loanUse = loanUse_example;  // String | Purpose of the loan
-            var loanUseOther = loanUseOther_example;  // String | Purpose of the loan
-            var totalInterestRate = 56;  // Integer | combined interest rate total
-            var amortizationTerm = 56;  // Integer | term of amortization
-            var amortizationType = amortizationType_example;  // String | Type of amortization
-<<<<<<< HEAD
-            var fnmCaseNumber = 1.2;  // BigDecimal | Fannie Mae Case Number
-            var loanAmount = 56;  // Integer | Amount of loan
-            var loanTerm2 = 56;  // Integer | Term of loan
-            var loanUse2 = loanUse_example;  // String | Purpose of loan
-            var loanUseOther2 = loanUseOther_example;  // String | Other purpose of loan
-            var applicationType = applicationType_example;  // String | Type of application (optional) 
-            var propertyUse = propertyUse_example;  // String | Enter what the property will be used for (optional) 
-            var payoffAmount = payoffAmount_example;  // String | Payoff amount (optional) 
-=======
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-
-            try
-            {
-                // Listing your Loan Applications
-<<<<<<< HEAD
-                array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType, fnmCaseNumber, loanAmount, loanTerm2, loanUse2, loanUseOther2, applicationType, propertyUse, payoffAmount);
-=======
-                array['String'] result = apiInstance.readLoanApp(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType);
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling LoanApplicationsV2Api.readLoanApp: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\ApiLoanApplicationsV2Api();
-$publishDate = publishDate_example; // String | Date of publication of the loan application.
-$duCaseFileID = 56; // Integer | CaseFile Identifier
-<<<<<<< HEAD
-$mortgageType = mortgageType_example; // String | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-$mortgageType = ; // array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-$fnmCaseNumber = fnmCaseNumber_example; // String | Fannie Mae case number.
-$loanAmount = 56; // Integer | Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-$loanTerm = 56; // Integer | Term in months for loan
-$loanUse = loanUse_example; // String | Purpose of the loan
-$loanUseOther = loanUseOther_example; // String | Purpose of the loan
-$totalInterestRate = 56; // Integer | combined interest rate total
-$amortizationTerm = 56; // Integer | term of amortization
-$amortizationType = amortizationType_example; // String | Type of amortization
-<<<<<<< HEAD
-$fnmCaseNumber = 1.2; // BigDecimal | Fannie Mae Case Number
-$loanAmount = 56; // Integer | Amount of loan
-$loanTerm2 = 56; // Integer | Term of loan
-$loanUse2 = loanUse_example; // String | Purpose of loan
-$loanUseOther2 = loanUseOther_example; // String | Other purpose of loan
-$applicationType = applicationType_example; // String | Type of application
-$propertyUse = propertyUse_example; // String | Enter what the property will be used for
-$payoffAmount = payoffAmount_example; // String | Payoff amount
-
-try {
-    $result = $api_instance->readLoanApp($publishDate, $duCaseFileID, $mortgageType, $loanTerm, $loanUse, $loanUseOther, $totalInterestRate, $amortizationTerm, $amortizationType, $fnmCaseNumber, $loanAmount, $loanTerm2, $loanUse2, $loanUseOther2, $applicationType, $propertyUse, $payoffAmount);
-=======
-
-try {
-    $result = $api_instance->readLoanApp($publishDate, $duCaseFileID, $mortgageType, $fnmCaseNumber, $loanAmount, $loanTerm, $loanUse, $loanUseOther, $totalInterestRate, $amortizationTerm, $amortizationType);
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling LoanApplicationsV2Api->readLoanApp: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::LoanApplicationsV2Api;
-
-my $api_instance = WWW::SwaggerClient::LoanApplicationsV2Api->new();
-my $publishDate = publishDate_example; # String | Date of publication of the loan application.
-my $duCaseFileID = 56; # Integer | CaseFile Identifier
-<<<<<<< HEAD
-my $mortgageType = mortgageType_example; # String | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-my $mortgageType = []; # array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-my $fnmCaseNumber = fnmCaseNumber_example; # String | Fannie Mae case number.
-my $loanAmount = 56; # Integer | Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-my $loanTerm = 56; # Integer | Term in months for loan
-my $loanUse = loanUse_example; # String | Purpose of the loan
-my $loanUseOther = loanUseOther_example; # String | Purpose of the loan
-my $totalInterestRate = 56; # Integer | combined interest rate total
-my $amortizationTerm = 56; # Integer | term of amortization
-my $amortizationType = amortizationType_example; # String | Type of amortization
-<<<<<<< HEAD
-my $fnmCaseNumber = 1.2; # BigDecimal | Fannie Mae Case Number
-my $loanAmount = 56; # Integer | Amount of loan
-my $loanTerm2 = 56; # Integer | Term of loan
-my $loanUse2 = loanUse_example; # String | Purpose of loan
-my $loanUseOther2 = loanUseOther_example; # String | Other purpose of loan
-my $applicationType = applicationType_example; # String | Type of application
-my $propertyUse = propertyUse_example; # String | Enter what the property will be used for
-my $payoffAmount = payoffAmount_example; # String | Payoff amount
-
-eval { 
-    my $result = $api_instance->readLoanApp(publishDate => $publishDate, duCaseFileID => $duCaseFileID, mortgageType => $mortgageType, loanTerm => $loanTerm, loanUse => $loanUse, loanUseOther => $loanUseOther, totalInterestRate => $totalInterestRate, amortizationTerm => $amortizationTerm, amortizationType => $amortizationType, fnmCaseNumber => $fnmCaseNumber, loanAmount => $loanAmount, loanTerm2 => $loanTerm2, loanUse2 => $loanUse2, loanUseOther2 => $loanUseOther2, applicationType => $applicationType, propertyUse => $propertyUse, payoffAmount => $payoffAmount);
-=======
-
-eval { 
-    my $result = $api_instance->readLoanApp(publishDate => $publishDate, duCaseFileID => $duCaseFileID, mortgageType => $mortgageType, fnmCaseNumber => $fnmCaseNumber, loanAmount => $loanAmount, loanTerm => $loanTerm, loanUse => $loanUse, loanUseOther => $loanUseOther, totalInterestRate => $totalInterestRate, amortizationTerm => $amortizationTerm, amortizationType => $amortizationType);
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling LoanApplicationsV2Api->readLoanApp: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-readLoanApp-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.LoanApplicationsV2Api()
-publishDate = publishDate_example # String | Date of publication of the loan application.
-duCaseFileID = 56 # Integer | CaseFile Identifier
-<<<<<<< HEAD
-mortgageType = mortgageType_example # String | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-=======
-mortgageType =  # array[MortgageTypes] | Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-fnmCaseNumber = fnmCaseNumber_example # String | Fannie Mae case number.
-loanAmount = 56 # Integer | Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-loanTerm = 56 # Integer | Term in months for loan
-loanUse = loanUse_example # String | Purpose of the loan
-loanUseOther = loanUseOther_example # String | Purpose of the loan
-totalInterestRate = 56 # Integer | combined interest rate total
-amortizationTerm = 56 # Integer | term of amortization
-amortizationType = amortizationType_example # String | Type of amortization
-<<<<<<< HEAD
-fnmCaseNumber = 1.2 # BigDecimal | Fannie Mae Case Number
-loanAmount = 56 # Integer | Amount of loan
-loanTerm2 = 56 # Integer | Term of loan
-loanUse2 = loanUse_example # String | Purpose of loan
-loanUseOther2 = loanUseOther_example # String | Other purpose of loan
-applicationType = applicationType_example # String | Type of application (optional)
-propertyUse = propertyUse_example # String | Enter what the property will be used for (optional)
-payoffAmount = payoffAmount_example # String | Payoff amount (optional)
-
-try: 
-    # Listing your Loan Applications
-    api_response = api_instance.read_loan_app(publishDate, duCaseFileID, mortgageType, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType, fnmCaseNumber, loanAmount, loanTerm2, loanUse2, loanUseOther2, applicationType=applicationType, propertyUse=propertyUse, payoffAmount=payoffAmount)
-=======
-
-try: 
-    # Listing your Loan Applications
-    api_response = api_instance.read_loan_app(publishDate, duCaseFileID, mortgageType, fnmCaseNumber, loanAmount, loanTerm, loanUse, loanUseOther, totalInterestRate, amortizationTerm, amortizationType)
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling LoanApplicationsV2Api->readLoanApp: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-
-
-
-
-                            <div class="methodsubtabletitle">Query parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">publishDate*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_publishDate">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Date of publication of the loan application.
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">duCaseFileID*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_duCaseFileID">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    Integer
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        CaseFile Identifier
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">mortgageType*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_mortgageType">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-<<<<<<< HEAD
-                                                    String
-=======
-                                                    array[MortgageTypes]
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Definition of the type of mortgage, one of four types as shown in the drop-down menu.
-
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">LoanTerm*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanTerm">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    Integer
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Term in months for loan
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">LoanUse*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanUse">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Purpose of the loan
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">LoanUseOther*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanUseOther">
-=======
-                                <tr><td style="width:150px;">fnmCaseNumber*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_fnmCaseNumber">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        Purpose of the loan
-=======
-                                                        Fannie Mae case number.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">totalInterestRate*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_totalInterestRate">
-=======
-                                <tr><td style="width:150px;">LoanAmount*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanAmount">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    Integer
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        combined interest rate total
-=======
-                                                        Amount of loan.
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">amortizationTerm*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_amortizationTerm">
-=======
-                                <tr><td style="width:150px;">LoanTerm*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanTerm">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    Integer
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        term of amortization
-=======
-                                                        Term in months for loan
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">amortizationType*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_amortizationType">
-=======
-                                <tr><td style="width:150px;">LoanUse*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanUse">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        Type of amortization
-=======
-                                                        Purpose of the loan
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">applicationType</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_applicationType">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Type of application
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">propertyUse</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_propertyUse">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Enter what the property will be used for
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">payoffAmount</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_payoffAmount">
-=======
-                                <tr><td style="width:150px;">LoanUseOther*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanUseOther">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        Payoff amount
-                                                    </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">fnmCaseNumber*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_fnmCaseNumber">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    BigDecimal
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Fannie Mae Case Number
-=======
-                                                        Purpose of the loan
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">loanAmount*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanAmount">
-=======
-                                <tr><td style="width:150px;">totalInterestRate*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_totalInterestRate">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    Integer
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        Amount of loan
-=======
-                                                        combined interest rate total
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">loanTerm*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanTerm2">
-=======
-                                <tr><td style="width:150px;">amortizationTerm*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_amortizationTerm">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    Integer
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        Term of loan
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                                <tr><td style="width:150px;">loanUse*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanUse2">
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-                                                        Purpose of loan
-=======
-                                                        term of amortization
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-<<<<<<< HEAD
-                                <tr><td style="width:150px;">loanUseOther*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_loanUseOther2">
-=======
-                                <tr><td style="width:150px;">amortizationType*</td>
-                                <td>
-                                
-                                
-                                    <div id="d2e199_readLoanApp_amortizationType">
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                        <div class="json-schema-view">
-                                            <div class="primitive">
-                                                <span class="type">
-                                                    String
-                                                </span>
-                                
-                                                    <div class="inner description">
-<<<<<<< HEAD
-                                                        Other purpose of loan
-=======
-                                                        Type of amortization
->>>>>>> a463e2039ade02afcfdf65a597fb468359a20bfd
-                                                    </div>
-                                            </div>
-                                                <div class="inner required">
-                                                    Required
-                                                </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                </tr>
-                            </table>
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - List loan applications </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                                <li class="active">
-                                  <a data-toggle="tab" href="#responses-readLoanApp-200-schema">Schema</a>
-                                </li>
-
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-readLoanApp-200-schema">
-                                  <div id='responses-readLoanApp-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-                                    <script>
-                                      $(document).ready(function() {
-                                        var schemaWrapper = {
-  "description" : "List loan applications",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "type" : "array",
-        "items" : {
-          "type" : "string"
-        },
-        "x-content-type" : "application/json"
-      }
-    }
-  }
-};
-                                        var schema = schemaWrapper.content["application/json"].schema;
-                                        if (schema.$ref != null) {
-                                          schema = defsParser.$refs.get(schema.$ref);
-                                        } else {
-                                          schemaWrapper.components = {};
-                                          schemaWrapper.components.schemas = Object.assign({}, defs);
-                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                            console.log(err);
-                                          });
-                                        }
-
-                                        //console.log(JSON.stringify(schema));
-                                        var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-readLoanApp-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-readLoanApp-200-schema-200');
-                                        result.empty();
-                                        result.append(view.render());
-                                      });
-                                    </script>
-                                  </div>
-                                  <input id='responses-readLoanApp-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-petsPost-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -2571,7 +1105,7 @@ except ApiException as e:
           <div id="footer">
             <div id="api-_footer">
               <p>Suggestions, contact, support and error reporting;
-                  <div class="app-desc">Information URL: <a href="https://roostify.com">https://roostify.com</a></div>
+                  <div class="app-desc">Information URL: <a href="https://openweathermap.org/api">https://openweathermap.org/api</a></div>
                   <div class="app-desc">Contact Info: <a href="some_email@gmail.com">some_email@gmail.com</a></div>
               </p>
                 <div class="license-info">CC Attribution-ShareAlike 4.0 (CC BY-SA 4.0)</div>
