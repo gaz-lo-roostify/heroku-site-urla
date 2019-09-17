@@ -3,8 +3,8 @@
 {
     "loan": {
         "token": "9057964436726381",
-        "publishDate": (necessary?),
-        "duCaseFileId": (necessary?),
+        "publishDate": "",
+        "duCaseFileId": "",
         "mortgageType": [
             "Conventional", 
             "FHA",
@@ -12,7 +12,7 @@
             "USDARuralDevelopment",
             "VA"
         ],
-        "fnmCaseNumber": null (is this the agency case number?),
+        "fnmCaseNumber": "",
         "loanAmount": "amount",
         "loanTerm": "Amount",
         "loanUse": ["Other", "Purchase", "Refinance"],
@@ -24,13 +24,13 @@
             "Fixed", 
             "Other"
         ],
-        "applicationType": (necessary?),
-        "propertyUse": (necessary?),
-        "propertySaleStage": null,
+        "applicationType": "",
+        "propertyUse": "",
+        "propertySaleStage": "",
         "payOffAmount": "amount",
         "vaIrrrl": false,
         "downPayment": "",
-        "downPaymentMethods": null,
+        "downPaymentMethods": "",
         "applicants": [
             {
                 "firstName": "sting",
@@ -59,7 +59,7 @@
                     "Unmarried"
                 ],
                 "dependents": "[1,3,4] (enumeration of ages)",
-                "jointApplicantSSN": null,
+                "jointApplicantSSN": "",
                 "addresses": [
                     {
                         "address1": "string",
@@ -110,7 +110,7 @@
                 ],
                 "expectedMilitaryCompletionDate": "ULAD date",
                 "monthlyRetirementAmount": "amount",
-                "totalOtherIncome": ""amount" (sum "incomes")?",
+                "totalOtherIncome": "amount",
                 "employments": [
                     {
                         "employmentStatus": ["current", "previous"],
@@ -137,7 +137,7 @@
                             "incomeType": ["base", "bonus", "commissions", "other", "overtime"],
                             "monthlyTotal": "amount",
                             "monthlyMilitaryEntitlement": "amount",
-                            "employmentIncome": true
+                            "employmentIncome": "",
                         },
                         "unitTypeDesignator": [
                             "Apartment",
@@ -243,10 +243,10 @@
                 "currentHousingExpenses": {},
                 "properties": [
                     {
-                        "propertyUse":
-                        "propertyType":
-                        "propertyState":
-                        "titleStatus":
+                        "propertyUse": "",
+                        "propertyType": "",
+                        "propertyState": "",
+                        "titleStatus": "",
                         "address1": "string",
                         "address2": "string",
                         "city": "string",
@@ -254,7 +254,7 @@
                         "zip": "string 5 or 9 digits",
                         "marketValue": "amount (estimated)",
                         "subjectProperty": "boolean",
-                        "mortgages": [ Liability ],
+                        "mortgages": "",
                         "rentalGrossIncome": "Amount",
                         "rentalNetIncome": "Amount",
                         "annualTax": "",
@@ -266,9 +266,9 @@
                 "liabilities": [
                     {
                         "liabiltyType": ["debt", "other", "mortgage"],
-                        "mortgageType": ["HELOC", "MortgageLoan"] (only if "mortgage liability type"), 
-                        "debtType": ["Installment", "LeasePayment", "Open30DayChargeAccount", "Other", "Revolving"] (only if "debt liability type"),
-                        "otherType": ["Alimony", "ChildSupport", "JobRelatedExpenses", "Other", "SeperateMaintenanceExpense"] (only if "other liability type"),
+                        "mortgageType": ["HELOC", "MortgageLoan"], 
+                        "debtType": ["Installment", "LeasePayment", "Open30DayChargeAccount", "Other", "Revolving"],
+                        "otherType": ["Alimony", "ChildSupport", "JobRelatedExpenses", "Other", "SeperateMaintenanceExpense"] ,
                         "typeOfMortgage": ["Convential", "FHA", "Other", "USDA", "VA"],
                         "creditLimit": "amount",
                         "creditorName": "string",
@@ -276,105 +276,105 @@
                         "accountNumber": "string",
                         "balance": "amount",
                         "monthlyAmount": "amount",
-                        "willBePaid": "boolean"
+                        "willBePaid": "boolean",
 
-                        These are currently included but not referenced in ULAD map
+                    
 
-                        "toBeResubordinated":
-                        "reoIdAndMortgage":
-                        "subjectProperty":
-                        "creditorCity":
-                        "creditorState":
-                        "creditorZip":
-                        "creditorZipFour":
-                        "creditorStreetAddress":
-                        "creditorAccountNo":
-                        "monthlyAmount":
-                        "noOfMonthsLeft":
-                        "omitted":
-                        "rentalProperty":
-                        "applicantSsn":
-                        "reoAssetId":
+                        "toBeResubordinated": "",
+                        "reoIdAndMortgage": "",
+                        "subjectProperty": "",
+                        "creditorCity": "",
+                        "creditorState": "",
+                        "creditorZip": "",
+                        "creditorZipFour": "",
+                        "creditorStreetAddress": "",
+                        "creditorAccountNo": "",
+                        "monthlyAmount": "",
+                        "noOfMonthsLeft": "",
+                        "omitted": "",
+                        "rentalProperty": "",
+                        "applicantSsn": "",
+                        "reoAssetId": "",
                     }
                 ],
-                "recentOwnership": null,
-                "ongoingPayments": null,
+                "recentOwnership": "",
+                "ongoingPayments": "",
                 "alimonyAmount": "0.00",
                 "childSupportAmount": "0.00",
-                "hasDefault": null,
+                "hasDefault": "",
                 "hasDefaultExp": "",
-                "hasJudgements": null,
+                "hasJudgements": "",
                 "hasJudgementsExp": "",
-                "hasBankruptcy": null,
+                "hasBankruptcy": "",
                 "hasBankruptcyExp": "",
-                "hasOngoingPayments": null,
-                "hasOngoingPaymentsExp": null,
-                "hasPropertyForeclosure": null,
+                "hasOngoingPayments": "",
+                "hasOngoingPaymentsExp": "",
+                "hasPropertyForeclosure": "",
                 "hasPropertyForeclosureExp": "",
-                "hasLawsuit": null,
+                "hasLawsuit": "",
                 "hasLawsuitExp": "",
-                "hasLoanForeclosure": null,
+                "hasLoanForeclosure": "",
                 "hasLoanForeclosureExp": "",
-                "downPaymentBorrowed": null,
+                "downPaymentBorrowed": "",
                 "downPaymentBorrowedExp": "",
-                "noteDebt": null,
+                "noteDebt": "",
                 "noteDebtExp": "",
                 "citizen": [
                     "NonPermanentResidentAlien", 
                     "PermanentResidentAlien", 
                     "USCitizen"
                 ],
-                "alien": null,
-                "ownedPropertyUse": null,
-                "ownedPropertyTitle": null,
-                "wantsMonitoring": null,
-                "hispanic": null,
-                "gender": null,
-                "white": null,
-                "black": null,
-                "islander": null,
-                "nativeAmerican": null,
-                "asian": null,
-                "hmdaMale": null,
-                "hmdaFemale": null,
-                "hmdaProvidesGender": null,
-                "hmdaProvidesEthnicity": null,
-                "hmdaHispanicOrLatino": null,
-                "hmdaNotHispanicOrLatino": null,
-                "hmdaMexican": null,
-                "hmdaPuertoRican": null,
-                "hmdaCuban": null,
-                "hmdaOtherHispanicOrLatino": null,
-                "hmdaProvidesRace": null,
-                "hmdaAmericanIndianOrAlaskan": null,
-                "hmdaAsian": null,
-                "hmdaAsianIndian": null,
-                "hmdaChinese": null,
-                "hmdaFilipino": null,
-                "hmdaJapanese": null,
-                "hmdaKorean": null,
-                "hmdaVietnamese": null,
-                "hmdaOtherAsian": null,
-                "hmdaBlackOrAfricanAmerican": null,
-                "hmdaHawaiianOrOtherPacificIslander": null,
-                "hmdaGuamanianOrChamorro": null,
-                "hmdaSamoan": null,
-                "hmdaOtherPacificIslander": null,
-                "hmdaWhite": null,
-                "hmdaHispanicOrLatinoDescription": null,
-                "hmdaAmericanIndianOrAlaskanDescription": null,
-                "hmdaOtherAsianDescription": null,
-                "hmdaOtherPacificIslanderDescription": null,
-                "hmdaNativeHawaiian": null,
-                "hmdaLenderProvidedGenderVisually": null,
-                "hmdaLenderProvidedRaceVisually": null,
+                "alien": "",
+                "ownedPropertyUse": "",
+                "ownedPropertyTitle": "",
+                "wantsMonitoring": "",
+                "hispanic": "",
+                "gender": "",
+                "white": "",
+                "black": "",
+                "islander": "",
+                "nativeAmerican": "",
+                "asian": "",
+                "hmdaMale": "",
+                "hmdaFemale": "",
+                "hmdaProvidesGender": "",
+                "hmdaProvidesEthnicity": "",
+                "hmdaHispanicOrLatino": "",
+                "hmdaNotHispanicOrLatino": "",
+                "hmdaMexican": "",
+                "hmdaPuertoRican": "",
+                "hmdaCuban": "",
+                "hmdaOtherHispanicOrLatino": "",
+                "hmdaProvidesRace": "",
+                "hmdaAmericanIndianOrAlaskan": "",
+                "hmdaAsian": "",
+                "hmdaAsianIndian": "",
+                "hmdaChinese": "",
+                "hmdaFilipino": "",
+                "hmdaJapanese": "",
+                "hmdaKorean": "",
+                "hmdaVietnamese": "",
+                "hmdaOtherAsian": "",
+                "hmdaBlackOrAfricanAmerican": "",
+                "hmdaHawaiianOrOtherPacificIslander": "",
+                "hmdaGuamanianOrChamorro": "",
+                "hmdaSamoan": "",
+                "hmdaOtherPacificIslander": "",
+                "hmdaWhite": "",
+                "hmdaHispanicOrLatinoDescription": "",
+                "hmdaAmericanIndianOrAlaskanDescription": "",
+                "hmdaOtherAsianDescription": "",
+                "hmdaOtherPacificIslanderDescription": "",
+                "hmdaNativeHawaiian": "",
+                "hmdaLenderProvidedGenderVisually": "",
+                "hmdaLenderProvidedRaceVisually": "",
                 "hmdaLenderProvidedEthnicityVisually": null
             }
         ],
         "subjectProperty": {
             "units": "amount",
             "propertyUse": ["Investment", "PrimaryResidence", "SecondHome"],
-            "mortgages": [Liability],
+            "mortgages": "",
             "rentalIncome": "amount",
             "netRentalIncome": "amount",
             "secondaryResidence": "boolean",
@@ -429,13 +429,13 @@
         "earnestMoneyAmount": "",
         "sellerCreditAmount": "",
         "lenderCreditAmount": "",
-        "loanType": null,
-        "armIndex": null,
-        "armMargin": null,
-        "reference": null
+        "loanType": "",
+        "armIndex": "",
+        "armMargin": "",
+        "reference": "",
     },
-    "advancedMode": null,
-    "enable2018Hmda": true,
-    "enableHmda": null
+    "advancedMode": "",
+    "enable2018Hmda": "",
+    "enableHmda": "",
 }
 ```

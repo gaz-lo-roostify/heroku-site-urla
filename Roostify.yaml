@@ -1,8 +1,8 @@
 ---
 loan:
   token: '9057964436726381'
-  publishDate: necessary?
-  duCaseFileId: necessary?
+  publishDate: 
+  duCaseFileId: 
   mortgageType:
   - Conventional
   - FHA
@@ -23,8 +23,8 @@ loan:
   - AdjustableRate
   - Fixed
   - Other
-  applicationType: necessary?
-  propertyUse: necessary?
+  applicationType:
+  propertyUse: 
   propertySaleStage: 
   payOffAmount: amount
   vaIrrrl: false
