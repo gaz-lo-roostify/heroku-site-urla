@@ -84,907 +84,319 @@
 
 JSON
 
-```
-{
-    "loan": {
-        "token": "9057964436726381",
-        "publishDate": (necessary?),
-        "duCaseFileId": (necessary?),
-        "mortgageType": [
-            "Conventional", 
-            "FHA",
-            "Other", 
-            "USDARuralDevelopment",
-            "VA"
-        ],
-        "fnmCaseNumber": null (is this the agency case number?),
-        "loanAmount": "amount",
-        "loanTerm": "Amount",
-        "loanUse": ["Other", "Purchase", "Refinance"],
-        "loanUseOther": "string",
-        "totalInterestRate": "percent",
-        "amortizationTerm": "numeric",
-        "amortizationType": [
-            "AdjustableRate", 
-            "Fixed", 
-            "Other"
-        ],
-        "applicationType": (necessary?),
-        "propertyUse": (necessary?),
-        "propertySaleStage": null,
-        "payOffAmount": "amount",
-        "vaIrrrl": false,
-        "downPayment": "",
-        "downPaymentMethods": null,
-        "applicants": [
-            {
-                "firstName": "sting",
-                "lastName": "string",
-                "middleName": "string",
-                "suffix": "string",
-                "email": "string",
-                "alternateFirstName": "string",
-                "alternateLastName": "string",
-                "alternateMiddleName": "string",
-                "alternateSuffix": "string",
-                "primaryBorrower": "boolean",
-                "partyRoleType": ["Borrower"],
-                "taxPayerIdentifierType": [
-                    "IndividualTaxPayerIdentificationNumber",
-                    "SocialSecurityNumber"
-                ],
-                "ssn": "string",
-                "phoneNumber": "string (home phone)",
-                "mobilePhoneNumber": "string",
-                "workPhoneNumber": "string",
-                "dob": "ULAD date",
-                "maritalStatus": [
-                    "Married", 
-                    "Separated", 
-                    "Unmarried"
-                ],
-                "dependents": "[1,3,4] (enumeration of ages)",
-                "jointApplicantSSN": null,
-                "addresses": [
-                    {
-                        "address1": "string",
-                        "address2": "string",
-                        "city": "string",
-                        "state": "string state code 2 digits",
-                        "zip": "string 5 or 9 digits",
-                        "own": "boolean",
-                        "country": "string",
-                        "startDate": "ULAD date",
-                        "endDate": "ULAD date",
-                        "rentAmount": "amount",
-                        "borrowerResidencyBasisType": ["livingRentFree", "own", "rent"],
-                        "addressType": ["current", "prior", "mailing"],
-                        "unitTypeDesignator": [
-                            "Apartment",
-                            "Basement",
-                            "Building", 
-                            "Condo",
-                            "Department", 
-                            "Floor", 
-                            "Front", 
-                            "Hangar", 
-                            "Key", 
-                            "Lobby", 
-                            "Lot", 
-                            "Lower", 
-                            "Office", 
-                            "Penthouse", 
-                            "Pier", 
-                            "Rear",
-                            "Room",
-                            "Side",
-                            "Space", 
-                            "Stop", 
-                            "Suite", 
-                            "Trailer", 
-                            "Unit",
-                            "Upper"
-                        ]
-                    }
-                ],
-                "militaryService": "boolean",
-                "militaryServiceType": [
-                    "ActiveDuty",
-                    "ReserverNationalGuardNeverActivated",
-                    "Veteran"
-                ],
-                "expectedMilitaryCompletionDate": "ULAD date",
-                "monthlyRetirementAmount": "amount",
-                "totalOtherIncome": ""amount" (sum "incomes")?",
-                "employments": [
-                    {
-                        "employmentStatus": ["current", "previous"],
-                        "name": "string",
-                        "timeInLineOfWork": "numeric (months)",
-                        "specialBorrowerEmployerRelationship": "boolean",
-                        "selfEmployed": "boolean",
-                        "ownershipInterestType": ["GreaterThanOrEqualTo25Percent", "LessThan25Percent"],
-                        "monthlyIncome": "amount",
-                        "startDate": "ULAD date",
-                        "endDate": "ULAD date",
-                        "position": "string",
-                        "phone": "string",
-                        "address1": "string",
-                        "address2": "string",
-                        "city": "string",
-                        "state": "string state code 2 digits",
-                        "zip": "string 5 or 9 digits",
-                        "own": "boolean",
-                        "country": "string",
-                        "totalAmount": "amount",
-                        "income":
-                        {
-                            "incomeType": ["base", "bonus", "commissions", "other", "overtime"],
-                            "monthlyTotal": "amount",
-                            "monthlyMilitaryEntitlement": "amount",
-                            "employmentIncome": true
-                        },
-                        "unitTypeDesignator": [
-                            "Apartment",
-                            "Basement",
-                            "Building", 
-                            "Condo",
-                            "Department", 
-                            "Floor", 
-                            "Front", 
-                            "Hangar", 
-                            "Key", 
-                            "Lobby", 
-                            "Lot", 
-                            "Lower", 
-                            "Office", 
-                            "Penthouse", 
-                            "Pier", 
-                            "Rear",
-                            "Room",
-                            "Side",
-                            "Space", 
-                            "Stop", 
-                            "Suite", 
-                            "Trailer", 
-                            "Unit",
-                            "Upper"
-                        ]  
-                    }
-                ],
-                "incomes": [
-                    {
-                        "incomeSource": [
-                            "Alimony",
-                            "AutomobileAllowance", 
-                            "BoarderIncome",
-                            "CapitalGains",
-                            "ChildSupport", 
-                            "DefinedContributionPlan", 
-                            "Disability",
-                            "DividendsInterest", 
-                            "FosterCare",
-                            "HousingAllowance", 
-                            "MortgageCreditCertificate", 
-                            "MortgageDifferential",
-                            "NotesReceivableInstallment", 
-                            "Other",
-                            "Pension",
-                            "PublicAssistance",
-                            "Royalties",
-                            "SeparateMaintenance",
-                            "SocialSecurity",
-                            "Trust",
-                            "Unemployment",
-                            "VABenefitsNonEducational"
-                        ],
-                        "monthlyTotal": "amount",
-                        "employmentIncome": false
-                    }
-                ],
-                "assets": [
-                    {
-                        "assetType": ["accounts", "other", "purchase_credit", "gift"],
-                        "giftType": ["GiftOfCash", "GiftOfPropertyEquity", "Grant"],
-                        "giftSourceType": [
-                            "CommunityNonProfit"
-                        ],
-                        "accountSourceType": [
-                            "Bond", 
-                            "BridgeLoanNotDeposited",
-                            "CertificateOfDepositTimeDeposit",
-                            "CheckingAccount",
-                            "IndividualDevelopmentAccount",
-                            "LifeInsurance",
-                            "MoneyMarketFund", 
-                            "MutualFund",
-                            "RetirementFund", 
-                            "SavingsAccount", 
-                            "Stock",
-                            "StockOptions",
-                            "TrustAccount"
-                        ],
-                        "otherSourceType":[
-                            "Other", 
-                            "PendingNetSaleProceedsFromRealEstateAssets", 
-                            "ProceedsFromSaleOfNonRealEstateAsset",
-                            "ProceedsFromSecuredLoan",
-                            "ProceedsFromUnsecuredLoan"
-                        ],
-                        "purchaseCreditType":[
-                            "EarnestMoney",
-                            "EmployerAssistedHousing",
-                            "LeasePurchaseFund",
-                            "SweatEquity",
-                            "TradeEquityFromPropertySwap"
-                        ],
-                        "otherDescription": "string",
-                        "accountIdentifier": "string",
-                        "deposited": "boolean",
-                        "source": "string",
-                        "amount": "amount"
-                    }
-                ],
-                "currentHousingExpenses": {},
-                "properties": [
-                    {
-                        "propertyUse":
-                        "propertyType":
-                        "propertyState":
-                        "titleStatus":
-                        "address1": "string",
-                        "address2": "string",
-                        "city": "string",
-                        "state": "string state code 2 digits",
-                        "zip": "string 5 or 9 digits",
-                        "marketValue": "amount (estimated)",
-                        "subjectProperty": "boolean",
-                        "mortgages": [ Liability ],
-                        "rentalGrossIncome": "Amount",
-                        "rentalNetIncome": "Amount",
-                        "annualTax": "",
-                        "monthlyHoa": "",
-                        "monthlyMortgageInsurance": "",
-                        "monthlyHomeownersInsurance": ""
-                    }
-                ],
-                "liabilities": [
-                    {
-                        "liabiltyType": ["debt", "other", "mortgage"],
-                        "mortgageType": ["HELOC", "MortgageLoan"] (only if "mortgage liability type"), 
-                        "debtType": ["Installment", "LeasePayment", "Open30DayChargeAccount", "Other", "Revolving"] (only if "debt liability type"),
-                        "otherType": ["Alimony", "ChildSupport", "JobRelatedExpenses", "Other", "SeperateMaintenanceExpense"] (only if "other liability type"),
-                        "typeOfMortgage": ["Convential", "FHA", "Other", "USDA", "VA"],
-                        "creditLimit": "amount",
-                        "creditorName": "string",
-                        "otherDescription": "string",
-                        "accountNumber": "string",
-                        "balance": "amount",
-                        "monthlyAmount": "amount",
-                        "willBePaid": "boolean"
-
-                        These are currently included but not referenced in ULAD map
-
-                        "toBeResubordinated":
-                        "reoIdAndMortgage":
-                        "subjectProperty":
-                        "creditorCity":
-                        "creditorState":
-                        "creditorZip":
-                        "creditorZipFour":
-                        "creditorStreetAddress":
-                        "creditorAccountNo":
-                        "monthlyAmount":
-                        "noOfMonthsLeft":
-                        "omitted":
-                        "rentalProperty":
-                        "applicantSsn":
-                        "reoAssetId":
-                    }
-                ],
-                "recentOwnership": null,
-                "ongoingPayments": null,
-                "alimonyAmount": "0.00",
-                "childSupportAmount": "0.00",
-                "hasDefault": null,
-                "hasDefaultExp": "",
-                "hasJudgements": null,
-                "hasJudgementsExp": "",
-                "hasBankruptcy": null,
-                "hasBankruptcyExp": "",
-                "hasOngoingPayments": null,
-                "hasOngoingPaymentsExp": null,
-                "hasPropertyForeclosure": null,
-                "hasPropertyForeclosureExp": "",
-                "hasLawsuit": null,
-                "hasLawsuitExp": "",
-                "hasLoanForeclosure": null,
-                "hasLoanForeclosureExp": "",
-                "downPaymentBorrowed": null,
-                "downPaymentBorrowedExp": "",
-                "noteDebt": null,
-                "noteDebtExp": "",
-                "citizen": [
-                    "NonPermanentResidentAlien", 
-                    "PermanentResidentAlien", 
-                    "USCitizen"
-                ],
-                "alien": null,
-                "ownedPropertyUse": null,
-                "ownedPropertyTitle": null,
-                "wantsMonitoring": null,
-                "hispanic": null,
-                "gender": null,
-                "white": null,
-                "black": null,
-                "islander": null,
-                "nativeAmerican": null,
-                "asian": null,
-                "hmdaMale": null,
-                "hmdaFemale": null,
-                "hmdaProvidesGender": null,
-                "hmdaProvidesEthnicity": null,
-                "hmdaHispanicOrLatino": null,
-                "hmdaNotHispanicOrLatino": null,
-                "hmdaMexican": null,
-                "hmdaPuertoRican": null,
-                "hmdaCuban": null,
-                "hmdaOtherHispanicOrLatino": null,
-                "hmdaProvidesRace": null,
-                "hmdaAmericanIndianOrAlaskan": null,
-                "hmdaAsian": null,
-                "hmdaAsianIndian": null,
-                "hmdaChinese": null,
-                "hmdaFilipino": null,
-                "hmdaJapanese": null,
-                "hmdaKorean": null,
-                "hmdaVietnamese": null,
-                "hmdaOtherAsian": null,
-                "hmdaBlackOrAfricanAmerican": null,
-                "hmdaHawaiianOrOtherPacificIslander": null,
-                "hmdaGuamanianOrChamorro": null,
-                "hmdaSamoan": null,
-                "hmdaOtherPacificIslander": null,
-                "hmdaWhite": null,
-                "hmdaHispanicOrLatinoDescription": null,
-                "hmdaAmericanIndianOrAlaskanDescription": null,
-                "hmdaOtherAsianDescription": null,
-                "hmdaOtherPacificIslanderDescription": null,
-                "hmdaNativeHawaiian": null,
-                "hmdaLenderProvidedGenderVisually": null,
-                "hmdaLenderProvidedRaceVisually": null,
-                "hmdaLenderProvidedEthnicityVisually": null
+{ 
+   "residential_loan":{ 
+      "token":"5594415352464157",
+      "loan_application_attributes":{ 
+         "lead_source":"Here",
+         "has_coborrower":"false",
+         "application_type":"1",
+         "pre_approval":"true",
+         "mortgage_type":"1",
+         "loan_use_other":"",
+         "non_mortgage_payoff_amount":"",
+         "desired_cashout_amount":"",
+         "overall_plans":[ 
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+         ],
+         "extra_circumstances":"asdfasdf",
+         "property_use":"1",
+         "receiving_down_payment_gift":"false"
+      },
+      "prospective_properties_attributes":{ 
+         "0":{ 
+            "city":"Washington",
+            "state":"DC",
+            "county_fips":"DC",
+            "id":"7"
+         }
+      },
+      "prospective_property_purchase_price":"500000",
+      "subject_properties_attributes":{ 
+         "0":{ 
+            "address1":"",
+            "address2":"",
+            "city":"",
+            "state":"AK",
+            "county_fips":"013",
+            "zip":"",
+            "purchase_price":"",
+            "homeowners_insurance_provider":"",
+            "monthly_homeowners_insurance":"",
+            "monthly_hoa":"",
+            "annual_tax":"",
+            "id":"1",
+            "mixed_use":"false",
+            "rental_income":"",
+            "first_existing_mortgage_attributes":{ 
+               "lender_name":"",
+               "monthly_mortgage":"",
+               "mortgage_rate":"",
+               "heloc_credit_limit":"",
+               "mortgage_balance":"",
+               "monthly_insurance":"",
+               "id":"1"
+            },
+            "second_existing_mortgage_attributes":{ 
+               "mortgage_rate":"",
+               "heloc_credit_limit":"",
+               "monthly_mortgage":"",
+               "id":"2"
             }
-        ],
-        "subjectProperty": {
-            "units": "amount",
-            "propertyUse": ["Investment", "PrimaryResidence", "SecondHome"],
-            "mortgages": [Liability],
-            "rentalIncome": "amount",
-            "netRentalIncome": "amount",
-            "secondaryResidence": "boolean",
-            "mixedUse": "boolean",
-            "manufactured": "boolean",
-            "marketValue": "amount (estimated)",
-            "address1": "string",
-            "address2": "string",
-            "city": "string",
-            "state": "string state code 2 digits",
-            "zip": "string 5 or 9 digits",
-            "own": "boolean",
-            "country": "string",
-            "startDate": "ULAD date",
-            "endDate": "ULAD date",
-            "rentAmount": "amount",
-            "borrowerResidencyBasisType": ["livingRentFree", "own", "rent"],
-            "addressType": ["current", "prior", "mailing"],
-            "unitTypeDesignator": [
-                "Apartment",
-                "Basement",
-                "Building", 
-                "Condo",
-                "Department", 
-                "Floor", 
-                "Front", 
-                "Hangar", 
-                "Key", 
-                "Lobby", 
-                "Lot", 
-                "Lower", 
-                "Office", 
-                "Penthouse", 
-                "Pier", 
-                "Rear",
-                "Room",
-                "Side",
-                "Space", 
-                "Stop", 
-                "Suite", 
-                "Trailer", 
-                "Unit",
-                "Upper"
-            ]
-        },
-        "proposedHousingExpenses": {},
-        "prepaidItemsTotalAmount": "",
-        "closingCostsTotal": "",
-        "pmiMipAndFundingFees": "",
-        "borrowerPaidDiscountPointsTotalAmount": "",
-        "subordinateFinancingAmount": "",
-        "earnestMoneyAmount": "",
-        "sellerCreditAmount": "",
-        "lenderCreditAmount": "",
-        "loanType": null,
-        "armIndex": null,
-        "armMargin": null,
-        "reference": null
-    },
-    "advancedMode": null,
-    "enable2018Hmda": true,
-    "enableHmda": null
+         }
+      },
+      "primary_applicant_attributes":{ 
+         "first_name":"asdfasdf",
+         "middle_initial":"",
+         "last_name":"asdf",
+         "suffix":"",
+         "uses_alternate_name":"false",
+         "alternate_first_name":"",
+         "alternate_middle_initial":"",
+         "alternate_last_name":"",
+         "alternate_suffix":"",
+         "email":"astuntz@roostify.com",
+         "home_phone":"(333) 333-3333",
+         "phone":"(333) 333-3333",
+         "work_phone":"(333) 333-3333",
+         "preferred_language":"3",
+         "account_relationship":"true",
+         "employee_relationship":"true",
+         "current_address_attributes":{ 
+            "address1":"1558 Alabama Avenue Southeast",
+            "address2":"",
+            "city":"Washington",
+            "state":"DC",
+            "zip":"98822",
+            "start_date(2i)":"5",
+            "start_date(3i)":"6",
+            "start_date(1i)":"2008",
+            "own":"false",
+            "monthly_rent":"800",
+            "id":"2"
+         },
+         "no_primary_housing_expenses":"false",
+         "previous_addresses_attributes":{ 
+            "0":{ 
+               "address1":"",
+               "address2":"",
+               "city":"",
+               "state":"AK",
+               "zip":"",
+               "start_date(2i)":"",
+               "start_date(3i)":"",
+               "start_date(1i)":"",
+               "id":"3"
+            }
+         },
+         "separate_mailing_address":"false",
+         "mailing_address_attributes":{ 
+            "address1":"",
+            "address2":"",
+            "city":"",
+            "state":"AK",
+            "zip":"",
+            "id":"4"
+         },
+         "dob(2i)":"5",
+         "dob(3i)":"8",
+         "dob(1i)":"2011",
+         "years_schooling":"12",
+         "marital_status":"3",
+         "relationship_type":"1",
+         "relationship_type_other":"",
+         "relationship_state":"AK",
+         "has_dependents":"false",
+         "dependents":"",
+         "citizenship":"1",
+         "military_service":"false",
+         "discharged_at(2i)":"",
+         "discharged_at(3i)":"1",
+         "discharged_at(1i)":"",
+         "incharged_at(2i)":"",
+         "incharged_at(3i)":"1",
+         "incharged_at(1i)":"",
+         "discharging_at(2i)":"",
+         "discharging_at(3i)":"1",
+         "discharging_at(1i)":"",
+         "other_property_other_mortgage":"true",
+         "other_property_other_mortgage_exp":"",
+         "new_credit":"true",
+         "new_credit_exp":"",
+         "priority_lien":"true",
+         "priority_lien_exp":"",
+         "cosigner_of_undisclosed":"true",
+         "cosigner_of_undisclosed_exp":"",
+         "has_judgements":"true",
+         "has_judgements_exp":"",
+         "delinquency":"true",
+         "delinquency_exp":"",
+         "has_lawsuit":"true",
+         "has_lawsuit_exp":"",
+         "has_loan_foreclosure":"true",
+         "has_loan_foreclosure_exp":"",
+         "pre_foreclosure":"true",
+         "pre_foreclosure_exp":"",
+         "has_property_foreclosure":"true",
+         "has_property_foreclosure_exp":"",
+         "has_declared_bankruptcy":"true",
+         "bankruptcies_attributes":{ 
+            "0":{ 
+               "type":"1"
+            }
+         },
+         "hmda_not_hispanic_or_latino":"true",
+         "hmda_hispanic_or_latino":"true",
+         "hmda_mexican":"true",
+         "hmda_puerto_rican":"true",
+         "hmda_cuban":"true",
+         "hmda_other_hispanic_or_latino":"true",
+         "hmda_hispanic_or_latino_description":"klklk",
+         "hmda_provides_ethnicity":"true",
+         "hmda_american_indian_or_alaskan":"true",
+         "hmda_american_indian_or_alaskan_description":";lk;lk",
+         "hmda_asian":"true",
+         "hmda_asian_indian":"true",
+         "hmda_chinese":"true",
+         "hmda_filipino":"true",
+         "hmda_japanese":"true",
+         "hmda_korean":"true",
+         "hmda_vietnamese":"true",
+         "hmda_other_asian":"true",
+         "hmda_other_asian_description":";lkp;lk",
+         "hmda_black_or_african_american":"true",
+         "hmda_hawaiian_or_other_pacific_islander":"true",
+         "hmda_native_hawaiian":"true",
+         "hmda_guamanian_or_chamorro":"true",
+         "hmda_samoan":"true",
+         "hmda_other_pacific_islander":"true",
+         "hmda_other_pacific_islander_description":";/,;l./,",
+         "hmda_white":"true",
+         "hmda_provides_race":"true",
+         "hmda_female":"true",
+         "hmda_male":"true",
+         "hmda_provides_gender":"true",
+         "recently_employed":"true",
+         "current_ownership":"true",
+         "new_properties_attributes":{ 
+            "0":{ 
+               "address1":"1558 Alabama Avenue Southeast",
+               "address2":"",
+               "city":"Washington",
+               "state":"DC",
+               "county_fips":"001",
+               "zip":"20032",
+               "no_of_units":"1",
+               "mixed_use":"true",
+               "manufactured_home":"false",
+               "property_use":"1",
+               "property_status":"2",
+               "title_status":"3",
+               "market_value":"3232323",
+               "annual_tax":"23232",
+               "homeowners_insurance_provider":"Me",
+               "monthly_homeowners_insurance":"100000",
+               "monthly_hoa":"203934",
+               "rental_income":"302093",
+               "has_first_existing_mortgage":"true",
+               "first_existing_mortgage_attributes":{ 
+                  "creditor_account_no":"232323",
+                  "monthly_mortgage":"232323",
+                  "mortgage_loan_type":"1",
+                  "mortgage_rate":"23",
+                  "mortgage_balance":"23422",
+                  "monthly_insurance":"23231",
+                  "id":"3"
+               },
+               "has_second_existing_mortgage":"false",
+               "second_existing_mortgage_attributes":{ 
+                  "creditor_account_no":"",
+                  "monthly_mortgage":"",
+                  "mortgage_rate":"",
+                  "mortgage_balance":"",
+                  "id":"4"
+               },
+               "id":"5"
+            }
+         },
+         "recent_ownership":"true",
+         "owned_property_use":"2",
+         "owned_property_title":"1",
+         "manually_setup_assets":"false",
+         "assets_attributes":{ 
+            "0":{ 
+               "financial_institution":"BoA",
+               "asset_type":"savings",
+               "total":"2000",
+               "account_type":"Savings",
+               "id":"1"
+            }
+         },
+         "id":"4",
+         "ongoing_payments":"3",
+         "alimony_amount":"",
+         "child_support_amount":"",
+         "employments_attributes":{ 
+            "0":{ 
+               "employer_name":"My name",
+               "phone":"(303) 030-3033",
+               "address_attributes":{ 
+                  "address1":"1558 Alabama Avenue Southeast",
+                  "city":"Washington",
+                  "state":"DC",
+                  "zip":"98229"
+               },
+               "position":"Software Developer",
+               "industry":"IT Services/Software",
+               "start_date(2i)":"7",
+               "start_date(3i)":"9",
+               "start_date(1i)":"2010",
+               "work_experience":"10",
+               "total_experience":"10",
+               "payment_type":"1",
+               "income_attributes":{ 
+                  "monthly_income":"100000",
+                  "yearly_bonus_income":"1000",
+                  "yearly_commission_income":"1000"
+               },
+               "self_employed":"false",
+               "proof_required":"false",
+               "id":"1"
+            }
+         },
+         "has_other_incomes":"true",
+         "other_incomes_attributes":{ 
+            "0":{ 
+               "gross_amount":"9988777",
+               "source":"disability"
+            }
+         },
+         "voe_consent_attributes":{ 
+            "status":"granted"
+         }
+      },
+      "down_payment_gift_asset_attributes":{ 
+         "donor_organization":"",
+         "donor_first_name":"",
+         "donor_last_name":"",
+         "donor_email_address":"",
+         "total":"",
+         "id":"1"
+      },
+      "has_undisclosed_finances":"false",
+      "undisclosed_dollar_amount":"",
+      "coborrower_lived_with_borrower":"false"
+   }
 }
-```
 
-</code></pre>
-
-</div>
-
-<div class="col-md-6">
-
-
-
-<pre id="yaml"> <code>
-
-YAML
----
-loan:
-  token: '9057964436726381'
-  publishDate: necessary?
-  duCaseFileId: necessary?
-  mortgageType:
-  - Conventional
-  - FHA
-  - Other
-  - USDARuralDevelopment
-  - VA
-  fnmCaseNumber: 
-  loanAmount: amount
-  loanTerm: Amount
-  loanUse:
-  - Other
-  - Purchase
-  - Refinance
-  loanUseOther: string
-  totalInterestRate: percent
-  amortizationTerm: numeric
-  amortizationType:
-  - AdjustableRate
-  - Fixed
-  - Other
-  applicationType: necessary?
-  propertyUse: necessary?
-  propertySaleStage: 
-  payOffAmount: amount
-  vaIrrrl: false
-  downPayment: ''
-  downPaymentMethods: 
-  applicants:
-  - firstName: sting
-    lastName: string
-    middleName: string
-    suffix: string
-    email: string
-    alternateFirstName: string
-    alternateLastName: string
-    alternateMiddleName: string
-    alternateSuffix: string
-    primaryBorrower: boolean
-    partyRoleType:
-    - Borrower
-    taxPayerIdentifierType:
-    - IndividualTaxPayerIdentificationNumber
-    - SocialSecurityNumber
-    ssn: string
-    phoneNumber: string (home phone)
-    mobilePhoneNumber: string
-    workPhoneNumber: string
-    dob: ULAD date
-    maritalStatus:
-    - Married
-    - Separated
-    - Unmarried
-    dependents: "[1,3,4] (enumeration of ages)"
-    jointApplicantSSN: 
-    addresses:
-    - address1: string
-      address2: string
-      city: string
-      state: string state code 2 digits
-      zip: string 5 or 9 digits
-      own: boolean
-      country: string
-      startDate: ULAD date
-      endDate: ULAD date
-      rentAmount: amount
-      borrowerResidencyBasisType:
-      - livingRentFree
-      - own
-      - rent
-      addressType:
-      - current
-      - prior
-      - mailing
-      unitTypeDesignator:
-      - Apartment
-      - Basement
-      - Building
-      - Condo
-      - Department
-      - Floor
-      - Front
-      - Hangar
-      - Key
-      - Lobby
-      - Lot
-      - Lower
-      - Office
-      - Penthouse
-      - Pier
-      - Rear
-      - Room
-      - Side
-      - Space
-      - Stop
-      - Suite
-      - Trailer
-      - Unit
-      - Upper
-    militaryService: boolean
-    militaryServiceType:
-    - ActiveDuty
-    - ReserverNationalGuardNeverActivated
-    - Veteran
-    expectedMilitaryCompletionDate: ULAD date
-    monthlyRetirementAmount: amount
-    totalOtherIncome: amount
-    employments:
-    - employmentStatus:
-      - current
-      - previous
-      name: string
-      timeInLineOfWork: numeric (months)
-      specialBorrowerEmployerRelationship: boolean
-      selfEmployed: boolean
-      ownershipInterestType:
-      - GreaterThanOrEqualTo25Percent
-      - LessThan25Percent
-      monthlyIncome: amount
-      startDate: ULAD date
-      endDate: ULAD date
-      position: string
-      phone: string
-      address1: string
-      address2: string
-      city: string
-      state: string state code 2 digits
-      zip: string 5 or 9 digits
-      own: boolean
-      country: string
-      totalAmount: amount
-      income:
-        incomeType:
-        - base
-        - bonus
-        - commissions
-        - other
-        - overtime
-        monthlyTotal: amount
-        monthlyMilitaryEntitlement: amount
-        employmentIncome: true
-      unitTypeDesignator:
-      - Apartment
-      - Basement
-      - Building
-      - Condo
-      - Department
-      - Floor
-      - Front
-      - Hangar
-      - Key
-      - Lobby
-      - Lot
-      - Lower
-      - Office
-      - Penthouse
-      - Pier
-      - Rear
-      - Room
-      - Side
-      - Space
-      - Stop
-      - Suite
-      - Trailer
-      - Unit
-      - Upper
-    incomes:
-    - incomeSource:
-      - Alimony
-      - AutomobileAllowance
-      - BoarderIncome
-      - CapitalGains
-      - ChildSupport
-      - DefinedContributionPlan
-      - Disability
-      - DividendsInterest
-      - FosterCare
-      - HousingAllowance
-      - MortgageCreditCertificate
-      - MortgageDifferential
-      - NotesReceivableInstallment
-      - Other
-      - Pension
-      - PublicAssistance
-      - Royalties
-      - SeparateMaintenance
-      - SocialSecurity
-      - Trust
-      - Unemployment
-      - VABenefitsNonEducational
-      monthlyTotal: amount
-      employmentIncome: false
-    assets:
-    - assetType:
-      - accounts
-      - other
-      - purchase_credit
-      - gift
-      giftType:
-      - GiftOfCash
-      - GiftOfPropertyEquity
-      - Grant
-      giftSourceType:
-      - CommunityNonProfit
-      accountSourceType:
-      - Bond
-      - BridgeLoanNotDeposited
-      - CertificateOfDepositTimeDeposit
-      - CheckingAccount
-      - IndividualDevelopmentAccount
-      - LifeInsurance
-      - MoneyMarketFund
-      - MutualFund
-      - RetirementFund
-      - SavingsAccount
-      - Stock
-      - StockOptions
-      - TrustAccount
-      otherSourceType:
-      - Other
-      - PendingNetSaleProceedsFromRealEstateAssets
-      - ProceedsFromSaleOfNonRealEstateAsset
-      - ProceedsFromSecuredLoan
-      - ProceedsFromUnsecuredLoan
-      purchaseCreditType:
-      - EarnestMoney
-      - EmployerAssistedHousing
-      - LeasePurchaseFund
-      - SweatEquity
-      - TradeEquityFromPropertySwap
-      otherDescription: string
-      accountIdentifier: string
-      deposited: boolean
-      source: string
-      amount: amount
-    currentHousingExpenses: {}
-    properties:
-    - propertyUse: string
-      propertyType: string
-      propertyState: string
-      titleStatus: string
-      address1: string
-      address2: string
-      city: string
-      state: string state code 2 digits
-      zip: string 5 or 9 digits
-      marketValue: amount (estimated)
-      subjectProperty: boolean
-      mortgages: Liability
-      rentalGrossIncome: Amount
-      rentalNetIncome: Amount
-      annualTax: ''
-      monthlyHoa: ''
-      monthlyMortgageInsurance: ''
-      monthlyHomeownersInsurance: ''
-    liabilities:
-    - liabiltyType:
-      - debt
-      - other
-      - mortgage
-      mortgageType:
-      - HELOC
-      - MortgageLoan
-      debtType:
-      - Installment
-      - LeasePayment
-      - Open30DayChargeAccount
-      - Other
-      - Revolving
-      otherType:
-      - Alimony
-      - ChildSupport
-      - JobRelatedExpenses
-      - Other
-      - SeperateMaintenanceExpense
-      typeOfMortgage:
-      - Convential
-      - FHA
-      - Other
-      - USDA
-      - VA
-      creditLimit: amount
-      creditorName: string
-      otherDescription: string
-      accountNumber: string
-      balance: amount
-      monthlyAmount: amount
-      willBePaid: boolean
-      toBeResubordinated: 
-      reoIdAndMortgage: 
-      subjectProperty: 
-      creditorCity: 
-      creditorState: 
-      creditorZip: 
-      creditorZipFour: 
-      creditorStreetAddress: 
-      creditorAccountNo: 
-      noOfMonthsLeft: 
-      omitted: 
-      rentalProperty: 
-      applicantSsn: 
-      reoAssetId: 
-    recentOwnership: 
-    ongoingPayments: 
-    alimonyAmount: '0.00'
-    childSupportAmount: '0.00'
-    hasDefault: 
-    hasDefaultExp: ''
-    hasJudgements: 
-    hasJudgementsExp: ''
-    hasBankruptcy: 
-    hasBankruptcyExp: ''
-    hasOngoingPayments: 
-    hasOngoingPaymentsExp: 
-    hasPropertyForeclosure: 
-    hasPropertyForeclosureExp: ''
-    hasLawsuit: 
-    hasLawsuitExp: ''
-    hasLoanForeclosure: 
-    hasLoanForeclosureExp: ''
-    downPaymentBorrowed: 
-    downPaymentBorrowedExp: ''
-    noteDebt: 
-    noteDebtExp: ''
-    citizen:
-    - NonPermanentResidentAlien
-    - PermanentResidentAlien
-    - USCitizen
-    alien: 
-    ownedPropertyUse: 
-    ownedPropertyTitle: 
-    wantsMonitoring: 
-    hispanic: 
-    gender: 
-    white: 
-    black: 
-    islander: 
-    nativeAmerican: 
-    asian: 
-    hmdaMale: 
-    hmdaFemale: 
-    hmdaProvidesGender: 
-    hmdaProvidesEthnicity: 
-    hmdaHispanicOrLatino: 
-    hmdaNotHispanicOrLatino: 
-    hmdaMexican: 
-    hmdaPuertoRican: 
-    hmdaCuban: 
-    hmdaOtherHispanicOrLatino: 
-    hmdaProvidesRace: 
-    hmdaAmericanIndianOrAlaskan: 
-    hmdaAsian: 
-    hmdaAsianIndian: 
-    hmdaChinese: 
-    hmdaFilipino: 
-    hmdaJapanese: 
-    hmdaKorean: 
-    hmdaVietnamese: 
-    hmdaOtherAsian: 
-    hmdaBlackOrAfricanAmerican: 
-    hmdaHawaiianOrOtherPacificIslander: 
-    hmdaGuamanianOrChamorro: 
-    hmdaSamoan: 
-    hmdaOtherPacificIslander: 
-    hmdaWhite: 
-    hmdaHispanicOrLatinoDescription: 
-    hmdaAmericanIndianOrAlaskanDescription: 
-    hmdaOtherAsianDescription: 
-    hmdaOtherPacificIslanderDescription: 
-    hmdaNativeHawaiian: 
-    hmdaLenderProvidedGenderVisually: 
-    hmdaLenderProvidedRaceVisually: 
-    hmdaLenderProvidedEthnicityVisually: 
-  subjectProperty:
-    units: amount
-    propertyUse:
-    - Investment
-    - PrimaryResidence
-    - SecondHome
-    mortgages: Liability
-    rentalIncome: amount
-    netRentalIncome: amount
-    secondaryResidence: boolean
-    mixedUse: boolean
-    manufactured: boolean
-    marketValue: amount (estimated)
-    address1: string
-    address2: string
-    city: string
-    state: string state code 2 digits
-    zip: string 5 or 9 digits
-    own: boolean
-    country: string
-    startDate: ULAD date
-    endDate: ULAD date
-    rentAmount: amount
-    borrowerResidencyBasisType:
-    - livingRentFree
-    - own
-    - rent
-    addressType:
-    - current
-    - prior
-    - mailing
-    unitTypeDesignator:
-    - Apartment
-    - Basement
-    - Building
-    - Condo
-    - Department
-    - Floor
-    - Front
-    - Hangar
-    - Key
-    - Lobby
-    - Lot
-    - Lower
-    - Office
-    - Penthouse
-    - Pier
-    - Rear
-    - Room
-    - Side
-    - Space
-    - Stop
-    - Suite
-    - Trailer
-    - Unit
-    - Upper
-  proposedHousingExpenses: {}
-  prepaidItemsTotalAmount: ''
-  closingCostsTotal: ''
-  pmiMipAndFundingFees: ''
-  borrowerPaidDiscountPointsTotalAmount: ''
-  subordinateFinancingAmount: ''
-  earnestMoneyAmount: ''
-  sellerCreditAmount: ''
-  lenderCreditAmount: ''
-  loanType: 
-  armIndex: 
-  armMargin: 
-  reference: 
-advancedMode: 
-enable2018Hmda: true
-enableHmda: 
 
 </code></pre>
 </div>
