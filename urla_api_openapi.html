@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>URLA API</title>
+  <title>JFB Test Collection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8" />
@@ -689,39 +689,2021 @@
   <script>
     // Script section to load models into a JS Var
     var defs = {}
-            defs.Applicant = {
-  "required" : [ "id", "name" ],
+            defs.AddressAttributes = {
+  "title" : "AddressAttributes",
+  "required" : [ "address1", "city", "state", "zip" ],
   "type" : "object",
   "properties" : {
+    "address1" : {
+      "type" : "string"
+    },
+    "city" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "string"
+    },
+    "zip" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "address1" : "1558 Alabama Avenue Southeast",
+    "city" : "Washington",
+    "state" : "DC",
+    "zip" : 98229
+  }
+};
+            defs.CurrentAddressAttributes = {
+  "title" : "CurrentAddressAttributes",
+  "required" : [ "address1", "address2", "city", "id", "monthly_rent", "own", "start_date(1i)", "start_date(2i)", "start_date(3i)", "state", "zip" ],
+  "type" : "object",
+  "properties" : {
+    "address1" : {
+      "type" : "string"
+    },
+    "address2" : {
+      "type" : "string"
+    },
+    "city" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "string"
+    },
+    "zip" : {
+      "type" : "string"
+    },
+    "start_date(2i)" : {
+      "type" : "string"
+    },
+    "start_date(3i)" : {
+      "type" : "string"
+    },
+    "start_date(1i)" : {
+      "type" : "string"
+    },
+    "own" : {
+      "type" : "string"
+    },
+    "monthly_rent" : {
+      "type" : "string"
+    },
     "id" : {
-      "type" : "integer",
-      "format" : "int64"
-    },
-    "name" : {
-      "type" : "string"
-    },
-    "tag" : {
       "type" : "string"
     }
+  },
+  "example" : {
+    "address1" : "1558 Alabama Avenue Southeast",
+    "address2" : "",
+    "city" : "Washington",
+    "state" : "DC",
+    "zip" : 98822,
+    "start_date(2i)" : 5,
+    "start_date(3i)" : 6,
+    "start_date(1i)" : 2008,
+    "own" : false,
+    "monthly_rent" : 800,
+    "id" : 2
   }
 };
-            defs.Applicants = {
-  "type" : "array",
-  "items" : {
-    "$ref" : "#/components/schemas/Applicant"
-  }
-};
-            defs.Error = {
-  "required" : [ "code", "message" ],
+            defs.DownPaymentGiftAssetAttributes = {
+  "title" : "DownPaymentGiftAssetAttributes",
+  "required" : [ "donor_email_address", "donor_first_name", "donor_last_name", "donor_organization", "id", "total" ],
   "type" : "object",
   "properties" : {
-    "code" : {
-      "type" : "integer",
-      "format" : "int32"
+    "donor_organization" : {
+      "type" : "string"
     },
-    "message" : {
+    "donor_first_name" : {
+      "type" : "string"
+    },
+    "donor_last_name" : {
+      "type" : "string"
+    },
+    "donor_email_address" : {
+      "type" : "string"
+    },
+    "total" : {
+      "type" : "string"
+    },
+    "id" : {
       "type" : "string"
     }
+  },
+  "example" : {
+    "donor_organization" : "",
+    "donor_first_name" : "",
+    "donor_last_name" : "",
+    "donor_email_address" : "",
+    "total" : "",
+    "id" : 1
+  }
+};
+            defs.FirstExistingMortgageAttributes = {
+  "title" : "FirstExistingMortgageAttributes",
+  "required" : [ "heloc_credit_limit", "id", "lender_name", "monthly_insurance", "monthly_mortgage", "mortgage_balance", "mortgage_rate" ],
+  "type" : "object",
+  "properties" : {
+    "lender_name" : {
+      "type" : "string"
+    },
+    "monthly_mortgage" : {
+      "type" : "string"
+    },
+    "mortgage_rate" : {
+      "type" : "string"
+    },
+    "heloc_credit_limit" : {
+      "type" : "string"
+    },
+    "mortgage_balance" : {
+      "type" : "string"
+    },
+    "monthly_insurance" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "lender_name" : "",
+    "monthly_mortgage" : "",
+    "mortgage_rate" : "",
+    "heloc_credit_limit" : "",
+    "mortgage_balance" : "",
+    "monthly_insurance" : "",
+    "id" : 1
+  }
+};
+            defs.FirstExistingMortgageAttributes1 = {
+  "title" : "FirstExistingMortgageAttributes1",
+  "required" : [ "creditor_account_no", "id", "monthly_insurance", "monthly_mortgage", "mortgage_balance", "mortgage_loan_type", "mortgage_rate" ],
+  "type" : "object",
+  "properties" : {
+    "creditor_account_no" : {
+      "type" : "string"
+    },
+    "monthly_mortgage" : {
+      "type" : "string"
+    },
+    "mortgage_loan_type" : {
+      "type" : "string"
+    },
+    "mortgage_rate" : {
+      "type" : "string"
+    },
+    "mortgage_balance" : {
+      "type" : "string"
+    },
+    "monthly_insurance" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "creditor_account_no" : 232323,
+    "monthly_mortgage" : 232323,
+    "mortgage_loan_type" : 1,
+    "mortgage_rate" : 23,
+    "mortgage_balance" : 23422,
+    "monthly_insurance" : 23231,
+    "id" : 3
+  }
+};
+            defs.generatedObject = {
+  "title" : "generatedObject",
+  "required" : [ "city", "county_fips", "id", "state" ],
+  "type" : "object",
+  "properties" : {
+    "city" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "string"
+    },
+    "county_fips" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "city" : "Washington",
+    "state" : "DC",
+    "county_fips" : "DC",
+    "id" : 7
+  }
+};
+            defs.generatedObject1 = {
+  "title" : "generatedObject1",
+  "required" : [ "address1", "address2", "annual_tax", "city", "county_fips", "first_existing_mortgage_attributes", "homeowners_insurance_provider", "id", "mixed_use", "monthly_hoa", "monthly_homeowners_insurance", "purchase_price", "rental_income", "second_existing_mortgage_attributes", "state", "zip" ],
+  "type" : "object",
+  "properties" : {
+    "address1" : {
+      "type" : "string"
+    },
+    "address2" : {
+      "type" : "string"
+    },
+    "city" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "string"
+    },
+    "county_fips" : {
+      "type" : "string"
+    },
+    "zip" : {
+      "type" : "string"
+    },
+    "purchase_price" : {
+      "type" : "string"
+    },
+    "homeowners_insurance_provider" : {
+      "type" : "string"
+    },
+    "monthly_homeowners_insurance" : {
+      "type" : "string"
+    },
+    "monthly_hoa" : {
+      "type" : "string"
+    },
+    "annual_tax" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    },
+    "mixed_use" : {
+      "type" : "string"
+    },
+    "rental_income" : {
+      "type" : "string"
+    },
+    "first_existing_mortgage_attributes" : {
+      "$ref" : "#/components/schemas/FirstExistingMortgageAttributes"
+    },
+    "second_existing_mortgage_attributes" : {
+      "$ref" : "#/components/schemas/SecondExistingMortgageAttributes"
+    }
+  },
+  "example" : {
+    "address1" : "",
+    "address2" : "",
+    "city" : "",
+    "state" : "AK",
+    "county_fips" : 11,
+    "zip" : "",
+    "purchase_price" : "",
+    "homeowners_insurance_provider" : "",
+    "monthly_homeowners_insurance" : "",
+    "monthly_hoa" : "",
+    "annual_tax" : "",
+    "id" : 1,
+    "mixed_use" : false,
+    "rental_income" : "",
+    "first_existing_mortgage_attributes" : {
+      "lender_name" : "",
+      "monthly_mortgage" : "",
+      "mortgage_rate" : "",
+      "heloc_credit_limit" : "",
+      "mortgage_balance" : "",
+      "monthly_insurance" : "",
+      "id" : 1
+    },
+    "second_existing_mortgage_attributes" : {
+      "mortgage_rate" : "",
+      "heloc_credit_limit" : "",
+      "monthly_mortgage" : "",
+      "id" : 2
+    }
+  }
+};
+            defs.generatedObject2 = {
+  "title" : "generatedObject2",
+  "required" : [ "address1", "address2", "city", "id", "start_date(1i)", "start_date(2i)", "start_date(3i)", "state", "zip" ],
+  "type" : "object",
+  "properties" : {
+    "address1" : {
+      "type" : "string"
+    },
+    "address2" : {
+      "type" : "string"
+    },
+    "city" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "string"
+    },
+    "zip" : {
+      "type" : "string"
+    },
+    "start_date(2i)" : {
+      "type" : "string"
+    },
+    "start_date(3i)" : {
+      "type" : "string"
+    },
+    "start_date(1i)" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "address1" : "",
+    "address2" : "",
+    "city" : "",
+    "state" : "AK",
+    "zip" : "",
+    "start_date(2i)" : "",
+    "start_date(3i)" : "",
+    "start_date(1i)" : "",
+    "id" : 3
+  }
+};
+            defs.generatedObject3 = {
+  "title" : "generatedObject3",
+  "required" : [ "type" ],
+  "type" : "object",
+  "properties" : {
+    "type" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "type" : 1
+  }
+};
+            defs.generatedObject4 = {
+  "title" : "generatedObject4",
+  "required" : [ "address1", "address2", "annual_tax", "city", "county_fips", "first_existing_mortgage_attributes", "has_first_existing_mortgage", "has_second_existing_mortgage", "homeowners_insurance_provider", "id", "manufactured_home", "market_value", "mixed_use", "monthly_hoa", "monthly_homeowners_insurance", "no_of_units", "property_status", "property_use", "rental_income", "second_existing_mortgage_attributes", "state", "title_status", "zip" ],
+  "type" : "object",
+  "properties" : {
+    "address1" : {
+      "type" : "string"
+    },
+    "address2" : {
+      "type" : "string"
+    },
+    "city" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "string"
+    },
+    "county_fips" : {
+      "type" : "string"
+    },
+    "zip" : {
+      "type" : "string"
+    },
+    "no_of_units" : {
+      "type" : "string"
+    },
+    "mixed_use" : {
+      "type" : "string"
+    },
+    "manufactured_home" : {
+      "type" : "string"
+    },
+    "property_use" : {
+      "type" : "string"
+    },
+    "property_status" : {
+      "type" : "string"
+    },
+    "title_status" : {
+      "type" : "string"
+    },
+    "market_value" : {
+      "type" : "string"
+    },
+    "annual_tax" : {
+      "type" : "string"
+    },
+    "homeowners_insurance_provider" : {
+      "type" : "string"
+    },
+    "monthly_homeowners_insurance" : {
+      "type" : "string"
+    },
+    "monthly_hoa" : {
+      "type" : "string"
+    },
+    "rental_income" : {
+      "type" : "string"
+    },
+    "has_first_existing_mortgage" : {
+      "type" : "string"
+    },
+    "first_existing_mortgage_attributes" : {
+      "$ref" : "#/components/schemas/FirstExistingMortgageAttributes1"
+    },
+    "has_second_existing_mortgage" : {
+      "type" : "string"
+    },
+    "second_existing_mortgage_attributes" : {
+      "$ref" : "#/components/schemas/SecondExistingMortgageAttributes1"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "address1" : "1558 Alabama Avenue Southeast",
+    "address2" : "",
+    "city" : "Washington",
+    "state" : "DC",
+    "county_fips" : 1,
+    "zip" : 20032,
+    "no_of_units" : 1,
+    "mixed_use" : true,
+    "manufactured_home" : false,
+    "property_use" : 1,
+    "property_status" : 2,
+    "title_status" : 3,
+    "market_value" : 3232323,
+    "annual_tax" : 23232,
+    "homeowners_insurance_provider" : "Me",
+    "monthly_homeowners_insurance" : 100000,
+    "monthly_hoa" : 203934,
+    "rental_income" : 302093,
+    "has_first_existing_mortgage" : true,
+    "first_existing_mortgage_attributes" : {
+      "creditor_account_no" : 232323,
+      "monthly_mortgage" : 232323,
+      "mortgage_loan_type" : 1,
+      "mortgage_rate" : 23,
+      "mortgage_balance" : 23422,
+      "monthly_insurance" : 23231,
+      "id" : 3
+    },
+    "has_second_existing_mortgage" : false,
+    "second_existing_mortgage_attributes" : {
+      "creditor_account_no" : "",
+      "monthly_mortgage" : "",
+      "mortgage_rate" : "",
+      "mortgage_balance" : "",
+      "id" : 4
+    },
+    "id" : 5
+  }
+};
+            defs.generatedObject5 = {
+  "title" : "generatedObject5",
+  "required" : [ "account_type", "asset_type", "financial_institution", "id", "total" ],
+  "type" : "object",
+  "properties" : {
+    "financial_institution" : {
+      "type" : "string"
+    },
+    "asset_type" : {
+      "type" : "string"
+    },
+    "total" : {
+      "type" : "string"
+    },
+    "account_type" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "financial_institution" : "BoA",
+    "asset_type" : "savings",
+    "total" : 2000,
+    "account_type" : "Savings",
+    "id" : 1
+  }
+};
+            defs.generatedObject6 = {
+  "title" : "generatedObject6",
+  "required" : [ "address_attributes", "employer_name", "id", "income_attributes", "industry", "payment_type", "phone", "position", "proof_required", "self_employed", "start_date(1i)", "start_date(2i)", "start_date(3i)", "total_experience", "work_experience" ],
+  "type" : "object",
+  "properties" : {
+    "employer_name" : {
+      "type" : "string"
+    },
+    "phone" : {
+      "type" : "string"
+    },
+    "address_attributes" : {
+      "$ref" : "#/components/schemas/AddressAttributes"
+    },
+    "position" : {
+      "type" : "string"
+    },
+    "industry" : {
+      "type" : "string"
+    },
+    "start_date(2i)" : {
+      "type" : "string"
+    },
+    "start_date(3i)" : {
+      "type" : "string"
+    },
+    "start_date(1i)" : {
+      "type" : "string"
+    },
+    "work_experience" : {
+      "type" : "string"
+    },
+    "total_experience" : {
+      "type" : "string"
+    },
+    "payment_type" : {
+      "type" : "string"
+    },
+    "income_attributes" : {
+      "$ref" : "#/components/schemas/IncomeAttributes"
+    },
+    "self_employed" : {
+      "type" : "string"
+    },
+    "proof_required" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "employer_name" : "My name",
+    "phone" : "(303) 030-3033",
+    "address_attributes" : {
+      "address1" : "1558 Alabama Avenue Southeast",
+      "city" : "Washington",
+      "state" : "DC",
+      "zip" : 98229
+    },
+    "position" : "Software Developer",
+    "industry" : "IT Services/Software",
+    "start_date(2i)" : 7,
+    "start_date(3i)" : 9,
+    "start_date(1i)" : 2010,
+    "work_experience" : 10,
+    "total_experience" : 10,
+    "payment_type" : 1,
+    "income_attributes" : {
+      "monthly_income" : 100000,
+      "yearly_bonus_income" : 1000,
+      "yearly_commission_income" : 1000
+    },
+    "self_employed" : false,
+    "proof_required" : false,
+    "id" : 1
+  }
+};
+            defs.generatedObject7 = {
+  "title" : "generatedObject7",
+  "required" : [ "gross_amount", "source" ],
+  "type" : "object",
+  "properties" : {
+    "gross_amount" : {
+      "type" : "string"
+    },
+    "source" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "gross_amount" : 9988777,
+    "source" : "disability"
+  }
+};
+            defs.IncomeAttributes = {
+  "title" : "IncomeAttributes",
+  "required" : [ "monthly_income", "yearly_bonus_income", "yearly_commission_income" ],
+  "type" : "object",
+  "properties" : {
+    "monthly_income" : {
+      "type" : "string"
+    },
+    "yearly_bonus_income" : {
+      "type" : "string"
+    },
+    "yearly_commission_income" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "monthly_income" : 100000,
+    "yearly_bonus_income" : 1000,
+    "yearly_commission_income" : 1000
+  }
+};
+            defs.LoanApplicationAttributes = {
+  "title" : "LoanApplicationAttributes",
+  "required" : [ "application_type", "desired_cashout_amount", "extra_circumstances", "has_coborrower", "lead_source", "loan_use_other", "mortgage_type", "non_mortgage_payoff_amount", "overall_plans", "pre_approval", "property_use", "receiving_down_payment_gift" ],
+  "type" : "object",
+  "properties" : {
+    "lead_source" : {
+      "type" : "string"
+    },
+    "has_coborrower" : {
+      "type" : "string"
+    },
+    "application_type" : {
+      "type" : "string"
+    },
+    "pre_approval" : {
+      "type" : "string"
+    },
+    "mortgage_type" : {
+      "type" : "string"
+    },
+    "loan_use_other" : {
+      "type" : "string"
+    },
+    "non_mortgage_payoff_amount" : {
+      "type" : "string"
+    },
+    "desired_cashout_amount" : {
+      "type" : "string"
+    },
+    "overall_plans" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "extra_circumstances" : {
+      "type" : "string"
+    },
+    "property_use" : {
+      "type" : "string"
+    },
+    "receiving_down_payment_gift" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "lead_source" : "Here",
+    "has_coborrower" : false,
+    "application_type" : 1,
+    "pre_approval" : true,
+    "mortgage_type" : 1,
+    "loan_use_other" : "",
+    "non_mortgage_payoff_amount" : "",
+    "desired_cashout_amount" : "",
+    "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+    "extra_circumstances" : "asdfasdf",
+    "property_use" : 1,
+    "receiving_down_payment_gift" : false
+  }
+};
+            defs.MailingAddressAttributes = {
+  "title" : "MailingAddressAttributes",
+  "required" : [ "address1", "address2", "city", "id", "state", "zip" ],
+  "type" : "object",
+  "properties" : {
+    "address1" : {
+      "type" : "string"
+    },
+    "address2" : {
+      "type" : "string"
+    },
+    "city" : {
+      "type" : "string"
+    },
+    "state" : {
+      "type" : "string"
+    },
+    "zip" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "address1" : "",
+    "address2" : "",
+    "city" : "",
+    "state" : "AK",
+    "zip" : "",
+    "id" : 4
+  }
+};
+            defs.PrimaryApplicantAttributes = {
+  "title" : "PrimaryApplicantAttributes",
+  "required" : [ "account_relationship", "alimony_amount", "alternate_first_name", "alternate_last_name", "alternate_middle_initial", "alternate_suffix", "assets_attributes", "bankruptcies_attributes", "child_support_amount", "citizenship", "cosigner_of_undisclosed", "cosigner_of_undisclosed_exp", "current_address_attributes", "current_ownership", "delinquency", "delinquency_exp", "dependents", "discharged_at(1i)", "discharged_at(2i)", "discharged_at(3i)", "discharging_at(1i)", "discharging_at(2i)", "discharging_at(3i)", "dob(1i)", "dob(2i)", "dob(3i)", "email", "employee_relationship", "employments_attributes", "first_name", "has_declared_bankruptcy", "has_dependents", "has_judgements", "has_judgements_exp", "has_lawsuit", "has_lawsuit_exp", "has_loan_foreclosure", "has_loan_foreclosure_exp", "has_other_incomes", "has_property_foreclosure", "has_property_foreclosure_exp", "hmda_american_indian_or_alaskan", "hmda_american_indian_or_alaskan_description", "hmda_asian", "hmda_asian_indian", "hmda_black_or_african_american", "hmda_chinese", "hmda_cuban", "hmda_female", "hmda_filipino", "hmda_guamanian_or_chamorro", "hmda_hawaiian_or_other_pacific_islander", "hmda_hispanic_or_latino", "hmda_hispanic_or_latino_description", "hmda_japanese", "hmda_korean", "hmda_male", "hmda_mexican", "hmda_native_hawaiian", "hmda_not_hispanic_or_latino", "hmda_other_asian", "hmda_other_asian_description", "hmda_other_hispanic_or_latino", "hmda_other_pacific_islander", "hmda_other_pacific_islander_description", "hmda_provides_ethnicity", "hmda_provides_gender", "hmda_provides_race", "hmda_puerto_rican", "hmda_samoan", "hmda_vietnamese", "hmda_white", "home_phone", "id", "incharged_at(1i)", "incharged_at(2i)", "incharged_at(3i)", "last_name", "mailing_address_attributes", "manually_setup_assets", "marital_status", "middle_initial", "military_service", "new_credit", "new_credit_exp", "new_properties_attributes", "no_primary_housing_expenses", "ongoing_payments", "other_incomes_attributes", "other_property_other_mortgage", "other_property_other_mortgage_exp", "owned_property_title", "owned_property_use", "phone", "pre_foreclosure", "pre_foreclosure_exp", "preferred_language", "previous_addresses_attributes", "priority_lien", "priority_lien_exp", "recent_ownership", "recently_employed", "relationship_state", "relationship_type", "relationship_type_other", "separate_mailing_address", "suffix", "uses_alternate_name", "voe_consent_attributes", "work_phone", "years_schooling" ],
+  "type" : "object",
+  "properties" : {
+    "first_name" : {
+      "type" : "string"
+    },
+    "middle_initial" : {
+      "type" : "string"
+    },
+    "last_name" : {
+      "type" : "string"
+    },
+    "suffix" : {
+      "type" : "string"
+    },
+    "uses_alternate_name" : {
+      "type" : "string"
+    },
+    "alternate_first_name" : {
+      "type" : "string"
+    },
+    "alternate_middle_initial" : {
+      "type" : "string"
+    },
+    "alternate_last_name" : {
+      "type" : "string"
+    },
+    "alternate_suffix" : {
+      "type" : "string"
+    },
+    "email" : {
+      "type" : "string"
+    },
+    "home_phone" : {
+      "type" : "string"
+    },
+    "phone" : {
+      "type" : "string"
+    },
+    "work_phone" : {
+      "type" : "string"
+    },
+    "preferred_language" : {
+      "type" : "string"
+    },
+    "account_relationship" : {
+      "type" : "string"
+    },
+    "employee_relationship" : {
+      "type" : "string"
+    },
+    "current_address_attributes" : {
+      "$ref" : "#/components/schemas/CurrentAddressAttributes"
+    },
+    "no_primary_housing_expenses" : {
+      "type" : "string"
+    },
+    "previous_addresses_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject2"
+      }
+    },
+    "separate_mailing_address" : {
+      "type" : "string"
+    },
+    "mailing_address_attributes" : {
+      "$ref" : "#/components/schemas/MailingAddressAttributes"
+    },
+    "dob(2i)" : {
+      "type" : "string"
+    },
+    "dob(3i)" : {
+      "type" : "string"
+    },
+    "dob(1i)" : {
+      "type" : "string"
+    },
+    "years_schooling" : {
+      "type" : "string"
+    },
+    "marital_status" : {
+      "type" : "string"
+    },
+    "relationship_type" : {
+      "type" : "string"
+    },
+    "relationship_type_other" : {
+      "type" : "string"
+    },
+    "relationship_state" : {
+      "type" : "string"
+    },
+    "has_dependents" : {
+      "type" : "string"
+    },
+    "dependents" : {
+      "type" : "string"
+    },
+    "citizenship" : {
+      "type" : "string"
+    },
+    "military_service" : {
+      "type" : "string"
+    },
+    "discharged_at(2i)" : {
+      "type" : "string"
+    },
+    "discharged_at(3i)" : {
+      "type" : "string"
+    },
+    "discharged_at(1i)" : {
+      "type" : "string"
+    },
+    "incharged_at(2i)" : {
+      "type" : "string"
+    },
+    "incharged_at(3i)" : {
+      "type" : "string"
+    },
+    "incharged_at(1i)" : {
+      "type" : "string"
+    },
+    "discharging_at(2i)" : {
+      "type" : "string"
+    },
+    "discharging_at(3i)" : {
+      "type" : "string"
+    },
+    "discharging_at(1i)" : {
+      "type" : "string"
+    },
+    "other_property_other_mortgage" : {
+      "type" : "string"
+    },
+    "other_property_other_mortgage_exp" : {
+      "type" : "string"
+    },
+    "new_credit" : {
+      "type" : "string"
+    },
+    "new_credit_exp" : {
+      "type" : "string"
+    },
+    "priority_lien" : {
+      "type" : "string"
+    },
+    "priority_lien_exp" : {
+      "type" : "string"
+    },
+    "cosigner_of_undisclosed" : {
+      "type" : "string"
+    },
+    "cosigner_of_undisclosed_exp" : {
+      "type" : "string"
+    },
+    "has_judgements" : {
+      "type" : "string"
+    },
+    "has_judgements_exp" : {
+      "type" : "string"
+    },
+    "delinquency" : {
+      "type" : "string"
+    },
+    "delinquency_exp" : {
+      "type" : "string"
+    },
+    "has_lawsuit" : {
+      "type" : "string"
+    },
+    "has_lawsuit_exp" : {
+      "type" : "string"
+    },
+    "has_loan_foreclosure" : {
+      "type" : "string"
+    },
+    "has_loan_foreclosure_exp" : {
+      "type" : "string"
+    },
+    "pre_foreclosure" : {
+      "type" : "string"
+    },
+    "pre_foreclosure_exp" : {
+      "type" : "string"
+    },
+    "has_property_foreclosure" : {
+      "type" : "string"
+    },
+    "has_property_foreclosure_exp" : {
+      "type" : "string"
+    },
+    "has_declared_bankruptcy" : {
+      "type" : "string"
+    },
+    "bankruptcies_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject3"
+      }
+    },
+    "hmda_not_hispanic_or_latino" : {
+      "type" : "string"
+    },
+    "hmda_hispanic_or_latino" : {
+      "type" : "string"
+    },
+    "hmda_mexican" : {
+      "type" : "string"
+    },
+    "hmda_puerto_rican" : {
+      "type" : "string"
+    },
+    "hmda_cuban" : {
+      "type" : "string"
+    },
+    "hmda_other_hispanic_or_latino" : {
+      "type" : "string"
+    },
+    "hmda_hispanic_or_latino_description" : {
+      "type" : "string"
+    },
+    "hmda_provides_ethnicity" : {
+      "type" : "string"
+    },
+    "hmda_american_indian_or_alaskan" : {
+      "type" : "string"
+    },
+    "hmda_american_indian_or_alaskan_description" : {
+      "type" : "string"
+    },
+    "hmda_asian" : {
+      "type" : "string"
+    },
+    "hmda_asian_indian" : {
+      "type" : "string"
+    },
+    "hmda_chinese" : {
+      "type" : "string"
+    },
+    "hmda_filipino" : {
+      "type" : "string"
+    },
+    "hmda_japanese" : {
+      "type" : "string"
+    },
+    "hmda_korean" : {
+      "type" : "string"
+    },
+    "hmda_vietnamese" : {
+      "type" : "string"
+    },
+    "hmda_other_asian" : {
+      "type" : "string"
+    },
+    "hmda_other_asian_description" : {
+      "type" : "string"
+    },
+    "hmda_black_or_african_american" : {
+      "type" : "string"
+    },
+    "hmda_hawaiian_or_other_pacific_islander" : {
+      "type" : "string"
+    },
+    "hmda_native_hawaiian" : {
+      "type" : "string"
+    },
+    "hmda_guamanian_or_chamorro" : {
+      "type" : "string"
+    },
+    "hmda_samoan" : {
+      "type" : "string"
+    },
+    "hmda_other_pacific_islander" : {
+      "type" : "string"
+    },
+    "hmda_other_pacific_islander_description" : {
+      "type" : "string"
+    },
+    "hmda_white" : {
+      "type" : "string"
+    },
+    "hmda_provides_race" : {
+      "type" : "string"
+    },
+    "hmda_female" : {
+      "type" : "string"
+    },
+    "hmda_male" : {
+      "type" : "string"
+    },
+    "hmda_provides_gender" : {
+      "type" : "string"
+    },
+    "recently_employed" : {
+      "type" : "string"
+    },
+    "current_ownership" : {
+      "type" : "string"
+    },
+    "new_properties_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject4"
+      }
+    },
+    "recent_ownership" : {
+      "type" : "string"
+    },
+    "owned_property_use" : {
+      "type" : "string"
+    },
+    "owned_property_title" : {
+      "type" : "string"
+    },
+    "manually_setup_assets" : {
+      "type" : "string"
+    },
+    "assets_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject5"
+      }
+    },
+    "id" : {
+      "type" : "string"
+    },
+    "ongoing_payments" : {
+      "type" : "string"
+    },
+    "alimony_amount" : {
+      "type" : "string"
+    },
+    "child_support_amount" : {
+      "type" : "string"
+    },
+    "employments_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject6"
+      }
+    },
+    "has_other_incomes" : {
+      "type" : "string"
+    },
+    "other_incomes_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject7"
+      }
+    },
+    "voe_consent_attributes" : {
+      "$ref" : "#/components/schemas/VoeConsentAttributes"
+    }
+  },
+  "example" : {
+    "first_name" : "asdfasdf",
+    "middle_initial" : "",
+    "last_name" : "asdf",
+    "suffix" : "",
+    "uses_alternate_name" : false,
+    "alternate_first_name" : "",
+    "alternate_middle_initial" : "",
+    "alternate_last_name" : "",
+    "alternate_suffix" : "",
+    "email" : "astuntz@roostify.com",
+    "home_phone" : "(333) 333-3333",
+    "phone" : "(333) 333-3333",
+    "work_phone" : "(333) 333-3333",
+    "preferred_language" : 3,
+    "account_relationship" : true,
+    "employee_relationship" : true,
+    "current_address_attributes" : {
+      "address1" : "1558 Alabama Avenue Southeast",
+      "address2" : "",
+      "city" : "Washington",
+      "state" : "DC",
+      "zip" : 98822,
+      "start_date(2i)" : 5,
+      "start_date(3i)" : 6,
+      "start_date(1i)" : 2008,
+      "own" : false,
+      "monthly_rent" : 800,
+      "id" : 2
+    },
+    "no_primary_housing_expenses" : false,
+    "previous_addresses_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "start_date(2i)" : "",
+        "start_date(3i)" : "",
+        "start_date(1i)" : "",
+        "id" : 3
+      }
+    },
+    "separate_mailing_address" : false,
+    "mailing_address_attributes" : {
+      "address1" : "",
+      "address2" : "",
+      "city" : "",
+      "state" : "AK",
+      "zip" : "",
+      "id" : 4
+    },
+    "dob(2i)" : 5,
+    "dob(3i)" : 8,
+    "dob(1i)" : 2011,
+    "years_schooling" : 12,
+    "marital_status" : 3,
+    "relationship_type" : 1,
+    "relationship_type_other" : "",
+    "relationship_state" : "AK",
+    "has_dependents" : false,
+    "dependents" : "",
+    "citizenship" : 1,
+    "military_service" : false,
+    "discharged_at(2i)" : "",
+    "discharged_at(3i)" : 1,
+    "discharged_at(1i)" : "",
+    "incharged_at(2i)" : "",
+    "incharged_at(3i)" : 1,
+    "incharged_at(1i)" : "",
+    "discharging_at(2i)" : "",
+    "discharging_at(3i)" : 1,
+    "discharging_at(1i)" : "",
+    "other_property_other_mortgage" : true,
+    "other_property_other_mortgage_exp" : "",
+    "new_credit" : true,
+    "new_credit_exp" : "",
+    "priority_lien" : true,
+    "priority_lien_exp" : "",
+    "cosigner_of_undisclosed" : true,
+    "cosigner_of_undisclosed_exp" : "",
+    "has_judgements" : true,
+    "has_judgements_exp" : "",
+    "delinquency" : true,
+    "delinquency_exp" : "",
+    "has_lawsuit" : true,
+    "has_lawsuit_exp" : "",
+    "has_loan_foreclosure" : true,
+    "has_loan_foreclosure_exp" : "",
+    "pre_foreclosure" : true,
+    "pre_foreclosure_exp" : "",
+    "has_property_foreclosure" : true,
+    "has_property_foreclosure_exp" : "",
+    "has_declared_bankruptcy" : true,
+    "bankruptcies_attributes" : {
+      "0" : {
+        "type" : 1
+      }
+    },
+    "hmda_not_hispanic_or_latino" : true,
+    "hmda_hispanic_or_latino" : true,
+    "hmda_mexican" : true,
+    "hmda_puerto_rican" : true,
+    "hmda_cuban" : true,
+    "hmda_other_hispanic_or_latino" : true,
+    "hmda_hispanic_or_latino_description" : "klklk",
+    "hmda_provides_ethnicity" : true,
+    "hmda_american_indian_or_alaskan" : true,
+    "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+    "hmda_asian" : true,
+    "hmda_asian_indian" : true,
+    "hmda_chinese" : true,
+    "hmda_filipino" : true,
+    "hmda_japanese" : true,
+    "hmda_korean" : true,
+    "hmda_vietnamese" : true,
+    "hmda_other_asian" : true,
+    "hmda_other_asian_description" : ";lkp;lk",
+    "hmda_black_or_african_american" : true,
+    "hmda_hawaiian_or_other_pacific_islander" : true,
+    "hmda_native_hawaiian" : true,
+    "hmda_guamanian_or_chamorro" : true,
+    "hmda_samoan" : true,
+    "hmda_other_pacific_islander" : true,
+    "hmda_other_pacific_islander_description" : ";/,;l./,",
+    "hmda_white" : true,
+    "hmda_provides_race" : true,
+    "hmda_female" : true,
+    "hmda_male" : true,
+    "hmda_provides_gender" : true,
+    "recently_employed" : true,
+    "current_ownership" : true,
+    "new_properties_attributes" : {
+      "0" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : 1,
+        "zip" : 20032,
+        "no_of_units" : 1,
+        "mixed_use" : true,
+        "manufactured_home" : false,
+        "property_use" : 1,
+        "property_status" : 2,
+        "title_status" : 3,
+        "market_value" : 3232323,
+        "annual_tax" : 23232,
+        "homeowners_insurance_provider" : "Me",
+        "monthly_homeowners_insurance" : 100000,
+        "monthly_hoa" : 203934,
+        "rental_income" : 302093,
+        "has_first_existing_mortgage" : true,
+        "first_existing_mortgage_attributes" : {
+          "creditor_account_no" : 232323,
+          "monthly_mortgage" : 232323,
+          "mortgage_loan_type" : 1,
+          "mortgage_rate" : 23,
+          "mortgage_balance" : 23422,
+          "monthly_insurance" : 23231,
+          "id" : 3
+        },
+        "has_second_existing_mortgage" : false,
+        "second_existing_mortgage_attributes" : {
+          "creditor_account_no" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "mortgage_balance" : "",
+          "id" : 4
+        },
+        "id" : 5
+      }
+    },
+    "recent_ownership" : true,
+    "owned_property_use" : 2,
+    "owned_property_title" : 1,
+    "manually_setup_assets" : false,
+    "assets_attributes" : {
+      "0" : {
+        "financial_institution" : "BoA",
+        "asset_type" : "savings",
+        "total" : 2000,
+        "account_type" : "Savings",
+        "id" : 1
+      }
+    },
+    "id" : 4,
+    "ongoing_payments" : 3,
+    "alimony_amount" : "",
+    "child_support_amount" : "",
+    "employments_attributes" : {
+      "0" : {
+        "employer_name" : "My name",
+        "phone" : "(303) 030-3033",
+        "address_attributes" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "city" : "Washington",
+          "state" : "DC",
+          "zip" : 98229
+        },
+        "position" : "Software Developer",
+        "industry" : "IT Services/Software",
+        "start_date(2i)" : 7,
+        "start_date(3i)" : 9,
+        "start_date(1i)" : 2010,
+        "work_experience" : 10,
+        "total_experience" : 10,
+        "payment_type" : 1,
+        "income_attributes" : {
+          "monthly_income" : 100000,
+          "yearly_bonus_income" : 1000,
+          "yearly_commission_income" : 1000
+        },
+        "self_employed" : false,
+        "proof_required" : false,
+        "id" : 1
+      }
+    },
+    "has_other_incomes" : true,
+    "other_incomes_attributes" : {
+      "0" : {
+        "gross_amount" : 9988777,
+        "source" : "disability"
+      }
+    },
+    "voe_consent_attributes" : {
+      "status" : "granted"
+    }
+  }
+};
+            defs.ResidentialLoan = {
+  "title" : "ResidentialLoan",
+  "required" : [ "coborrower_lived_with_borrower", "down_payment_gift_asset_attributes", "has_undisclosed_finances", "loan_application_attributes", "primary_applicant_attributes", "prospective_properties_attributes", "prospective_property_purchase_price", "subject_properties_attributes", "token", "undisclosed_dollar_amount" ],
+  "type" : "object",
+  "properties" : {
+    "token" : {
+      "type" : "string"
+    },
+    "loan_application_attributes" : {
+      "$ref" : "#/components/schemas/LoanApplicationAttributes"
+    },
+    "prospective_properties_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject"
+      }
+    },
+    "prospective_property_purchase_price" : {
+      "type" : "string"
+    },
+    "subject_properties_attributes" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "$ref" : "#/components/schemas/generatedObject1"
+      }
+    },
+    "primary_applicant_attributes" : {
+      "$ref" : "#/components/schemas/PrimaryApplicantAttributes"
+    },
+    "down_payment_gift_asset_attributes" : {
+      "$ref" : "#/components/schemas/DownPaymentGiftAssetAttributes"
+    },
+    "has_undisclosed_finances" : {
+      "type" : "string"
+    },
+    "undisclosed_dollar_amount" : {
+      "type" : "string"
+    },
+    "coborrower_lived_with_borrower" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "token" : 5594415352464157,
+    "loan_application_attributes" : {
+      "lead_source" : "Here",
+      "has_coborrower" : false,
+      "application_type" : 1,
+      "pre_approval" : true,
+      "mortgage_type" : 1,
+      "loan_use_other" : "",
+      "non_mortgage_payoff_amount" : "",
+      "desired_cashout_amount" : "",
+      "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "extra_circumstances" : "asdfasdf",
+      "property_use" : 1,
+      "receiving_down_payment_gift" : false
+    },
+    "prospective_properties_attributes" : {
+      "0" : {
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : "DC",
+        "id" : 7
+      }
+    },
+    "prospective_property_purchase_price" : 500000,
+    "subject_properties_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "county_fips" : 11,
+        "zip" : "",
+        "purchase_price" : "",
+        "homeowners_insurance_provider" : "",
+        "monthly_homeowners_insurance" : "",
+        "monthly_hoa" : "",
+        "annual_tax" : "",
+        "id" : 1,
+        "mixed_use" : false,
+        "rental_income" : "",
+        "first_existing_mortgage_attributes" : {
+          "lender_name" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "mortgage_balance" : "",
+          "monthly_insurance" : "",
+          "id" : 1
+        },
+        "second_existing_mortgage_attributes" : {
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "monthly_mortgage" : "",
+          "id" : 2
+        }
+      }
+    },
+    "primary_applicant_attributes" : {
+      "first_name" : "asdfasdf",
+      "middle_initial" : "",
+      "last_name" : "asdf",
+      "suffix" : "",
+      "uses_alternate_name" : false,
+      "alternate_first_name" : "",
+      "alternate_middle_initial" : "",
+      "alternate_last_name" : "",
+      "alternate_suffix" : "",
+      "email" : "astuntz@roostify.com",
+      "home_phone" : "(333) 333-3333",
+      "phone" : "(333) 333-3333",
+      "work_phone" : "(333) 333-3333",
+      "preferred_language" : 3,
+      "account_relationship" : true,
+      "employee_relationship" : true,
+      "current_address_attributes" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "zip" : 98822,
+        "start_date(2i)" : 5,
+        "start_date(3i)" : 6,
+        "start_date(1i)" : 2008,
+        "own" : false,
+        "monthly_rent" : 800,
+        "id" : 2
+      },
+      "no_primary_housing_expenses" : false,
+      "previous_addresses_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "start_date(2i)" : "",
+          "start_date(3i)" : "",
+          "start_date(1i)" : "",
+          "id" : 3
+        }
+      },
+      "separate_mailing_address" : false,
+      "mailing_address_attributes" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "id" : 4
+      },
+      "dob(2i)" : 5,
+      "dob(3i)" : 8,
+      "dob(1i)" : 2011,
+      "years_schooling" : 12,
+      "marital_status" : 3,
+      "relationship_type" : 1,
+      "relationship_type_other" : "",
+      "relationship_state" : "AK",
+      "has_dependents" : false,
+      "dependents" : "",
+      "citizenship" : 1,
+      "military_service" : false,
+      "discharged_at(2i)" : "",
+      "discharged_at(3i)" : 1,
+      "discharged_at(1i)" : "",
+      "incharged_at(2i)" : "",
+      "incharged_at(3i)" : 1,
+      "incharged_at(1i)" : "",
+      "discharging_at(2i)" : "",
+      "discharging_at(3i)" : 1,
+      "discharging_at(1i)" : "",
+      "other_property_other_mortgage" : true,
+      "other_property_other_mortgage_exp" : "",
+      "new_credit" : true,
+      "new_credit_exp" : "",
+      "priority_lien" : true,
+      "priority_lien_exp" : "",
+      "cosigner_of_undisclosed" : true,
+      "cosigner_of_undisclosed_exp" : "",
+      "has_judgements" : true,
+      "has_judgements_exp" : "",
+      "delinquency" : true,
+      "delinquency_exp" : "",
+      "has_lawsuit" : true,
+      "has_lawsuit_exp" : "",
+      "has_loan_foreclosure" : true,
+      "has_loan_foreclosure_exp" : "",
+      "pre_foreclosure" : true,
+      "pre_foreclosure_exp" : "",
+      "has_property_foreclosure" : true,
+      "has_property_foreclosure_exp" : "",
+      "has_declared_bankruptcy" : true,
+      "bankruptcies_attributes" : {
+        "0" : {
+          "type" : 1
+        }
+      },
+      "hmda_not_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino" : true,
+      "hmda_mexican" : true,
+      "hmda_puerto_rican" : true,
+      "hmda_cuban" : true,
+      "hmda_other_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino_description" : "klklk",
+      "hmda_provides_ethnicity" : true,
+      "hmda_american_indian_or_alaskan" : true,
+      "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+      "hmda_asian" : true,
+      "hmda_asian_indian" : true,
+      "hmda_chinese" : true,
+      "hmda_filipino" : true,
+      "hmda_japanese" : true,
+      "hmda_korean" : true,
+      "hmda_vietnamese" : true,
+      "hmda_other_asian" : true,
+      "hmda_other_asian_description" : ";lkp;lk",
+      "hmda_black_or_african_american" : true,
+      "hmda_hawaiian_or_other_pacific_islander" : true,
+      "hmda_native_hawaiian" : true,
+      "hmda_guamanian_or_chamorro" : true,
+      "hmda_samoan" : true,
+      "hmda_other_pacific_islander" : true,
+      "hmda_other_pacific_islander_description" : ";/,;l./,",
+      "hmda_white" : true,
+      "hmda_provides_race" : true,
+      "hmda_female" : true,
+      "hmda_male" : true,
+      "hmda_provides_gender" : true,
+      "recently_employed" : true,
+      "current_ownership" : true,
+      "new_properties_attributes" : {
+        "0" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : 1,
+          "zip" : 20032,
+          "no_of_units" : 1,
+          "mixed_use" : true,
+          "manufactured_home" : false,
+          "property_use" : 1,
+          "property_status" : 2,
+          "title_status" : 3,
+          "market_value" : 3232323,
+          "annual_tax" : 23232,
+          "homeowners_insurance_provider" : "Me",
+          "monthly_homeowners_insurance" : 100000,
+          "monthly_hoa" : 203934,
+          "rental_income" : 302093,
+          "has_first_existing_mortgage" : true,
+          "first_existing_mortgage_attributes" : {
+            "creditor_account_no" : 232323,
+            "monthly_mortgage" : 232323,
+            "mortgage_loan_type" : 1,
+            "mortgage_rate" : 23,
+            "mortgage_balance" : 23422,
+            "monthly_insurance" : 23231,
+            "id" : 3
+          },
+          "has_second_existing_mortgage" : false,
+          "second_existing_mortgage_attributes" : {
+            "creditor_account_no" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "mortgage_balance" : "",
+            "id" : 4
+          },
+          "id" : 5
+        }
+      },
+      "recent_ownership" : true,
+      "owned_property_use" : 2,
+      "owned_property_title" : 1,
+      "manually_setup_assets" : false,
+      "assets_attributes" : {
+        "0" : {
+          "financial_institution" : "BoA",
+          "asset_type" : "savings",
+          "total" : 2000,
+          "account_type" : "Savings",
+          "id" : 1
+        }
+      },
+      "id" : 4,
+      "ongoing_payments" : 3,
+      "alimony_amount" : "",
+      "child_support_amount" : "",
+      "employments_attributes" : {
+        "0" : {
+          "employer_name" : "My name",
+          "phone" : "(303) 030-3033",
+          "address_attributes" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "city" : "Washington",
+            "state" : "DC",
+            "zip" : 98229
+          },
+          "position" : "Software Developer",
+          "industry" : "IT Services/Software",
+          "start_date(2i)" : 7,
+          "start_date(3i)" : 9,
+          "start_date(1i)" : 2010,
+          "work_experience" : 10,
+          "total_experience" : 10,
+          "payment_type" : 1,
+          "income_attributes" : {
+            "monthly_income" : 100000,
+            "yearly_bonus_income" : 1000,
+            "yearly_commission_income" : 1000
+          },
+          "self_employed" : false,
+          "proof_required" : false,
+          "id" : 1
+        }
+      },
+      "has_other_incomes" : true,
+      "other_incomes_attributes" : {
+        "0" : {
+          "gross_amount" : 9988777,
+          "source" : "disability"
+        }
+      },
+      "voe_consent_attributes" : {
+        "status" : "granted"
+      }
+    },
+    "down_payment_gift_asset_attributes" : {
+      "donor_organization" : "",
+      "donor_first_name" : "",
+      "donor_last_name" : "",
+      "donor_email_address" : "",
+      "total" : "",
+      "id" : 1
+    },
+    "has_undisclosed_finances" : false,
+    "undisclosed_dollar_amount" : "",
+    "coborrower_lived_with_borrower" : false
+  }
+};
+            defs.SecondExistingMortgageAttributes = {
+  "title" : "SecondExistingMortgageAttributes",
+  "required" : [ "heloc_credit_limit", "id", "monthly_mortgage", "mortgage_rate" ],
+  "type" : "object",
+  "properties" : {
+    "mortgage_rate" : {
+      "type" : "string"
+    },
+    "heloc_credit_limit" : {
+      "type" : "string"
+    },
+    "monthly_mortgage" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "mortgage_rate" : "",
+    "heloc_credit_limit" : "",
+    "monthly_mortgage" : "",
+    "id" : 2
+  }
+};
+            defs.SecondExistingMortgageAttributes1 = {
+  "title" : "SecondExistingMortgageAttributes1",
+  "required" : [ "creditor_account_no", "id", "monthly_mortgage", "mortgage_balance", "mortgage_rate" ],
+  "type" : "object",
+  "properties" : {
+    "creditor_account_no" : {
+      "type" : "string"
+    },
+    "monthly_mortgage" : {
+      "type" : "string"
+    },
+    "mortgage_rate" : {
+      "type" : "string"
+    },
+    "mortgage_balance" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "creditor_account_no" : "",
+    "monthly_mortgage" : "",
+    "mortgage_rate" : "",
+    "mortgage_balance" : "",
+    "id" : 4
+  }
+};
+            defs.URLATestRequest = {
+  "title" : "URLATestRequest",
+  "required" : [ "residential_loan" ],
+  "type" : "object",
+  "properties" : {
+    "residential_loan" : {
+      "$ref" : "#/components/schemas/ResidentialLoan"
+    }
+  },
+  "example" : {
+    "residential_loan" : {
+      "token" : 5594415352464157,
+      "loan_application_attributes" : {
+        "lead_source" : "Here",
+        "has_coborrower" : false,
+        "application_type" : 1,
+        "pre_approval" : true,
+        "mortgage_type" : 1,
+        "loan_use_other" : "",
+        "non_mortgage_payoff_amount" : "",
+        "desired_cashout_amount" : "",
+        "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+        "extra_circumstances" : "asdfasdf",
+        "property_use" : 1,
+        "receiving_down_payment_gift" : false
+      },
+      "prospective_properties_attributes" : {
+        "0" : {
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : "DC",
+          "id" : 7
+        }
+      },
+      "prospective_property_purchase_price" : 500000,
+      "subject_properties_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "county_fips" : 11,
+          "zip" : "",
+          "purchase_price" : "",
+          "homeowners_insurance_provider" : "",
+          "monthly_homeowners_insurance" : "",
+          "monthly_hoa" : "",
+          "annual_tax" : "",
+          "id" : 1,
+          "mixed_use" : false,
+          "rental_income" : "",
+          "first_existing_mortgage_attributes" : {
+            "lender_name" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "heloc_credit_limit" : "",
+            "mortgage_balance" : "",
+            "monthly_insurance" : "",
+            "id" : 1
+          },
+          "second_existing_mortgage_attributes" : {
+            "mortgage_rate" : "",
+            "heloc_credit_limit" : "",
+            "monthly_mortgage" : "",
+            "id" : 2
+          }
+        }
+      },
+      "primary_applicant_attributes" : {
+        "first_name" : "asdfasdf",
+        "middle_initial" : "",
+        "last_name" : "asdf",
+        "suffix" : "",
+        "uses_alternate_name" : false,
+        "alternate_first_name" : "",
+        "alternate_middle_initial" : "",
+        "alternate_last_name" : "",
+        "alternate_suffix" : "",
+        "email" : "astuntz@roostify.com",
+        "home_phone" : "(333) 333-3333",
+        "phone" : "(333) 333-3333",
+        "work_phone" : "(333) 333-3333",
+        "preferred_language" : 3,
+        "account_relationship" : true,
+        "employee_relationship" : true,
+        "current_address_attributes" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "zip" : 98822,
+          "start_date(2i)" : 5,
+          "start_date(3i)" : 6,
+          "start_date(1i)" : 2008,
+          "own" : false,
+          "monthly_rent" : 800,
+          "id" : 2
+        },
+        "no_primary_housing_expenses" : false,
+        "previous_addresses_attributes" : {
+          "0" : {
+            "address1" : "",
+            "address2" : "",
+            "city" : "",
+            "state" : "AK",
+            "zip" : "",
+            "start_date(2i)" : "",
+            "start_date(3i)" : "",
+            "start_date(1i)" : "",
+            "id" : 3
+          }
+        },
+        "separate_mailing_address" : false,
+        "mailing_address_attributes" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "id" : 4
+        },
+        "dob(2i)" : 5,
+        "dob(3i)" : 8,
+        "dob(1i)" : 2011,
+        "years_schooling" : 12,
+        "marital_status" : 3,
+        "relationship_type" : 1,
+        "relationship_type_other" : "",
+        "relationship_state" : "AK",
+        "has_dependents" : false,
+        "dependents" : "",
+        "citizenship" : 1,
+        "military_service" : false,
+        "discharged_at(2i)" : "",
+        "discharged_at(3i)" : 1,
+        "discharged_at(1i)" : "",
+        "incharged_at(2i)" : "",
+        "incharged_at(3i)" : 1,
+        "incharged_at(1i)" : "",
+        "discharging_at(2i)" : "",
+        "discharging_at(3i)" : 1,
+        "discharging_at(1i)" : "",
+        "other_property_other_mortgage" : true,
+        "other_property_other_mortgage_exp" : "",
+        "new_credit" : true,
+        "new_credit_exp" : "",
+        "priority_lien" : true,
+        "priority_lien_exp" : "",
+        "cosigner_of_undisclosed" : true,
+        "cosigner_of_undisclosed_exp" : "",
+        "has_judgements" : true,
+        "has_judgements_exp" : "",
+        "delinquency" : true,
+        "delinquency_exp" : "",
+        "has_lawsuit" : true,
+        "has_lawsuit_exp" : "",
+        "has_loan_foreclosure" : true,
+        "has_loan_foreclosure_exp" : "",
+        "pre_foreclosure" : true,
+        "pre_foreclosure_exp" : "",
+        "has_property_foreclosure" : true,
+        "has_property_foreclosure_exp" : "",
+        "has_declared_bankruptcy" : true,
+        "bankruptcies_attributes" : {
+          "0" : {
+            "type" : 1
+          }
+        },
+        "hmda_not_hispanic_or_latino" : true,
+        "hmda_hispanic_or_latino" : true,
+        "hmda_mexican" : true,
+        "hmda_puerto_rican" : true,
+        "hmda_cuban" : true,
+        "hmda_other_hispanic_or_latino" : true,
+        "hmda_hispanic_or_latino_description" : "klklk",
+        "hmda_provides_ethnicity" : true,
+        "hmda_american_indian_or_alaskan" : true,
+        "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+        "hmda_asian" : true,
+        "hmda_asian_indian" : true,
+        "hmda_chinese" : true,
+        "hmda_filipino" : true,
+        "hmda_japanese" : true,
+        "hmda_korean" : true,
+        "hmda_vietnamese" : true,
+        "hmda_other_asian" : true,
+        "hmda_other_asian_description" : ";lkp;lk",
+        "hmda_black_or_african_american" : true,
+        "hmda_hawaiian_or_other_pacific_islander" : true,
+        "hmda_native_hawaiian" : true,
+        "hmda_guamanian_or_chamorro" : true,
+        "hmda_samoan" : true,
+        "hmda_other_pacific_islander" : true,
+        "hmda_other_pacific_islander_description" : ";/,;l./,",
+        "hmda_white" : true,
+        "hmda_provides_race" : true,
+        "hmda_female" : true,
+        "hmda_male" : true,
+        "hmda_provides_gender" : true,
+        "recently_employed" : true,
+        "current_ownership" : true,
+        "new_properties_attributes" : {
+          "0" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "address2" : "",
+            "city" : "Washington",
+            "state" : "DC",
+            "county_fips" : 1,
+            "zip" : 20032,
+            "no_of_units" : 1,
+            "mixed_use" : true,
+            "manufactured_home" : false,
+            "property_use" : 1,
+            "property_status" : 2,
+            "title_status" : 3,
+            "market_value" : 3232323,
+            "annual_tax" : 23232,
+            "homeowners_insurance_provider" : "Me",
+            "monthly_homeowners_insurance" : 100000,
+            "monthly_hoa" : 203934,
+            "rental_income" : 302093,
+            "has_first_existing_mortgage" : true,
+            "first_existing_mortgage_attributes" : {
+              "creditor_account_no" : 232323,
+              "monthly_mortgage" : 232323,
+              "mortgage_loan_type" : 1,
+              "mortgage_rate" : 23,
+              "mortgage_balance" : 23422,
+              "monthly_insurance" : 23231,
+              "id" : 3
+            },
+            "has_second_existing_mortgage" : false,
+            "second_existing_mortgage_attributes" : {
+              "creditor_account_no" : "",
+              "monthly_mortgage" : "",
+              "mortgage_rate" : "",
+              "mortgage_balance" : "",
+              "id" : 4
+            },
+            "id" : 5
+          }
+        },
+        "recent_ownership" : true,
+        "owned_property_use" : 2,
+        "owned_property_title" : 1,
+        "manually_setup_assets" : false,
+        "assets_attributes" : {
+          "0" : {
+            "financial_institution" : "BoA",
+            "asset_type" : "savings",
+            "total" : 2000,
+            "account_type" : "Savings",
+            "id" : 1
+          }
+        },
+        "id" : 4,
+        "ongoing_payments" : 3,
+        "alimony_amount" : "",
+        "child_support_amount" : "",
+        "employments_attributes" : {
+          "0" : {
+            "employer_name" : "My name",
+            "phone" : "(303) 030-3033",
+            "address_attributes" : {
+              "address1" : "1558 Alabama Avenue Southeast",
+              "city" : "Washington",
+              "state" : "DC",
+              "zip" : 98229
+            },
+            "position" : "Software Developer",
+            "industry" : "IT Services/Software",
+            "start_date(2i)" : 7,
+            "start_date(3i)" : 9,
+            "start_date(1i)" : 2010,
+            "work_experience" : 10,
+            "total_experience" : 10,
+            "payment_type" : 1,
+            "income_attributes" : {
+              "monthly_income" : 100000,
+              "yearly_bonus_income" : 1000,
+              "yearly_commission_income" : 1000
+            },
+            "self_employed" : false,
+            "proof_required" : false,
+            "id" : 1
+          }
+        },
+        "has_other_incomes" : true,
+        "other_incomes_attributes" : {
+          "0" : {
+            "gross_amount" : 9988777,
+            "source" : "disability"
+          }
+        },
+        "voe_consent_attributes" : {
+          "status" : "granted"
+        }
+      },
+      "down_payment_gift_asset_attributes" : {
+        "donor_organization" : "",
+        "donor_first_name" : "",
+        "donor_last_name" : "",
+        "donor_email_address" : "",
+        "total" : "",
+        "id" : 1
+      },
+      "has_undisclosed_finances" : false,
+      "undisclosed_dollar_amount" : "",
+      "coborrower_lived_with_borrower" : false
+    }
+  }
+};
+            defs.VoeConsentAttributes = {
+  "title" : "VoeConsentAttributes",
+  "required" : [ "status" ],
+  "type" : "object",
+  "properties" : {
+    "status" : {
+      "type" : "string"
+    }
+  },
+  "example" : {
+    "status" : "granted"
   }
 };
   </script>
@@ -740,9 +2722,9 @@
             -->
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
-                  <li class="nav-header" data-group="LoanApplicationsV2"><a href="#api-LoanApplicationsV2">API Methods - LoanApplicationsV2</a></li>
-                    <li data-group="LoanApplicationsV2" data-name="loanPost" class="">
-                      <a href="#api-LoanApplicationsV2-loanPost">loanPost</a>
+                  <li class="nav-header" data-group="Misc"><a href="#api-Misc">API Methods - Misc</a></li>
+                    <li data-group="Misc" data-name="urlaTest" class="">
+                      <a href="#api-Misc-urlaTest">urlaTest</a>
                     </li>
           </ul>
         </nav>
@@ -750,7 +2732,7 @@
       <div id="content">
         <div id="project">
           <div class="pull-left">
-            <h1>API</h1>
+            <h1>JFB Test Collection</h1>
           </div>
           <div class="clearfix"></div>
         </div>
@@ -759,117 +2741,1012 @@
             <h2 id="welcome-to-apidoc">API and SDK Documentation</h2>
               <div class="app-desc">Version: 5.0.0</div>
             <hr>
-            <div><p>Fannie Mae's Form 1003 Uniform Residential Loan Application (URLA) has been in use for more than twenty years. It is the standard form used to apply for a residential loan application, also known as a mortgage. Fannie Mae is coming out with a revised URLA in 2020, with many enhancements to the borrower experience.</p>
-<p>Revised URLA is a completely reimagined loan application form that move the audience focus away from the lender on to the borrower. Because more information must be collected, Roostify has completely refreshed its digital loan application UX to meet the new mandated data requirements.</p>
-<p>Roostify has not only built a new application UX but a completely new V2 loan format to support it. Clients are able to turn on this new format in test accounts so they can thoroughly prepare for switching over their production accounts to the new format. Once they switch, all new loans must use the new format. The benefit of Roostify creating a new loan format is it can now support both simultaneously in the same account. This eliminates the need for forced migration of loans in-flight to the new format, lowering the risk of issues arising.</p>
-</div>
+            <div>TODO: Add Description</div>
           </div>
         </div>
         <div id="sections">
-                <section id="api-LoanApplicationsV2">
-                  <h1>LoanApplicationsV2</h1>
-                    <div id="api-LoanApplicationsV2-loanPost">
-                      <article id="api-LoanApplicationsV2-loanPost-0" data-group="User" data-name="loanPost" data-version="0">
+                <section id="api-Misc">
+                  <h1>Misc</h1>
+                    <div id="api-Misc-urlaTest">
+                      <article id="api-Misc-urlaTest-0" data-group="User" data-name="urlaTest" data-version="0">
                         <div class="pull-left">
-                          <h1>loanPost</h1>
-                          <p>Add a new loan application</p>
+                          <h1>urlaTest</h1>
+                          <p>URLA Test</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">
-**Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
-</p>
+                        <p class="marked">adding an eSign document test, after creating a loan application</p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/loan</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/tasks</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-LoanApplicationsV2-loanPost-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-java">Java</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-LoanApplicationsV2-loanPost-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Misc-urlaTest-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Misc-urlaTest-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Misc-urlaTest-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Misc-urlaTest-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Misc-urlaTest-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Misc-urlaTest-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Misc-urlaTest-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Misc-urlaTest-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Misc-urlaTest-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Misc-urlaTest-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Misc-urlaTest-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-LoanApplicationsV2-loanPost-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST "https://api.roostify.com/api/v1/loan"</code></pre>
+                          <div class="tab-pane active" id="examples-Misc-urlaTest-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "Authorization: Basic [[basicHash]]" "https://roostify-whales2-dev.herokuapp.com/api/v1/tasks"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-java">
+                          <div class="tab-pane" id="examples-Misc-urlaTest-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.LoanApplicationsV2Api;
+import io.swagger.client.api.MiscApi;
 
 import java.io.File;
 import java.util.*;
 
-public class LoanApplicationsV2ApiExample {
+public class MiscApiExample {
 
     public static void main(String[] args) {
-        
-        LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
-        Applicant body = ; // Applicant | **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        // Configure HTTP basic authorization: httpBasic
+        HttpBasicAuth httpBasic = (HttpBasicAuth) defaultClient.getAuthentication("httpBasic");
+        httpBasic.setUsername("YOUR USERNAME");
+        httpBasic.setPassword("YOUR PASSWORD");
 
+        MiscApi apiInstance = new MiscApi();
+        URLATestRequest body = {
+  "residential_loan" : {
+    "token" : 5594415352464157,
+    "loan_application_attributes" : {
+      "lead_source" : "Here",
+      "has_coborrower" : false,
+      "application_type" : 1,
+      "pre_approval" : true,
+      "mortgage_type" : 1,
+      "loan_use_other" : "",
+      "non_mortgage_payoff_amount" : "",
+      "desired_cashout_amount" : "",
+      "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "extra_circumstances" : "asdfasdf",
+      "property_use" : 1,
+      "receiving_down_payment_gift" : false
+    },
+    "prospective_properties_attributes" : {
+      "0" : {
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : "DC",
+        "id" : 7
+      }
+    },
+    "prospective_property_purchase_price" : 500000,
+    "subject_properties_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "county_fips" : 11,
+        "zip" : "",
+        "purchase_price" : "",
+        "homeowners_insurance_provider" : "",
+        "monthly_homeowners_insurance" : "",
+        "monthly_hoa" : "",
+        "annual_tax" : "",
+        "id" : 1,
+        "mixed_use" : false,
+        "rental_income" : "",
+        "first_existing_mortgage_attributes" : {
+          "lender_name" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "mortgage_balance" : "",
+          "monthly_insurance" : "",
+          "id" : 1
+        },
+        "second_existing_mortgage_attributes" : {
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "monthly_mortgage" : "",
+          "id" : 2
+        }
+      }
+    },
+    "primary_applicant_attributes" : {
+      "first_name" : "asdfasdf",
+      "middle_initial" : "",
+      "last_name" : "asdf",
+      "suffix" : "",
+      "uses_alternate_name" : false,
+      "alternate_first_name" : "",
+      "alternate_middle_initial" : "",
+      "alternate_last_name" : "",
+      "alternate_suffix" : "",
+      "email" : "astuntz@roostify.com",
+      "home_phone" : "(333) 333-3333",
+      "phone" : "(333) 333-3333",
+      "work_phone" : "(333) 333-3333",
+      "preferred_language" : 3,
+      "account_relationship" : true,
+      "employee_relationship" : true,
+      "current_address_attributes" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "zip" : 98822,
+        "start_date(2i)" : 5,
+        "start_date(3i)" : 6,
+        "start_date(1i)" : 2008,
+        "own" : false,
+        "monthly_rent" : 800,
+        "id" : 2
+      },
+      "no_primary_housing_expenses" : false,
+      "previous_addresses_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "start_date(2i)" : "",
+          "start_date(3i)" : "",
+          "start_date(1i)" : "",
+          "id" : 3
+        }
+      },
+      "separate_mailing_address" : false,
+      "mailing_address_attributes" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "id" : 4
+      },
+      "dob(2i)" : 5,
+      "dob(3i)" : 8,
+      "dob(1i)" : 2011,
+      "years_schooling" : 12,
+      "marital_status" : 3,
+      "relationship_type" : 1,
+      "relationship_type_other" : "",
+      "relationship_state" : "AK",
+      "has_dependents" : false,
+      "dependents" : "",
+      "citizenship" : 1,
+      "military_service" : false,
+      "discharged_at(2i)" : "",
+      "discharged_at(3i)" : 1,
+      "discharged_at(1i)" : "",
+      "incharged_at(2i)" : "",
+      "incharged_at(3i)" : 1,
+      "incharged_at(1i)" : "",
+      "discharging_at(2i)" : "",
+      "discharging_at(3i)" : 1,
+      "discharging_at(1i)" : "",
+      "other_property_other_mortgage" : true,
+      "other_property_other_mortgage_exp" : "",
+      "new_credit" : true,
+      "new_credit_exp" : "",
+      "priority_lien" : true,
+      "priority_lien_exp" : "",
+      "cosigner_of_undisclosed" : true,
+      "cosigner_of_undisclosed_exp" : "",
+      "has_judgements" : true,
+      "has_judgements_exp" : "",
+      "delinquency" : true,
+      "delinquency_exp" : "",
+      "has_lawsuit" : true,
+      "has_lawsuit_exp" : "",
+      "has_loan_foreclosure" : true,
+      "has_loan_foreclosure_exp" : "",
+      "pre_foreclosure" : true,
+      "pre_foreclosure_exp" : "",
+      "has_property_foreclosure" : true,
+      "has_property_foreclosure_exp" : "",
+      "has_declared_bankruptcy" : true,
+      "bankruptcies_attributes" : {
+        "0" : {
+          "type" : 1
+        }
+      },
+      "hmda_not_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino" : true,
+      "hmda_mexican" : true,
+      "hmda_puerto_rican" : true,
+      "hmda_cuban" : true,
+      "hmda_other_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino_description" : "klklk",
+      "hmda_provides_ethnicity" : true,
+      "hmda_american_indian_or_alaskan" : true,
+      "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+      "hmda_asian" : true,
+      "hmda_asian_indian" : true,
+      "hmda_chinese" : true,
+      "hmda_filipino" : true,
+      "hmda_japanese" : true,
+      "hmda_korean" : true,
+      "hmda_vietnamese" : true,
+      "hmda_other_asian" : true,
+      "hmda_other_asian_description" : ";lkp;lk",
+      "hmda_black_or_african_american" : true,
+      "hmda_hawaiian_or_other_pacific_islander" : true,
+      "hmda_native_hawaiian" : true,
+      "hmda_guamanian_or_chamorro" : true,
+      "hmda_samoan" : true,
+      "hmda_other_pacific_islander" : true,
+      "hmda_other_pacific_islander_description" : ";/,;l./,",
+      "hmda_white" : true,
+      "hmda_provides_race" : true,
+      "hmda_female" : true,
+      "hmda_male" : true,
+      "hmda_provides_gender" : true,
+      "recently_employed" : true,
+      "current_ownership" : true,
+      "new_properties_attributes" : {
+        "0" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : 1,
+          "zip" : 20032,
+          "no_of_units" : 1,
+          "mixed_use" : true,
+          "manufactured_home" : false,
+          "property_use" : 1,
+          "property_status" : 2,
+          "title_status" : 3,
+          "market_value" : 3232323,
+          "annual_tax" : 23232,
+          "homeowners_insurance_provider" : "Me",
+          "monthly_homeowners_insurance" : 100000,
+          "monthly_hoa" : 203934,
+          "rental_income" : 302093,
+          "has_first_existing_mortgage" : true,
+          "first_existing_mortgage_attributes" : {
+            "creditor_account_no" : 232323,
+            "monthly_mortgage" : 232323,
+            "mortgage_loan_type" : 1,
+            "mortgage_rate" : 23,
+            "mortgage_balance" : 23422,
+            "monthly_insurance" : 23231,
+            "id" : 3
+          },
+          "has_second_existing_mortgage" : false,
+          "second_existing_mortgage_attributes" : {
+            "creditor_account_no" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "mortgage_balance" : "",
+            "id" : 4
+          },
+          "id" : 5
+        }
+      },
+      "recent_ownership" : true,
+      "owned_property_use" : 2,
+      "owned_property_title" : 1,
+      "manually_setup_assets" : false,
+      "assets_attributes" : {
+        "0" : {
+          "financial_institution" : "BoA",
+          "asset_type" : "savings",
+          "total" : 2000,
+          "account_type" : "Savings",
+          "id" : 1
+        }
+      },
+      "id" : 4,
+      "ongoing_payments" : 3,
+      "alimony_amount" : "",
+      "child_support_amount" : "",
+      "employments_attributes" : {
+        "0" : {
+          "employer_name" : "My name",
+          "phone" : "(303) 030-3033",
+          "address_attributes" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "city" : "Washington",
+            "state" : "DC",
+            "zip" : 98229
+          },
+          "position" : "Software Developer",
+          "industry" : "IT Services/Software",
+          "start_date(2i)" : 7,
+          "start_date(3i)" : 9,
+          "start_date(1i)" : 2010,
+          "work_experience" : 10,
+          "total_experience" : 10,
+          "payment_type" : 1,
+          "income_attributes" : {
+            "monthly_income" : 100000,
+            "yearly_bonus_income" : 1000,
+            "yearly_commission_income" : 1000
+          },
+          "self_employed" : false,
+          "proof_required" : false,
+          "id" : 1
+        }
+      },
+      "has_other_incomes" : true,
+      "other_incomes_attributes" : {
+        "0" : {
+          "gross_amount" : 9988777,
+          "source" : "disability"
+        }
+      },
+      "voe_consent_attributes" : {
+        "status" : "granted"
+      }
+    },
+    "down_payment_gift_asset_attributes" : {
+      "donor_organization" : "",
+      "donor_first_name" : "",
+      "donor_last_name" : "",
+      "donor_email_address" : "",
+      "total" : "",
+      "id" : 1
+    },
+    "has_undisclosed_finances" : false,
+    "undisclosed_dollar_amount" : "",
+    "coborrower_lived_with_borrower" : false
+  }
+}; // URLATestRequest | 
         try {
-            array['String'] result = apiInstance.loanPost(body);
-            System.out.println(result);
+            apiInstance.urlaTest(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#loanPost");
+            System.err.println("Exception when calling MiscApi#urlaTest");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.LoanApplicationsV2Api;
+                          <div class="tab-pane" id="examples-Misc-urlaTest-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.MiscApi;
 
-public class LoanApplicationsV2ApiExample {
+public class MiscApiExample {
 
     public static void main(String[] args) {
-        LoanApplicationsV2Api apiInstance = new LoanApplicationsV2Api();
-        Applicant body = ; // Applicant | **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
-
+        MiscApi apiInstance = new MiscApi();
+        URLATestRequest body = {
+  "residential_loan" : {
+    "token" : 5594415352464157,
+    "loan_application_attributes" : {
+      "lead_source" : "Here",
+      "has_coborrower" : false,
+      "application_type" : 1,
+      "pre_approval" : true,
+      "mortgage_type" : 1,
+      "loan_use_other" : "",
+      "non_mortgage_payoff_amount" : "",
+      "desired_cashout_amount" : "",
+      "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "extra_circumstances" : "asdfasdf",
+      "property_use" : 1,
+      "receiving_down_payment_gift" : false
+    },
+    "prospective_properties_attributes" : {
+      "0" : {
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : "DC",
+        "id" : 7
+      }
+    },
+    "prospective_property_purchase_price" : 500000,
+    "subject_properties_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "county_fips" : 11,
+        "zip" : "",
+        "purchase_price" : "",
+        "homeowners_insurance_provider" : "",
+        "monthly_homeowners_insurance" : "",
+        "monthly_hoa" : "",
+        "annual_tax" : "",
+        "id" : 1,
+        "mixed_use" : false,
+        "rental_income" : "",
+        "first_existing_mortgage_attributes" : {
+          "lender_name" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "mortgage_balance" : "",
+          "monthly_insurance" : "",
+          "id" : 1
+        },
+        "second_existing_mortgage_attributes" : {
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "monthly_mortgage" : "",
+          "id" : 2
+        }
+      }
+    },
+    "primary_applicant_attributes" : {
+      "first_name" : "asdfasdf",
+      "middle_initial" : "",
+      "last_name" : "asdf",
+      "suffix" : "",
+      "uses_alternate_name" : false,
+      "alternate_first_name" : "",
+      "alternate_middle_initial" : "",
+      "alternate_last_name" : "",
+      "alternate_suffix" : "",
+      "email" : "astuntz@roostify.com",
+      "home_phone" : "(333) 333-3333",
+      "phone" : "(333) 333-3333",
+      "work_phone" : "(333) 333-3333",
+      "preferred_language" : 3,
+      "account_relationship" : true,
+      "employee_relationship" : true,
+      "current_address_attributes" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "zip" : 98822,
+        "start_date(2i)" : 5,
+        "start_date(3i)" : 6,
+        "start_date(1i)" : 2008,
+        "own" : false,
+        "monthly_rent" : 800,
+        "id" : 2
+      },
+      "no_primary_housing_expenses" : false,
+      "previous_addresses_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "start_date(2i)" : "",
+          "start_date(3i)" : "",
+          "start_date(1i)" : "",
+          "id" : 3
+        }
+      },
+      "separate_mailing_address" : false,
+      "mailing_address_attributes" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "id" : 4
+      },
+      "dob(2i)" : 5,
+      "dob(3i)" : 8,
+      "dob(1i)" : 2011,
+      "years_schooling" : 12,
+      "marital_status" : 3,
+      "relationship_type" : 1,
+      "relationship_type_other" : "",
+      "relationship_state" : "AK",
+      "has_dependents" : false,
+      "dependents" : "",
+      "citizenship" : 1,
+      "military_service" : false,
+      "discharged_at(2i)" : "",
+      "discharged_at(3i)" : 1,
+      "discharged_at(1i)" : "",
+      "incharged_at(2i)" : "",
+      "incharged_at(3i)" : 1,
+      "incharged_at(1i)" : "",
+      "discharging_at(2i)" : "",
+      "discharging_at(3i)" : 1,
+      "discharging_at(1i)" : "",
+      "other_property_other_mortgage" : true,
+      "other_property_other_mortgage_exp" : "",
+      "new_credit" : true,
+      "new_credit_exp" : "",
+      "priority_lien" : true,
+      "priority_lien_exp" : "",
+      "cosigner_of_undisclosed" : true,
+      "cosigner_of_undisclosed_exp" : "",
+      "has_judgements" : true,
+      "has_judgements_exp" : "",
+      "delinquency" : true,
+      "delinquency_exp" : "",
+      "has_lawsuit" : true,
+      "has_lawsuit_exp" : "",
+      "has_loan_foreclosure" : true,
+      "has_loan_foreclosure_exp" : "",
+      "pre_foreclosure" : true,
+      "pre_foreclosure_exp" : "",
+      "has_property_foreclosure" : true,
+      "has_property_foreclosure_exp" : "",
+      "has_declared_bankruptcy" : true,
+      "bankruptcies_attributes" : {
+        "0" : {
+          "type" : 1
+        }
+      },
+      "hmda_not_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino" : true,
+      "hmda_mexican" : true,
+      "hmda_puerto_rican" : true,
+      "hmda_cuban" : true,
+      "hmda_other_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino_description" : "klklk",
+      "hmda_provides_ethnicity" : true,
+      "hmda_american_indian_or_alaskan" : true,
+      "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+      "hmda_asian" : true,
+      "hmda_asian_indian" : true,
+      "hmda_chinese" : true,
+      "hmda_filipino" : true,
+      "hmda_japanese" : true,
+      "hmda_korean" : true,
+      "hmda_vietnamese" : true,
+      "hmda_other_asian" : true,
+      "hmda_other_asian_description" : ";lkp;lk",
+      "hmda_black_or_african_american" : true,
+      "hmda_hawaiian_or_other_pacific_islander" : true,
+      "hmda_native_hawaiian" : true,
+      "hmda_guamanian_or_chamorro" : true,
+      "hmda_samoan" : true,
+      "hmda_other_pacific_islander" : true,
+      "hmda_other_pacific_islander_description" : ";/,;l./,",
+      "hmda_white" : true,
+      "hmda_provides_race" : true,
+      "hmda_female" : true,
+      "hmda_male" : true,
+      "hmda_provides_gender" : true,
+      "recently_employed" : true,
+      "current_ownership" : true,
+      "new_properties_attributes" : {
+        "0" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : 1,
+          "zip" : 20032,
+          "no_of_units" : 1,
+          "mixed_use" : true,
+          "manufactured_home" : false,
+          "property_use" : 1,
+          "property_status" : 2,
+          "title_status" : 3,
+          "market_value" : 3232323,
+          "annual_tax" : 23232,
+          "homeowners_insurance_provider" : "Me",
+          "monthly_homeowners_insurance" : 100000,
+          "monthly_hoa" : 203934,
+          "rental_income" : 302093,
+          "has_first_existing_mortgage" : true,
+          "first_existing_mortgage_attributes" : {
+            "creditor_account_no" : 232323,
+            "monthly_mortgage" : 232323,
+            "mortgage_loan_type" : 1,
+            "mortgage_rate" : 23,
+            "mortgage_balance" : 23422,
+            "monthly_insurance" : 23231,
+            "id" : 3
+          },
+          "has_second_existing_mortgage" : false,
+          "second_existing_mortgage_attributes" : {
+            "creditor_account_no" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "mortgage_balance" : "",
+            "id" : 4
+          },
+          "id" : 5
+        }
+      },
+      "recent_ownership" : true,
+      "owned_property_use" : 2,
+      "owned_property_title" : 1,
+      "manually_setup_assets" : false,
+      "assets_attributes" : {
+        "0" : {
+          "financial_institution" : "BoA",
+          "asset_type" : "savings",
+          "total" : 2000,
+          "account_type" : "Savings",
+          "id" : 1
+        }
+      },
+      "id" : 4,
+      "ongoing_payments" : 3,
+      "alimony_amount" : "",
+      "child_support_amount" : "",
+      "employments_attributes" : {
+        "0" : {
+          "employer_name" : "My name",
+          "phone" : "(303) 030-3033",
+          "address_attributes" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "city" : "Washington",
+            "state" : "DC",
+            "zip" : 98229
+          },
+          "position" : "Software Developer",
+          "industry" : "IT Services/Software",
+          "start_date(2i)" : 7,
+          "start_date(3i)" : 9,
+          "start_date(1i)" : 2010,
+          "work_experience" : 10,
+          "total_experience" : 10,
+          "payment_type" : 1,
+          "income_attributes" : {
+            "monthly_income" : 100000,
+            "yearly_bonus_income" : 1000,
+            "yearly_commission_income" : 1000
+          },
+          "self_employed" : false,
+          "proof_required" : false,
+          "id" : 1
+        }
+      },
+      "has_other_incomes" : true,
+      "other_incomes_attributes" : {
+        "0" : {
+          "gross_amount" : 9988777,
+          "source" : "disability"
+        }
+      },
+      "voe_consent_attributes" : {
+        "status" : "granted"
+      }
+    },
+    "down_payment_gift_asset_attributes" : {
+      "donor_organization" : "",
+      "donor_first_name" : "",
+      "donor_last_name" : "",
+      "donor_email_address" : "",
+      "total" : "",
+      "id" : 1
+    },
+    "has_undisclosed_finances" : false,
+    "undisclosed_dollar_amount" : "",
+    "coborrower_lived_with_borrower" : false
+  }
+}; // URLATestRequest | 
         try {
-            array['String'] result = apiInstance.loanPost(body);
-            System.out.println(result);
+            apiInstance.urlaTest(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling LoanApplicationsV2Api#loanPost");
+            System.err.println("Exception when calling MiscApi#urlaTest");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-groovy">
+  <div class="tab-pane" id="examples-Misc-urlaTest-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Applicant *body = ; // **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
+                            <div class="tab-pane" id="examples-Misc-urlaTest-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
+// Configure HTTP basic authorization (authentication scheme: httpBasic)
+[apiConfig setUsername:@"YOUR_USERNAME"];
+[apiConfig setPassword:@"YOUR_PASSWORD"];
+URLATestRequest *body = {
+  "residential_loan" : {
+    "token" : 5594415352464157,
+    "loan_application_attributes" : {
+      "lead_source" : "Here",
+      "has_coborrower" : false,
+      "application_type" : 1,
+      "pre_approval" : true,
+      "mortgage_type" : 1,
+      "loan_use_other" : "",
+      "non_mortgage_payoff_amount" : "",
+      "desired_cashout_amount" : "",
+      "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "extra_circumstances" : "asdfasdf",
+      "property_use" : 1,
+      "receiving_down_payment_gift" : false
+    },
+    "prospective_properties_attributes" : {
+      "0" : {
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : "DC",
+        "id" : 7
+      }
+    },
+    "prospective_property_purchase_price" : 500000,
+    "subject_properties_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "county_fips" : 11,
+        "zip" : "",
+        "purchase_price" : "",
+        "homeowners_insurance_provider" : "",
+        "monthly_homeowners_insurance" : "",
+        "monthly_hoa" : "",
+        "annual_tax" : "",
+        "id" : 1,
+        "mixed_use" : false,
+        "rental_income" : "",
+        "first_existing_mortgage_attributes" : {
+          "lender_name" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "mortgage_balance" : "",
+          "monthly_insurance" : "",
+          "id" : 1
+        },
+        "second_existing_mortgage_attributes" : {
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "monthly_mortgage" : "",
+          "id" : 2
+        }
+      }
+    },
+    "primary_applicant_attributes" : {
+      "first_name" : "asdfasdf",
+      "middle_initial" : "",
+      "last_name" : "asdf",
+      "suffix" : "",
+      "uses_alternate_name" : false,
+      "alternate_first_name" : "",
+      "alternate_middle_initial" : "",
+      "alternate_last_name" : "",
+      "alternate_suffix" : "",
+      "email" : "astuntz@roostify.com",
+      "home_phone" : "(333) 333-3333",
+      "phone" : "(333) 333-3333",
+      "work_phone" : "(333) 333-3333",
+      "preferred_language" : 3,
+      "account_relationship" : true,
+      "employee_relationship" : true,
+      "current_address_attributes" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "zip" : 98822,
+        "start_date(2i)" : 5,
+        "start_date(3i)" : 6,
+        "start_date(1i)" : 2008,
+        "own" : false,
+        "monthly_rent" : 800,
+        "id" : 2
+      },
+      "no_primary_housing_expenses" : false,
+      "previous_addresses_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "start_date(2i)" : "",
+          "start_date(3i)" : "",
+          "start_date(1i)" : "",
+          "id" : 3
+        }
+      },
+      "separate_mailing_address" : false,
+      "mailing_address_attributes" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "id" : 4
+      },
+      "dob(2i)" : 5,
+      "dob(3i)" : 8,
+      "dob(1i)" : 2011,
+      "years_schooling" : 12,
+      "marital_status" : 3,
+      "relationship_type" : 1,
+      "relationship_type_other" : "",
+      "relationship_state" : "AK",
+      "has_dependents" : false,
+      "dependents" : "",
+      "citizenship" : 1,
+      "military_service" : false,
+      "discharged_at(2i)" : "",
+      "discharged_at(3i)" : 1,
+      "discharged_at(1i)" : "",
+      "incharged_at(2i)" : "",
+      "incharged_at(3i)" : 1,
+      "incharged_at(1i)" : "",
+      "discharging_at(2i)" : "",
+      "discharging_at(3i)" : 1,
+      "discharging_at(1i)" : "",
+      "other_property_other_mortgage" : true,
+      "other_property_other_mortgage_exp" : "",
+      "new_credit" : true,
+      "new_credit_exp" : "",
+      "priority_lien" : true,
+      "priority_lien_exp" : "",
+      "cosigner_of_undisclosed" : true,
+      "cosigner_of_undisclosed_exp" : "",
+      "has_judgements" : true,
+      "has_judgements_exp" : "",
+      "delinquency" : true,
+      "delinquency_exp" : "",
+      "has_lawsuit" : true,
+      "has_lawsuit_exp" : "",
+      "has_loan_foreclosure" : true,
+      "has_loan_foreclosure_exp" : "",
+      "pre_foreclosure" : true,
+      "pre_foreclosure_exp" : "",
+      "has_property_foreclosure" : true,
+      "has_property_foreclosure_exp" : "",
+      "has_declared_bankruptcy" : true,
+      "bankruptcies_attributes" : {
+        "0" : {
+          "type" : 1
+        }
+      },
+      "hmda_not_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino" : true,
+      "hmda_mexican" : true,
+      "hmda_puerto_rican" : true,
+      "hmda_cuban" : true,
+      "hmda_other_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino_description" : "klklk",
+      "hmda_provides_ethnicity" : true,
+      "hmda_american_indian_or_alaskan" : true,
+      "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+      "hmda_asian" : true,
+      "hmda_asian_indian" : true,
+      "hmda_chinese" : true,
+      "hmda_filipino" : true,
+      "hmda_japanese" : true,
+      "hmda_korean" : true,
+      "hmda_vietnamese" : true,
+      "hmda_other_asian" : true,
+      "hmda_other_asian_description" : ";lkp;lk",
+      "hmda_black_or_african_american" : true,
+      "hmda_hawaiian_or_other_pacific_islander" : true,
+      "hmda_native_hawaiian" : true,
+      "hmda_guamanian_or_chamorro" : true,
+      "hmda_samoan" : true,
+      "hmda_other_pacific_islander" : true,
+      "hmda_other_pacific_islander_description" : ";/,;l./,",
+      "hmda_white" : true,
+      "hmda_provides_race" : true,
+      "hmda_female" : true,
+      "hmda_male" : true,
+      "hmda_provides_gender" : true,
+      "recently_employed" : true,
+      "current_ownership" : true,
+      "new_properties_attributes" : {
+        "0" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : 1,
+          "zip" : 20032,
+          "no_of_units" : 1,
+          "mixed_use" : true,
+          "manufactured_home" : false,
+          "property_use" : 1,
+          "property_status" : 2,
+          "title_status" : 3,
+          "market_value" : 3232323,
+          "annual_tax" : 23232,
+          "homeowners_insurance_provider" : "Me",
+          "monthly_homeowners_insurance" : 100000,
+          "monthly_hoa" : 203934,
+          "rental_income" : 302093,
+          "has_first_existing_mortgage" : true,
+          "first_existing_mortgage_attributes" : {
+            "creditor_account_no" : 232323,
+            "monthly_mortgage" : 232323,
+            "mortgage_loan_type" : 1,
+            "mortgage_rate" : 23,
+            "mortgage_balance" : 23422,
+            "monthly_insurance" : 23231,
+            "id" : 3
+          },
+          "has_second_existing_mortgage" : false,
+          "second_existing_mortgage_attributes" : {
+            "creditor_account_no" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "mortgage_balance" : "",
+            "id" : 4
+          },
+          "id" : 5
+        }
+      },
+      "recent_ownership" : true,
+      "owned_property_use" : 2,
+      "owned_property_title" : 1,
+      "manually_setup_assets" : false,
+      "assets_attributes" : {
+        "0" : {
+          "financial_institution" : "BoA",
+          "asset_type" : "savings",
+          "total" : 2000,
+          "account_type" : "Savings",
+          "id" : 1
+        }
+      },
+      "id" : 4,
+      "ongoing_payments" : 3,
+      "alimony_amount" : "",
+      "child_support_amount" : "",
+      "employments_attributes" : {
+        "0" : {
+          "employer_name" : "My name",
+          "phone" : "(303) 030-3033",
+          "address_attributes" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "city" : "Washington",
+            "state" : "DC",
+            "zip" : 98229
+          },
+          "position" : "Software Developer",
+          "industry" : "IT Services/Software",
+          "start_date(2i)" : 7,
+          "start_date(3i)" : 9,
+          "start_date(1i)" : 2010,
+          "work_experience" : 10,
+          "total_experience" : 10,
+          "payment_type" : 1,
+          "income_attributes" : {
+            "monthly_income" : 100000,
+            "yearly_bonus_income" : 1000,
+            "yearly_commission_income" : 1000
+          },
+          "self_employed" : false,
+          "proof_required" : false,
+          "id" : 1
+        }
+      },
+      "has_other_incomes" : true,
+      "other_incomes_attributes" : {
+        "0" : {
+          "gross_amount" : 9988777,
+          "source" : "disability"
+        }
+      },
+      "voe_consent_attributes" : {
+        "status" : "granted"
+      }
+    },
+    "down_payment_gift_asset_attributes" : {
+      "donor_organization" : "",
+      "donor_first_name" : "",
+      "donor_last_name" : "",
+      "donor_email_address" : "",
+      "total" : "",
+      "id" : 1
+    },
+    "has_undisclosed_finances" : false,
+    "undisclosed_dollar_amount" : "",
+    "coborrower_lived_with_borrower" : false
+  }
+}; // 
 
+MiscApi *apiInstance = [[MiscApi alloc] init];
 
-LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
-
-// Add a new loan application
-[apiInstance loanPostWith:body
-              completionHandler: ^(array['String'] output, NSError* error) {
-                            if (output) {
-                                NSLog(@"%@", output);
-                            }
+// URLA Test
+[apiInstance urlaTestWith:body
+              completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
                             }
@@ -877,29 +3754,333 @@ LoanApplicationsV2Api *apiInstance = [[LoanApplicationsV2Api alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var Api = require('api');
+                            <div class="tab-pane" id="examples-Misc-urlaTest-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var JfbTestCollection = require('jfb_test_collection');
+var defaultClient = JfbTestCollection.ApiClient.instance;
+// Configure HTTP basic authorization: httpBasic
+var httpBasic = defaultClient.authentications['httpBasic'];
+httpBasic.username = 'YOUR USERNAME'
+httpBasic.password = 'YOUR PASSWORD'
 
-var api = new Api.LoanApplicationsV2Api()
-var body = ; // {{Applicant}} **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
-
+var api = new JfbTestCollection.MiscApi()
+var body = {
+  "residential_loan" : {
+    "token" : 5594415352464157,
+    "loan_application_attributes" : {
+      "lead_source" : "Here",
+      "has_coborrower" : false,
+      "application_type" : 1,
+      "pre_approval" : true,
+      "mortgage_type" : 1,
+      "loan_use_other" : "",
+      "non_mortgage_payoff_amount" : "",
+      "desired_cashout_amount" : "",
+      "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "extra_circumstances" : "asdfasdf",
+      "property_use" : 1,
+      "receiving_down_payment_gift" : false
+    },
+    "prospective_properties_attributes" : {
+      "0" : {
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : "DC",
+        "id" : 7
+      }
+    },
+    "prospective_property_purchase_price" : 500000,
+    "subject_properties_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "county_fips" : 11,
+        "zip" : "",
+        "purchase_price" : "",
+        "homeowners_insurance_provider" : "",
+        "monthly_homeowners_insurance" : "",
+        "monthly_hoa" : "",
+        "annual_tax" : "",
+        "id" : 1,
+        "mixed_use" : false,
+        "rental_income" : "",
+        "first_existing_mortgage_attributes" : {
+          "lender_name" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "mortgage_balance" : "",
+          "monthly_insurance" : "",
+          "id" : 1
+        },
+        "second_existing_mortgage_attributes" : {
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "monthly_mortgage" : "",
+          "id" : 2
+        }
+      }
+    },
+    "primary_applicant_attributes" : {
+      "first_name" : "asdfasdf",
+      "middle_initial" : "",
+      "last_name" : "asdf",
+      "suffix" : "",
+      "uses_alternate_name" : false,
+      "alternate_first_name" : "",
+      "alternate_middle_initial" : "",
+      "alternate_last_name" : "",
+      "alternate_suffix" : "",
+      "email" : "astuntz@roostify.com",
+      "home_phone" : "(333) 333-3333",
+      "phone" : "(333) 333-3333",
+      "work_phone" : "(333) 333-3333",
+      "preferred_language" : 3,
+      "account_relationship" : true,
+      "employee_relationship" : true,
+      "current_address_attributes" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "zip" : 98822,
+        "start_date(2i)" : 5,
+        "start_date(3i)" : 6,
+        "start_date(1i)" : 2008,
+        "own" : false,
+        "monthly_rent" : 800,
+        "id" : 2
+      },
+      "no_primary_housing_expenses" : false,
+      "previous_addresses_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "start_date(2i)" : "",
+          "start_date(3i)" : "",
+          "start_date(1i)" : "",
+          "id" : 3
+        }
+      },
+      "separate_mailing_address" : false,
+      "mailing_address_attributes" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "id" : 4
+      },
+      "dob(2i)" : 5,
+      "dob(3i)" : 8,
+      "dob(1i)" : 2011,
+      "years_schooling" : 12,
+      "marital_status" : 3,
+      "relationship_type" : 1,
+      "relationship_type_other" : "",
+      "relationship_state" : "AK",
+      "has_dependents" : false,
+      "dependents" : "",
+      "citizenship" : 1,
+      "military_service" : false,
+      "discharged_at(2i)" : "",
+      "discharged_at(3i)" : 1,
+      "discharged_at(1i)" : "",
+      "incharged_at(2i)" : "",
+      "incharged_at(3i)" : 1,
+      "incharged_at(1i)" : "",
+      "discharging_at(2i)" : "",
+      "discharging_at(3i)" : 1,
+      "discharging_at(1i)" : "",
+      "other_property_other_mortgage" : true,
+      "other_property_other_mortgage_exp" : "",
+      "new_credit" : true,
+      "new_credit_exp" : "",
+      "priority_lien" : true,
+      "priority_lien_exp" : "",
+      "cosigner_of_undisclosed" : true,
+      "cosigner_of_undisclosed_exp" : "",
+      "has_judgements" : true,
+      "has_judgements_exp" : "",
+      "delinquency" : true,
+      "delinquency_exp" : "",
+      "has_lawsuit" : true,
+      "has_lawsuit_exp" : "",
+      "has_loan_foreclosure" : true,
+      "has_loan_foreclosure_exp" : "",
+      "pre_foreclosure" : true,
+      "pre_foreclosure_exp" : "",
+      "has_property_foreclosure" : true,
+      "has_property_foreclosure_exp" : "",
+      "has_declared_bankruptcy" : true,
+      "bankruptcies_attributes" : {
+        "0" : {
+          "type" : 1
+        }
+      },
+      "hmda_not_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino" : true,
+      "hmda_mexican" : true,
+      "hmda_puerto_rican" : true,
+      "hmda_cuban" : true,
+      "hmda_other_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino_description" : "klklk",
+      "hmda_provides_ethnicity" : true,
+      "hmda_american_indian_or_alaskan" : true,
+      "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+      "hmda_asian" : true,
+      "hmda_asian_indian" : true,
+      "hmda_chinese" : true,
+      "hmda_filipino" : true,
+      "hmda_japanese" : true,
+      "hmda_korean" : true,
+      "hmda_vietnamese" : true,
+      "hmda_other_asian" : true,
+      "hmda_other_asian_description" : ";lkp;lk",
+      "hmda_black_or_african_american" : true,
+      "hmda_hawaiian_or_other_pacific_islander" : true,
+      "hmda_native_hawaiian" : true,
+      "hmda_guamanian_or_chamorro" : true,
+      "hmda_samoan" : true,
+      "hmda_other_pacific_islander" : true,
+      "hmda_other_pacific_islander_description" : ";/,;l./,",
+      "hmda_white" : true,
+      "hmda_provides_race" : true,
+      "hmda_female" : true,
+      "hmda_male" : true,
+      "hmda_provides_gender" : true,
+      "recently_employed" : true,
+      "current_ownership" : true,
+      "new_properties_attributes" : {
+        "0" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : 1,
+          "zip" : 20032,
+          "no_of_units" : 1,
+          "mixed_use" : true,
+          "manufactured_home" : false,
+          "property_use" : 1,
+          "property_status" : 2,
+          "title_status" : 3,
+          "market_value" : 3232323,
+          "annual_tax" : 23232,
+          "homeowners_insurance_provider" : "Me",
+          "monthly_homeowners_insurance" : 100000,
+          "monthly_hoa" : 203934,
+          "rental_income" : 302093,
+          "has_first_existing_mortgage" : true,
+          "first_existing_mortgage_attributes" : {
+            "creditor_account_no" : 232323,
+            "monthly_mortgage" : 232323,
+            "mortgage_loan_type" : 1,
+            "mortgage_rate" : 23,
+            "mortgage_balance" : 23422,
+            "monthly_insurance" : 23231,
+            "id" : 3
+          },
+          "has_second_existing_mortgage" : false,
+          "second_existing_mortgage_attributes" : {
+            "creditor_account_no" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "mortgage_balance" : "",
+            "id" : 4
+          },
+          "id" : 5
+        }
+      },
+      "recent_ownership" : true,
+      "owned_property_use" : 2,
+      "owned_property_title" : 1,
+      "manually_setup_assets" : false,
+      "assets_attributes" : {
+        "0" : {
+          "financial_institution" : "BoA",
+          "asset_type" : "savings",
+          "total" : 2000,
+          "account_type" : "Savings",
+          "id" : 1
+        }
+      },
+      "id" : 4,
+      "ongoing_payments" : 3,
+      "alimony_amount" : "",
+      "child_support_amount" : "",
+      "employments_attributes" : {
+        "0" : {
+          "employer_name" : "My name",
+          "phone" : "(303) 030-3033",
+          "address_attributes" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "city" : "Washington",
+            "state" : "DC",
+            "zip" : 98229
+          },
+          "position" : "Software Developer",
+          "industry" : "IT Services/Software",
+          "start_date(2i)" : 7,
+          "start_date(3i)" : 9,
+          "start_date(1i)" : 2010,
+          "work_experience" : 10,
+          "total_experience" : 10,
+          "payment_type" : 1,
+          "income_attributes" : {
+            "monthly_income" : 100000,
+            "yearly_bonus_income" : 1000,
+            "yearly_commission_income" : 1000
+          },
+          "self_employed" : false,
+          "proof_required" : false,
+          "id" : 1
+        }
+      },
+      "has_other_incomes" : true,
+      "other_incomes_attributes" : {
+        "0" : {
+          "gross_amount" : 9988777,
+          "source" : "disability"
+        }
+      },
+      "voe_consent_attributes" : {
+        "status" : "granted"
+      }
+    },
+    "down_payment_gift_asset_attributes" : {
+      "donor_organization" : "",
+      "donor_first_name" : "",
+      "donor_last_name" : "",
+      "donor_email_address" : "",
+      "total" : "",
+      "id" : 1
+    },
+    "has_undisclosed_finances" : false,
+    "undisclosed_dollar_amount" : "",
+    "coborrower_lived_with_borrower" : false
+  }
+}; // {{URLATestRequest}} 
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
-api.loanPost(body, callback);
+api.urlaTest(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-angular">
+                            <!--<div class="tab-pane" id="examples-Misc-urlaTest-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-csharp">
+                            <div class="tab-pane" id="examples-Misc-urlaTest-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -908,25 +4089,25 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class loanPostExample
+    public class urlaTestExample
     {
         public void main()
         {
+            // Configure HTTP basic authorization: httpBasic
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
 
-            var apiInstance = new LoanApplicationsV2Api();
-            var body = new Applicant(); // Applicant | **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
-
+            var apiInstance = new MiscApi();
+            var body = new URLATestRequest(); // URLATestRequest | 
 
             try
             {
-                // Add a new loan application
-                array['String'] result = apiInstance.loanPost(body);
-                Debug.WriteLine(result);
+                // URLA Test
+                apiInstance.urlaTest(body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LoanApplicationsV2Api.loanPost: " + e.Message );
+                Debug.Print("Exception when calling MiscApi.urlaTest: " + e.Message );
             }
         }
     }
@@ -934,62 +4115,664 @@ Use the applicants array to provide details about the borrowers. You can specify
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-php">
+                            <div class="tab-pane" id="examples-Misc-urlaTest-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure HTTP basic authorization: httpBasic
+Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
+Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\ApiLoanApplicationsV2Api();
-$body = ; // Applicant | **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
-
+$api_instance = new Swagger\Client\ApiMiscApi();
+$body = {
+  "residential_loan" : {
+    "token" : 5594415352464157,
+    "loan_application_attributes" : {
+      "lead_source" : "Here",
+      "has_coborrower" : false,
+      "application_type" : 1,
+      "pre_approval" : true,
+      "mortgage_type" : 1,
+      "loan_use_other" : "",
+      "non_mortgage_payoff_amount" : "",
+      "desired_cashout_amount" : "",
+      "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "extra_circumstances" : "asdfasdf",
+      "property_use" : 1,
+      "receiving_down_payment_gift" : false
+    },
+    "prospective_properties_attributes" : {
+      "0" : {
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : "DC",
+        "id" : 7
+      }
+    },
+    "prospective_property_purchase_price" : 500000,
+    "subject_properties_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "county_fips" : 11,
+        "zip" : "",
+        "purchase_price" : "",
+        "homeowners_insurance_provider" : "",
+        "monthly_homeowners_insurance" : "",
+        "monthly_hoa" : "",
+        "annual_tax" : "",
+        "id" : 1,
+        "mixed_use" : false,
+        "rental_income" : "",
+        "first_existing_mortgage_attributes" : {
+          "lender_name" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "mortgage_balance" : "",
+          "monthly_insurance" : "",
+          "id" : 1
+        },
+        "second_existing_mortgage_attributes" : {
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "monthly_mortgage" : "",
+          "id" : 2
+        }
+      }
+    },
+    "primary_applicant_attributes" : {
+      "first_name" : "asdfasdf",
+      "middle_initial" : "",
+      "last_name" : "asdf",
+      "suffix" : "",
+      "uses_alternate_name" : false,
+      "alternate_first_name" : "",
+      "alternate_middle_initial" : "",
+      "alternate_last_name" : "",
+      "alternate_suffix" : "",
+      "email" : "astuntz@roostify.com",
+      "home_phone" : "(333) 333-3333",
+      "phone" : "(333) 333-3333",
+      "work_phone" : "(333) 333-3333",
+      "preferred_language" : 3,
+      "account_relationship" : true,
+      "employee_relationship" : true,
+      "current_address_attributes" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "zip" : 98822,
+        "start_date(2i)" : 5,
+        "start_date(3i)" : 6,
+        "start_date(1i)" : 2008,
+        "own" : false,
+        "monthly_rent" : 800,
+        "id" : 2
+      },
+      "no_primary_housing_expenses" : false,
+      "previous_addresses_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "start_date(2i)" : "",
+          "start_date(3i)" : "",
+          "start_date(1i)" : "",
+          "id" : 3
+        }
+      },
+      "separate_mailing_address" : false,
+      "mailing_address_attributes" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "id" : 4
+      },
+      "dob(2i)" : 5,
+      "dob(3i)" : 8,
+      "dob(1i)" : 2011,
+      "years_schooling" : 12,
+      "marital_status" : 3,
+      "relationship_type" : 1,
+      "relationship_type_other" : "",
+      "relationship_state" : "AK",
+      "has_dependents" : false,
+      "dependents" : "",
+      "citizenship" : 1,
+      "military_service" : false,
+      "discharged_at(2i)" : "",
+      "discharged_at(3i)" : 1,
+      "discharged_at(1i)" : "",
+      "incharged_at(2i)" : "",
+      "incharged_at(3i)" : 1,
+      "incharged_at(1i)" : "",
+      "discharging_at(2i)" : "",
+      "discharging_at(3i)" : 1,
+      "discharging_at(1i)" : "",
+      "other_property_other_mortgage" : true,
+      "other_property_other_mortgage_exp" : "",
+      "new_credit" : true,
+      "new_credit_exp" : "",
+      "priority_lien" : true,
+      "priority_lien_exp" : "",
+      "cosigner_of_undisclosed" : true,
+      "cosigner_of_undisclosed_exp" : "",
+      "has_judgements" : true,
+      "has_judgements_exp" : "",
+      "delinquency" : true,
+      "delinquency_exp" : "",
+      "has_lawsuit" : true,
+      "has_lawsuit_exp" : "",
+      "has_loan_foreclosure" : true,
+      "has_loan_foreclosure_exp" : "",
+      "pre_foreclosure" : true,
+      "pre_foreclosure_exp" : "",
+      "has_property_foreclosure" : true,
+      "has_property_foreclosure_exp" : "",
+      "has_declared_bankruptcy" : true,
+      "bankruptcies_attributes" : {
+        "0" : {
+          "type" : 1
+        }
+      },
+      "hmda_not_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino" : true,
+      "hmda_mexican" : true,
+      "hmda_puerto_rican" : true,
+      "hmda_cuban" : true,
+      "hmda_other_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino_description" : "klklk",
+      "hmda_provides_ethnicity" : true,
+      "hmda_american_indian_or_alaskan" : true,
+      "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+      "hmda_asian" : true,
+      "hmda_asian_indian" : true,
+      "hmda_chinese" : true,
+      "hmda_filipino" : true,
+      "hmda_japanese" : true,
+      "hmda_korean" : true,
+      "hmda_vietnamese" : true,
+      "hmda_other_asian" : true,
+      "hmda_other_asian_description" : ";lkp;lk",
+      "hmda_black_or_african_american" : true,
+      "hmda_hawaiian_or_other_pacific_islander" : true,
+      "hmda_native_hawaiian" : true,
+      "hmda_guamanian_or_chamorro" : true,
+      "hmda_samoan" : true,
+      "hmda_other_pacific_islander" : true,
+      "hmda_other_pacific_islander_description" : ";/,;l./,",
+      "hmda_white" : true,
+      "hmda_provides_race" : true,
+      "hmda_female" : true,
+      "hmda_male" : true,
+      "hmda_provides_gender" : true,
+      "recently_employed" : true,
+      "current_ownership" : true,
+      "new_properties_attributes" : {
+        "0" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : 1,
+          "zip" : 20032,
+          "no_of_units" : 1,
+          "mixed_use" : true,
+          "manufactured_home" : false,
+          "property_use" : 1,
+          "property_status" : 2,
+          "title_status" : 3,
+          "market_value" : 3232323,
+          "annual_tax" : 23232,
+          "homeowners_insurance_provider" : "Me",
+          "monthly_homeowners_insurance" : 100000,
+          "monthly_hoa" : 203934,
+          "rental_income" : 302093,
+          "has_first_existing_mortgage" : true,
+          "first_existing_mortgage_attributes" : {
+            "creditor_account_no" : 232323,
+            "monthly_mortgage" : 232323,
+            "mortgage_loan_type" : 1,
+            "mortgage_rate" : 23,
+            "mortgage_balance" : 23422,
+            "monthly_insurance" : 23231,
+            "id" : 3
+          },
+          "has_second_existing_mortgage" : false,
+          "second_existing_mortgage_attributes" : {
+            "creditor_account_no" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "mortgage_balance" : "",
+            "id" : 4
+          },
+          "id" : 5
+        }
+      },
+      "recent_ownership" : true,
+      "owned_property_use" : 2,
+      "owned_property_title" : 1,
+      "manually_setup_assets" : false,
+      "assets_attributes" : {
+        "0" : {
+          "financial_institution" : "BoA",
+          "asset_type" : "savings",
+          "total" : 2000,
+          "account_type" : "Savings",
+          "id" : 1
+        }
+      },
+      "id" : 4,
+      "ongoing_payments" : 3,
+      "alimony_amount" : "",
+      "child_support_amount" : "",
+      "employments_attributes" : {
+        "0" : {
+          "employer_name" : "My name",
+          "phone" : "(303) 030-3033",
+          "address_attributes" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "city" : "Washington",
+            "state" : "DC",
+            "zip" : 98229
+          },
+          "position" : "Software Developer",
+          "industry" : "IT Services/Software",
+          "start_date(2i)" : 7,
+          "start_date(3i)" : 9,
+          "start_date(1i)" : 2010,
+          "work_experience" : 10,
+          "total_experience" : 10,
+          "payment_type" : 1,
+          "income_attributes" : {
+            "monthly_income" : 100000,
+            "yearly_bonus_income" : 1000,
+            "yearly_commission_income" : 1000
+          },
+          "self_employed" : false,
+          "proof_required" : false,
+          "id" : 1
+        }
+      },
+      "has_other_incomes" : true,
+      "other_incomes_attributes" : {
+        "0" : {
+          "gross_amount" : 9988777,
+          "source" : "disability"
+        }
+      },
+      "voe_consent_attributes" : {
+        "status" : "granted"
+      }
+    },
+    "down_payment_gift_asset_attributes" : {
+      "donor_organization" : "",
+      "donor_first_name" : "",
+      "donor_last_name" : "",
+      "donor_email_address" : "",
+      "total" : "",
+      "id" : 1
+    },
+    "has_undisclosed_finances" : false,
+    "undisclosed_dollar_amount" : "",
+    "coborrower_lived_with_borrower" : false
+  }
+}; // URLATestRequest | 
 
 try {
-    $result = $api_instance->loanPost($body);
-    print_r($result);
+    $api_instance->urlaTest($body);
 } catch (Exception $e) {
-    echo 'Exception when calling LoanApplicationsV2Api->loanPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MiscApi->urlaTest: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-perl">
+                            <div class="tab-pane" id="examples-Misc-urlaTest-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::LoanApplicationsV2Api;
+use WWW::SwaggerClient::MiscApi;
+# Configure HTTP basic authorization: httpBasic
+$WWW::SwaggerClient::Configuration::username = 'YOUR_USERNAME';
+$WWW::SwaggerClient::Configuration::password = 'YOUR_PASSWORD';
 
-my $api_instance = WWW::SwaggerClient::LoanApplicationsV2Api->new();
-my $body = WWW::SwaggerClient::Object::Applicant->new(); # Applicant | **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
-
+my $api_instance = WWW::SwaggerClient::MiscApi->new();
+my $body = WWW::SwaggerClient::Object::URLATestRequest->new(); # URLATestRequest | 
 
 eval { 
-    my $result = $api_instance->loanPost(body => $body);
-    print Dumper($result);
+    $api_instance->urlaTest(body => $body);
 };
 if ($@) {
-    warn "Exception when calling LoanApplicationsV2Api->loanPost: $@\n";
+    warn "Exception when calling MiscApi->urlaTest: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-LoanApplicationsV2-loanPost-0-python">
+                            <div class="tab-pane" id="examples-Misc-urlaTest-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
+# Configure HTTP basic authorization: httpBasic
+swagger_client.configuration.username = 'YOUR_USERNAME'
+swagger_client.configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.LoanApplicationsV2Api()
-body =  # Applicant | **Overview**  
-Use the applicants array to provide details about the borrowers. You can specify up to four borrowers.
-
+api_instance = swagger_client.MiscApi()
+body = {
+  "residential_loan" : {
+    "token" : 5594415352464157,
+    "loan_application_attributes" : {
+      "lead_source" : "Here",
+      "has_coborrower" : false,
+      "application_type" : 1,
+      "pre_approval" : true,
+      "mortgage_type" : 1,
+      "loan_use_other" : "",
+      "non_mortgage_payoff_amount" : "",
+      "desired_cashout_amount" : "",
+      "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+      "extra_circumstances" : "asdfasdf",
+      "property_use" : 1,
+      "receiving_down_payment_gift" : false
+    },
+    "prospective_properties_attributes" : {
+      "0" : {
+        "city" : "Washington",
+        "state" : "DC",
+        "county_fips" : "DC",
+        "id" : 7
+      }
+    },
+    "prospective_property_purchase_price" : 500000,
+    "subject_properties_attributes" : {
+      "0" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "county_fips" : 11,
+        "zip" : "",
+        "purchase_price" : "",
+        "homeowners_insurance_provider" : "",
+        "monthly_homeowners_insurance" : "",
+        "monthly_hoa" : "",
+        "annual_tax" : "",
+        "id" : 1,
+        "mixed_use" : false,
+        "rental_income" : "",
+        "first_existing_mortgage_attributes" : {
+          "lender_name" : "",
+          "monthly_mortgage" : "",
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "mortgage_balance" : "",
+          "monthly_insurance" : "",
+          "id" : 1
+        },
+        "second_existing_mortgage_attributes" : {
+          "mortgage_rate" : "",
+          "heloc_credit_limit" : "",
+          "monthly_mortgage" : "",
+          "id" : 2
+        }
+      }
+    },
+    "primary_applicant_attributes" : {
+      "first_name" : "asdfasdf",
+      "middle_initial" : "",
+      "last_name" : "asdf",
+      "suffix" : "",
+      "uses_alternate_name" : false,
+      "alternate_first_name" : "",
+      "alternate_middle_initial" : "",
+      "alternate_last_name" : "",
+      "alternate_suffix" : "",
+      "email" : "astuntz@roostify.com",
+      "home_phone" : "(333) 333-3333",
+      "phone" : "(333) 333-3333",
+      "work_phone" : "(333) 333-3333",
+      "preferred_language" : 3,
+      "account_relationship" : true,
+      "employee_relationship" : true,
+      "current_address_attributes" : {
+        "address1" : "1558 Alabama Avenue Southeast",
+        "address2" : "",
+        "city" : "Washington",
+        "state" : "DC",
+        "zip" : 98822,
+        "start_date(2i)" : 5,
+        "start_date(3i)" : 6,
+        "start_date(1i)" : 2008,
+        "own" : false,
+        "monthly_rent" : 800,
+        "id" : 2
+      },
+      "no_primary_housing_expenses" : false,
+      "previous_addresses_attributes" : {
+        "0" : {
+          "address1" : "",
+          "address2" : "",
+          "city" : "",
+          "state" : "AK",
+          "zip" : "",
+          "start_date(2i)" : "",
+          "start_date(3i)" : "",
+          "start_date(1i)" : "",
+          "id" : 3
+        }
+      },
+      "separate_mailing_address" : false,
+      "mailing_address_attributes" : {
+        "address1" : "",
+        "address2" : "",
+        "city" : "",
+        "state" : "AK",
+        "zip" : "",
+        "id" : 4
+      },
+      "dob(2i)" : 5,
+      "dob(3i)" : 8,
+      "dob(1i)" : 2011,
+      "years_schooling" : 12,
+      "marital_status" : 3,
+      "relationship_type" : 1,
+      "relationship_type_other" : "",
+      "relationship_state" : "AK",
+      "has_dependents" : false,
+      "dependents" : "",
+      "citizenship" : 1,
+      "military_service" : false,
+      "discharged_at(2i)" : "",
+      "discharged_at(3i)" : 1,
+      "discharged_at(1i)" : "",
+      "incharged_at(2i)" : "",
+      "incharged_at(3i)" : 1,
+      "incharged_at(1i)" : "",
+      "discharging_at(2i)" : "",
+      "discharging_at(3i)" : 1,
+      "discharging_at(1i)" : "",
+      "other_property_other_mortgage" : true,
+      "other_property_other_mortgage_exp" : "",
+      "new_credit" : true,
+      "new_credit_exp" : "",
+      "priority_lien" : true,
+      "priority_lien_exp" : "",
+      "cosigner_of_undisclosed" : true,
+      "cosigner_of_undisclosed_exp" : "",
+      "has_judgements" : true,
+      "has_judgements_exp" : "",
+      "delinquency" : true,
+      "delinquency_exp" : "",
+      "has_lawsuit" : true,
+      "has_lawsuit_exp" : "",
+      "has_loan_foreclosure" : true,
+      "has_loan_foreclosure_exp" : "",
+      "pre_foreclosure" : true,
+      "pre_foreclosure_exp" : "",
+      "has_property_foreclosure" : true,
+      "has_property_foreclosure_exp" : "",
+      "has_declared_bankruptcy" : true,
+      "bankruptcies_attributes" : {
+        "0" : {
+          "type" : 1
+        }
+      },
+      "hmda_not_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino" : true,
+      "hmda_mexican" : true,
+      "hmda_puerto_rican" : true,
+      "hmda_cuban" : true,
+      "hmda_other_hispanic_or_latino" : true,
+      "hmda_hispanic_or_latino_description" : "klklk",
+      "hmda_provides_ethnicity" : true,
+      "hmda_american_indian_or_alaskan" : true,
+      "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+      "hmda_asian" : true,
+      "hmda_asian_indian" : true,
+      "hmda_chinese" : true,
+      "hmda_filipino" : true,
+      "hmda_japanese" : true,
+      "hmda_korean" : true,
+      "hmda_vietnamese" : true,
+      "hmda_other_asian" : true,
+      "hmda_other_asian_description" : ";lkp;lk",
+      "hmda_black_or_african_american" : true,
+      "hmda_hawaiian_or_other_pacific_islander" : true,
+      "hmda_native_hawaiian" : true,
+      "hmda_guamanian_or_chamorro" : true,
+      "hmda_samoan" : true,
+      "hmda_other_pacific_islander" : true,
+      "hmda_other_pacific_islander_description" : ";/,;l./,",
+      "hmda_white" : true,
+      "hmda_provides_race" : true,
+      "hmda_female" : true,
+      "hmda_male" : true,
+      "hmda_provides_gender" : true,
+      "recently_employed" : true,
+      "current_ownership" : true,
+      "new_properties_attributes" : {
+        "0" : {
+          "address1" : "1558 Alabama Avenue Southeast",
+          "address2" : "",
+          "city" : "Washington",
+          "state" : "DC",
+          "county_fips" : 1,
+          "zip" : 20032,
+          "no_of_units" : 1,
+          "mixed_use" : true,
+          "manufactured_home" : false,
+          "property_use" : 1,
+          "property_status" : 2,
+          "title_status" : 3,
+          "market_value" : 3232323,
+          "annual_tax" : 23232,
+          "homeowners_insurance_provider" : "Me",
+          "monthly_homeowners_insurance" : 100000,
+          "monthly_hoa" : 203934,
+          "rental_income" : 302093,
+          "has_first_existing_mortgage" : true,
+          "first_existing_mortgage_attributes" : {
+            "creditor_account_no" : 232323,
+            "monthly_mortgage" : 232323,
+            "mortgage_loan_type" : 1,
+            "mortgage_rate" : 23,
+            "mortgage_balance" : 23422,
+            "monthly_insurance" : 23231,
+            "id" : 3
+          },
+          "has_second_existing_mortgage" : false,
+          "second_existing_mortgage_attributes" : {
+            "creditor_account_no" : "",
+            "monthly_mortgage" : "",
+            "mortgage_rate" : "",
+            "mortgage_balance" : "",
+            "id" : 4
+          },
+          "id" : 5
+        }
+      },
+      "recent_ownership" : true,
+      "owned_property_use" : 2,
+      "owned_property_title" : 1,
+      "manually_setup_assets" : false,
+      "assets_attributes" : {
+        "0" : {
+          "financial_institution" : "BoA",
+          "asset_type" : "savings",
+          "total" : 2000,
+          "account_type" : "Savings",
+          "id" : 1
+        }
+      },
+      "id" : 4,
+      "ongoing_payments" : 3,
+      "alimony_amount" : "",
+      "child_support_amount" : "",
+      "employments_attributes" : {
+        "0" : {
+          "employer_name" : "My name",
+          "phone" : "(303) 030-3033",
+          "address_attributes" : {
+            "address1" : "1558 Alabama Avenue Southeast",
+            "city" : "Washington",
+            "state" : "DC",
+            "zip" : 98229
+          },
+          "position" : "Software Developer",
+          "industry" : "IT Services/Software",
+          "start_date(2i)" : 7,
+          "start_date(3i)" : 9,
+          "start_date(1i)" : 2010,
+          "work_experience" : 10,
+          "total_experience" : 10,
+          "payment_type" : 1,
+          "income_attributes" : {
+            "monthly_income" : 100000,
+            "yearly_bonus_income" : 1000,
+            "yearly_commission_income" : 1000
+          },
+          "self_employed" : false,
+          "proof_required" : false,
+          "id" : 1
+        }
+      },
+      "has_other_incomes" : true,
+      "other_incomes_attributes" : {
+        "0" : {
+          "gross_amount" : 9988777,
+          "source" : "disability"
+        }
+      },
+      "voe_consent_attributes" : {
+        "status" : "granted"
+      }
+    },
+    "down_payment_gift_asset_attributes" : {
+      "donor_organization" : "",
+      "donor_first_name" : "",
+      "donor_last_name" : "",
+      "donor_email_address" : "",
+      "total" : "",
+      "id" : 1
+    },
+    "has_undisclosed_finances" : false,
+    "undisclosed_dollar_amount" : "",
+    "coborrower_lived_with_borrower" : false
+  }
+} # URLATestRequest | 
 
 try: 
-    # Add a new loan application
-    api_response = api_instance.loan_post(body)
-    pprint(api_response)
+    # URLA Test
+    api_instance.urla_test(body)
 except ApiException as e:
-    print("Exception when calling LoanApplicationsV2Api->loanPost: %s\n" % e)</code></pre>
+    print("Exception when calling MiscApi->urlaTest: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -1010,11 +4793,312 @@ except ApiException as e:
                                 <script>
                                 $(document).ready(function() {
                                   var schemaWrapper = {
-  "description" : "**Overview**  \nUse the applicants array to provide details about the borrowers. You can specify up to four borrowers.\n",
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/Applicant"
+        "$ref" : "#/components/schemas/URLATestRequest"
+      },
+      "example" : {
+        "residential_loan" : {
+          "token" : 5594415352464157,
+          "loan_application_attributes" : {
+            "lead_source" : "Here",
+            "has_coborrower" : false,
+            "application_type" : 1,
+            "pre_approval" : true,
+            "mortgage_type" : 1,
+            "loan_use_other" : "",
+            "non_mortgage_payoff_amount" : "",
+            "desired_cashout_amount" : "",
+            "overall_plans" : [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+            "extra_circumstances" : "asdfasdf",
+            "property_use" : 1,
+            "receiving_down_payment_gift" : false
+          },
+          "prospective_properties_attributes" : {
+            "0" : {
+              "city" : "Washington",
+              "state" : "DC",
+              "county_fips" : "DC",
+              "id" : 7
+            }
+          },
+          "prospective_property_purchase_price" : 500000,
+          "subject_properties_attributes" : {
+            "0" : {
+              "address1" : "",
+              "address2" : "",
+              "city" : "",
+              "state" : "AK",
+              "county_fips" : 11,
+              "zip" : "",
+              "purchase_price" : "",
+              "homeowners_insurance_provider" : "",
+              "monthly_homeowners_insurance" : "",
+              "monthly_hoa" : "",
+              "annual_tax" : "",
+              "id" : 1,
+              "mixed_use" : false,
+              "rental_income" : "",
+              "first_existing_mortgage_attributes" : {
+                "lender_name" : "",
+                "monthly_mortgage" : "",
+                "mortgage_rate" : "",
+                "heloc_credit_limit" : "",
+                "mortgage_balance" : "",
+                "monthly_insurance" : "",
+                "id" : 1
+              },
+              "second_existing_mortgage_attributes" : {
+                "mortgage_rate" : "",
+                "heloc_credit_limit" : "",
+                "monthly_mortgage" : "",
+                "id" : 2
+              }
+            }
+          },
+          "primary_applicant_attributes" : {
+            "first_name" : "asdfasdf",
+            "middle_initial" : "",
+            "last_name" : "asdf",
+            "suffix" : "",
+            "uses_alternate_name" : false,
+            "alternate_first_name" : "",
+            "alternate_middle_initial" : "",
+            "alternate_last_name" : "",
+            "alternate_suffix" : "",
+            "email" : "astuntz@roostify.com",
+            "home_phone" : "(333) 333-3333",
+            "phone" : "(333) 333-3333",
+            "work_phone" : "(333) 333-3333",
+            "preferred_language" : 3,
+            "account_relationship" : true,
+            "employee_relationship" : true,
+            "current_address_attributes" : {
+              "address1" : "1558 Alabama Avenue Southeast",
+              "address2" : "",
+              "city" : "Washington",
+              "state" : "DC",
+              "zip" : 98822,
+              "start_date(2i)" : 5,
+              "start_date(3i)" : 6,
+              "start_date(1i)" : 2008,
+              "own" : false,
+              "monthly_rent" : 800,
+              "id" : 2
+            },
+            "no_primary_housing_expenses" : false,
+            "previous_addresses_attributes" : {
+              "0" : {
+                "address1" : "",
+                "address2" : "",
+                "city" : "",
+                "state" : "AK",
+                "zip" : "",
+                "start_date(2i)" : "",
+                "start_date(3i)" : "",
+                "start_date(1i)" : "",
+                "id" : 3
+              }
+            },
+            "separate_mailing_address" : false,
+            "mailing_address_attributes" : {
+              "address1" : "",
+              "address2" : "",
+              "city" : "",
+              "state" : "AK",
+              "zip" : "",
+              "id" : 4
+            },
+            "dob(2i)" : 5,
+            "dob(3i)" : 8,
+            "dob(1i)" : 2011,
+            "years_schooling" : 12,
+            "marital_status" : 3,
+            "relationship_type" : 1,
+            "relationship_type_other" : "",
+            "relationship_state" : "AK",
+            "has_dependents" : false,
+            "dependents" : "",
+            "citizenship" : 1,
+            "military_service" : false,
+            "discharged_at(2i)" : "",
+            "discharged_at(3i)" : 1,
+            "discharged_at(1i)" : "",
+            "incharged_at(2i)" : "",
+            "incharged_at(3i)" : 1,
+            "incharged_at(1i)" : "",
+            "discharging_at(2i)" : "",
+            "discharging_at(3i)" : 1,
+            "discharging_at(1i)" : "",
+            "other_property_other_mortgage" : true,
+            "other_property_other_mortgage_exp" : "",
+            "new_credit" : true,
+            "new_credit_exp" : "",
+            "priority_lien" : true,
+            "priority_lien_exp" : "",
+            "cosigner_of_undisclosed" : true,
+            "cosigner_of_undisclosed_exp" : "",
+            "has_judgements" : true,
+            "has_judgements_exp" : "",
+            "delinquency" : true,
+            "delinquency_exp" : "",
+            "has_lawsuit" : true,
+            "has_lawsuit_exp" : "",
+            "has_loan_foreclosure" : true,
+            "has_loan_foreclosure_exp" : "",
+            "pre_foreclosure" : true,
+            "pre_foreclosure_exp" : "",
+            "has_property_foreclosure" : true,
+            "has_property_foreclosure_exp" : "",
+            "has_declared_bankruptcy" : true,
+            "bankruptcies_attributes" : {
+              "0" : {
+                "type" : 1
+              }
+            },
+            "hmda_not_hispanic_or_latino" : true,
+            "hmda_hispanic_or_latino" : true,
+            "hmda_mexican" : true,
+            "hmda_puerto_rican" : true,
+            "hmda_cuban" : true,
+            "hmda_other_hispanic_or_latino" : true,
+            "hmda_hispanic_or_latino_description" : "klklk",
+            "hmda_provides_ethnicity" : true,
+            "hmda_american_indian_or_alaskan" : true,
+            "hmda_american_indian_or_alaskan_description" : ";lk;lk",
+            "hmda_asian" : true,
+            "hmda_asian_indian" : true,
+            "hmda_chinese" : true,
+            "hmda_filipino" : true,
+            "hmda_japanese" : true,
+            "hmda_korean" : true,
+            "hmda_vietnamese" : true,
+            "hmda_other_asian" : true,
+            "hmda_other_asian_description" : ";lkp;lk",
+            "hmda_black_or_african_american" : true,
+            "hmda_hawaiian_or_other_pacific_islander" : true,
+            "hmda_native_hawaiian" : true,
+            "hmda_guamanian_or_chamorro" : true,
+            "hmda_samoan" : true,
+            "hmda_other_pacific_islander" : true,
+            "hmda_other_pacific_islander_description" : ";/,;l./,",
+            "hmda_white" : true,
+            "hmda_provides_race" : true,
+            "hmda_female" : true,
+            "hmda_male" : true,
+            "hmda_provides_gender" : true,
+            "recently_employed" : true,
+            "current_ownership" : true,
+            "new_properties_attributes" : {
+              "0" : {
+                "address1" : "1558 Alabama Avenue Southeast",
+                "address2" : "",
+                "city" : "Washington",
+                "state" : "DC",
+                "county_fips" : 1,
+                "zip" : 20032,
+                "no_of_units" : 1,
+                "mixed_use" : true,
+                "manufactured_home" : false,
+                "property_use" : 1,
+                "property_status" : 2,
+                "title_status" : 3,
+                "market_value" : 3232323,
+                "annual_tax" : 23232,
+                "homeowners_insurance_provider" : "Me",
+                "monthly_homeowners_insurance" : 100000,
+                "monthly_hoa" : 203934,
+                "rental_income" : 302093,
+                "has_first_existing_mortgage" : true,
+                "first_existing_mortgage_attributes" : {
+                  "creditor_account_no" : 232323,
+                  "monthly_mortgage" : 232323,
+                  "mortgage_loan_type" : 1,
+                  "mortgage_rate" : 23,
+                  "mortgage_balance" : 23422,
+                  "monthly_insurance" : 23231,
+                  "id" : 3
+                },
+                "has_second_existing_mortgage" : false,
+                "second_existing_mortgage_attributes" : {
+                  "creditor_account_no" : "",
+                  "monthly_mortgage" : "",
+                  "mortgage_rate" : "",
+                  "mortgage_balance" : "",
+                  "id" : 4
+                },
+                "id" : 5
+              }
+            },
+            "recent_ownership" : true,
+            "owned_property_use" : 2,
+            "owned_property_title" : 1,
+            "manually_setup_assets" : false,
+            "assets_attributes" : {
+              "0" : {
+                "financial_institution" : "BoA",
+                "asset_type" : "savings",
+                "total" : 2000,
+                "account_type" : "Savings",
+                "id" : 1
+              }
+            },
+            "id" : 4,
+            "ongoing_payments" : 3,
+            "alimony_amount" : "",
+            "child_support_amount" : "",
+            "employments_attributes" : {
+              "0" : {
+                "employer_name" : "My name",
+                "phone" : "(303) 030-3033",
+                "address_attributes" : {
+                  "address1" : "1558 Alabama Avenue Southeast",
+                  "city" : "Washington",
+                  "state" : "DC",
+                  "zip" : 98229
+                },
+                "position" : "Software Developer",
+                "industry" : "IT Services/Software",
+                "start_date(2i)" : 7,
+                "start_date(3i)" : 9,
+                "start_date(1i)" : 2010,
+                "work_experience" : 10,
+                "total_experience" : 10,
+                "payment_type" : 1,
+                "income_attributes" : {
+                  "monthly_income" : 100000,
+                  "yearly_bonus_income" : 1000,
+                  "yearly_commission_income" : 1000
+                },
+                "self_employed" : false,
+                "proof_required" : false,
+                "id" : 1
+              }
+            },
+            "has_other_incomes" : true,
+            "other_incomes_attributes" : {
+              "0" : {
+                "gross_amount" : 9988777,
+                "source" : "disability"
+              }
+            },
+            "voe_consent_attributes" : {
+              "status" : "granted"
+            }
+          },
+          "down_payment_gift_asset_attributes" : {
+            "donor_organization" : "",
+            "donor_first_name" : "",
+            "donor_last_name" : "",
+            "donor_email_address" : "",
+            "total" : "",
+            "id" : 1
+          },
+          "has_undisclosed_finances" : false,
+          "undisclosed_dollar_amount" : "",
+          "coborrower_lived_with_borrower" : false
+        }
       }
     }
   },
@@ -1032,12 +5116,12 @@ except ApiException as e:
                                   }
                                 
                                   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_loanPost_body');
+                                  var result = $('#d2e199_urlaTest_body');
                                   result.empty();
                                   result.append(view.render());
                                 });
                                 </script>
-                                <div id="d2e199_loanPost_body"></div>
+                                <div id="d2e199_urlaTest_body"></div>
                                 </td>
                                 </tr>
                             </table>
@@ -1045,56 +5129,12 @@ except ApiException as e:
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - successful </h3>
+                            <h3> Status: 200 -  </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
-                                <li class="active">
-                                  <a data-toggle="tab" href="#responses-loanPost-200-schema">Schema</a>
-                                </li>
-
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-loanPost-200-schema">
-                                  <div id='responses-loanPost-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-                                    <script>
-                                      $(document).ready(function() {
-                                        var schemaWrapper = {
-  "description" : "successful",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "type" : "array",
-        "items" : {
-          "type" : "string"
-        },
-        "x-content-type" : "application/json"
-      }
-    }
-  }
-};
-                                        var schema = schemaWrapper.content["application/json"].schema;
-                                        if (schema.$ref != null) {
-                                          schema = defsParser.$refs.get(schema.$ref);
-                                        } else {
-                                          schemaWrapper.components = {};
-                                          schemaWrapper.components.schemas = Object.assign({}, defs);
-                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                            console.log(err);
-                                          });
-                                        }
-
-                                        //console.log(JSON.stringify(schema));
-                                        var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-loanPost-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-loanPost-200-schema-200');
-                                        result.empty();
-                                        result.append(view.render());
-                                      });
-                                    </script>
-                                  </div>
-                                  <input id='responses-loanPost-200-schema-data' type='hidden' value=''></input>
-                                </div>
                             </div>
 
                         </article>
@@ -1105,11 +5145,11 @@ except ApiException as e:
           <div id="footer">
             <div id="api-_footer">
               <p>Suggestions, contact, support and error reporting;
-                  <div class="app-desc">Information URL: <a href="https://openweathermap.org/api">https://openweathermap.org/api</a></div>
-                  <div class="app-desc">Contact Info: <a href="some_email@gmail.com">some_email@gmail.com</a></div>
+                  <div class="app-desc">Information URL: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+                  <div class="app-desc">Contact Info: <a href="hello@helloreverb.com">hello@helloreverb.com</a></div>
               </p>
-                <div class="license-info">CC Attribution-ShareAlike 4.0 (CC BY-SA 4.0)</div>
-                <div class="license-url">https://openweathermap.org/price</div>
+                <div class="license-info">All rights reserved</div>
+                <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
             </div>
           </div>
       </div>
