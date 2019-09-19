@@ -2722,9 +2722,9 @@
             -->
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
-                  <li class="nav-header" data-group="Misc"><a href="#api-Misc">API Methods - Misc</a></li>
-                    <li data-group="Misc" data-name="urlaLoanApplication" class="">
-                      <a href="#api-Misc-urlaLoanApplication">urlaLoanApplication</a>
+                  <li class="nav-header" data-group="LoanApplication"><a href="#api-LoanApplication">API Methods - LoanApplication</a></li>
+                    <li data-group="LoanApplication" data-name="urlaLoanApplication" class="">
+                      <a href="#api-LoanApplication-urlaLoanApplication">urlaLoanApplication</a>
                     </li>
           </ul>
         </nav>
@@ -2748,10 +2748,10 @@
           </div>
         </div>
         <div id="sections">
-                <section id="api-Misc">
-                  <h1>Misc</h1>
-                    <div id="api-Misc-urlaLoanApplication">
-                      <article id="api-Misc-urlaLoanApplication-0" data-group="User" data-name="urlaLoanApplication" data-version="0">
+                <section id="api-LoanApplication">
+                  <h1>LoanApplication</h1>
+                    <div id="api-LoanApplication-urlaLoanApplication">
+                      <article id="api-LoanApplication-urlaLoanApplication-0" data-group="User" data-name="urlaLoanApplication" data-version="0">
                         <div class="pull-left">
                           <h1>urlaLoanApplication</h1>
                           <p>URLA Loan Application</p>
@@ -2768,33 +2768,33 @@
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Misc-urlaLoanApplication-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Misc-urlaLoanApplication-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Misc-urlaLoanApplication-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Misc-urlaLoanApplication-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-LoanApplication-urlaLoanApplication-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-java">Java</a></li>
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-LoanApplication-urlaLoanApplication-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Misc-urlaLoanApplication-0-curl">
+                          <div class="tab-pane active" id="examples-LoanApplication-urlaLoanApplication-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "Authorization: Basic [[basicHash]]" "https://roostify.com/"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-java">
+                          <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.MiscApi;
+import io.swagger.client.api.LoanApplicationApi;
 
 import java.io.File;
 import java.util.*;
 
-public class MiscApiExample {
+public class LoanApplicationApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
@@ -2803,7 +2803,7 @@ public class MiscApiExample {
         httpBasic.setUsername("YOUR USERNAME");
         httpBasic.setPassword("YOUR PASSWORD");
 
-        MiscApi apiInstance = new MiscApi();
+        LoanApplicationApi apiInstance = new LoanApplicationApi();
         URLALoanApplicationRequest body = {
   "residential_loan" : {
     "token" : 5594415352464157,
@@ -3109,20 +3109,20 @@ public class MiscApiExample {
         try {
             apiInstance.urlaLoanApplication(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling MiscApi#urlaLoanApplication");
+            System.err.println("Exception when calling LoanApplicationApi#urlaLoanApplication");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.MiscApi;
+                          <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.LoanApplicationApi;
 
-public class MiscApiExample {
+public class LoanApplicationApiExample {
 
     public static void main(String[] args) {
-        MiscApi apiInstance = new MiscApi();
+        LoanApplicationApi apiInstance = new LoanApplicationApi();
         URLALoanApplicationRequest body = {
   "residential_loan" : {
     "token" : 5594415352464157,
@@ -3428,17 +3428,17 @@ public class MiscApiExample {
         try {
             apiInstance.urlaLoanApplication(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling MiscApi#urlaLoanApplication");
+            System.err.println("Exception when calling LoanApplicationApi#urlaLoanApplication");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-groovy">
+  <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-objc">
+                            <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
 // Configure HTTP basic authorization (authentication scheme: httpBasic)
 [apiConfig setUsername:@"YOUR_USERNAME"];
@@ -3746,7 +3746,7 @@ URLALoanApplicationRequest *body = {
   }
 }; // 
 
-MiscApi *apiInstance = [[MiscApi alloc] init];
+LoanApplicationApi *apiInstance = [[LoanApplicationApi alloc] init];
 
 // URLA Loan Application
 [apiInstance urlaLoanApplicationWith:body
@@ -3758,7 +3758,7 @@ MiscApi *apiInstance = [[MiscApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-javascript">
+                            <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var RoostifyUrlaLoanApplicationApi = require('roostify_urla_loan_application_api');
 var defaultClient = RoostifyUrlaLoanApplicationApi.ApiClient.instance;
 // Configure HTTP basic authorization: httpBasic
@@ -3766,7 +3766,7 @@ var httpBasic = defaultClient.authentications['httpBasic'];
 httpBasic.username = 'YOUR USERNAME'
 httpBasic.password = 'YOUR PASSWORD'
 
-var api = new RoostifyUrlaLoanApplicationApi.MiscApi()
+var api = new RoostifyUrlaLoanApplicationApi.LoanApplicationApi()
 var body = {
   "residential_loan" : {
     "token" : 5594415352464157,
@@ -4081,10 +4081,10 @@ api.urlaLoanApplication(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-angular">
+                            <!--<div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-csharp">
+                            <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -4101,7 +4101,7 @@ namespace Example
             Configuration.Default.Username = "YOUR_USERNAME";
             Configuration.Default.Password = "YOUR_PASSWORD";
 
-            var apiInstance = new MiscApi();
+            var apiInstance = new LoanApplicationApi();
             var body = new URLALoanApplicationRequest(); // URLALoanApplicationRequest | 
 
             try
@@ -4111,7 +4111,7 @@ namespace Example
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MiscApi.urlaLoanApplication: " + e.Message );
+                Debug.Print("Exception when calling LoanApplicationApi.urlaLoanApplication: " + e.Message );
             }
         }
     }
@@ -4119,14 +4119,14 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-php">
+                            <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: httpBasic
 Swagger\Client\Configuration::getDefaultConfiguration()->setUsername('YOUR_USERNAME');
 Swagger\Client\Configuration::getDefaultConfiguration()->setPassword('YOUR_PASSWORD');
 
-$api_instance = new Swagger\Client\ApiMiscApi();
+$api_instance = new Swagger\Client\ApiLoanApplicationApi();
 $body = {
   "residential_loan" : {
     "token" : 5594415352464157,
@@ -4433,31 +4433,31 @@ $body = {
 try {
     $api_instance->urlaLoanApplication($body);
 } catch (Exception $e) {
-    echo 'Exception when calling MiscApi->urlaLoanApplication: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LoanApplicationApi->urlaLoanApplication: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-perl">
+                            <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::MiscApi;
+use WWW::SwaggerClient::LoanApplicationApi;
 # Configure HTTP basic authorization: httpBasic
 $WWW::SwaggerClient::Configuration::username = 'YOUR_USERNAME';
 $WWW::SwaggerClient::Configuration::password = 'YOUR_PASSWORD';
 
-my $api_instance = WWW::SwaggerClient::MiscApi->new();
+my $api_instance = WWW::SwaggerClient::LoanApplicationApi->new();
 my $body = WWW::SwaggerClient::Object::URLALoanApplicationRequest->new(); # URLALoanApplicationRequest | 
 
 eval { 
     $api_instance->urlaLoanApplication(body => $body);
 };
 if ($@) {
-    warn "Exception when calling MiscApi->urlaLoanApplication: $@\n";
+    warn "Exception when calling LoanApplicationApi->urlaLoanApplication: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Misc-urlaLoanApplication-0-python">
+                            <div class="tab-pane" id="examples-LoanApplication-urlaLoanApplication-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -4468,7 +4468,7 @@ swagger_client.configuration.username = 'YOUR_USERNAME'
 swagger_client.configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.MiscApi()
+api_instance = swagger_client.LoanApplicationApi()
 body = {
   "residential_loan" : {
     "token" : 5594415352464157,
@@ -4776,7 +4776,7 @@ try:
     # URLA Loan Application
     api_instance.urla_loan_application(body)
 except ApiException as e:
-    print("Exception when calling MiscApi->urlaLoanApplication: %s\n" % e)</code></pre>
+    print("Exception when calling LoanApplicationApi->urlaLoanApplication: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -5148,8 +5148,12 @@ except ApiException as e:
           </div>
           <div id="footer">
             <div id="api-_footer">
-             
-            
+              <p>Suggestions, contact, support and error reporting;
+                  <div class="app-desc">Information URL: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+                  <div class="app-desc">Contact Info: <a href="hello@helloreverb.com">hello@helloreverb.com</a></div>
+              </p>
+                <div class="license-info">All rights reserved</div>
+                <div class="license-url">http://apache.org/licenses/LICENSE-2.0.html</div>
             </div>
           </div>
       </div>
